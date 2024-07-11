@@ -7,11 +7,38 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      grey: "#1E1E1E",
+      white: "#fff",
+      orange: {
+        DEFAULT: "#FE945C",
+        light: "#FEA97D",
+      },
+      yellow: {
+        DEFAULT: "#FFBD45",
+        light: "#FFCA6A",
+      },
+      blue: {
+        DEFAULT: "#ADD8E6",
+      },
+      red: {
+        DEFAULT: "#CA1010",
+      },
+      purple: {
+        DEFAULT: "#C9A2BC",
+      },
+    },
+    container: {
+      center: true,
+      screens: {
+        sm: "450px",
+        md: "768px",
+        lg: "1056px",
+      },
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        lato: ["var(--font-lato)"],
       },
     },
   },
