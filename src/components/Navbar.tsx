@@ -10,7 +10,12 @@ interface NavbarProps {
 
 const Navbar: FunctionComponent<NavbarProps> = ({ className }) => {
   return (
-    <nav className={cn(className, "fixed w-full z-20 top-0 h-20 shadow-md")}>
+    <nav
+      className={cn(
+        className,
+        "fixed w-full z-20 top-0 h-20 shadow-md bg-white"
+      )}
+    >
       <div className="container h-full flex items-center justify-between">
         <div className="flex gap-x-6">
           <Link href="/" className="w-16 relative">

@@ -3,22 +3,25 @@ import { ComponentProps, FunctionComponent } from "react";
 import { cn } from "../../lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
 
-const buttonVariants = cva("items-center rounded-b-xl justify-center text-xl", {
-  variants: {
-    variant: {
-      default: "border-b-4 border-grey",
-      nav: "bg-orange border-b-4 border-yellow",
+const buttonVariants = cva(
+  "items-center rounded-xl justify-center text-xl font-bold",
+  {
+    variants: {
+      variant: {
+        default: "bg-white border-b-4 border-grey",
+        nav: "bg-orange border-b-4 rounded-none rounded-b-xl border-yellow font-normal",
+      },
+      size: {
+        default: "py-2 px-10",
+        nav: "py-1 px-24",
+      },
     },
-    size: {
-      default: "py-2 px-10",
-      nav: "py-1 px-24",
+    defaultVariants: {
+      variant: "default",
+      size: "default",
     },
-  },
-  defaultVariants: {
-    variant: "default",
-    size: "default",
-  },
-});
+  }
+);
 
 interface ButtonProps
   extends ComponentProps<"button">,
