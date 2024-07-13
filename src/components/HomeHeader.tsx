@@ -37,10 +37,7 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = () => {
               <h2 className="ml-14">Violences conjugales</h2>
             </div>
           </div>
-          <div
-            aria-label="Header"
-            className="bg-gradient-to-r from-orange from-50% via-yellow to-yellow mt-1 grow"
-          >
+          <div className="bg-gradient-to-r from-orange from-50% via-yellow to-yellow mt-1 grow">
             <div className="flex h-full container">
               <div className="bg-orange">
                 <div className="h-full flex flex-col mr-20 justify-center gap-y-14">
@@ -66,7 +63,7 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = () => {
           </div>
         </div>
         <div className="bg-yellow">
-          <button className="bg-white w-2/3 rounded-tr-3xl py-1 flex items-center">
+          <button className="bg-white w-2/3 flex items-center rounded-tr-3xl py-1 ">
             <h4 className="grow">Soutenir APEX</h4>
             <div className="size-9 relative mr-1 rounded-2xl ">
               <Image

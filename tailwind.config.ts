@@ -40,6 +40,9 @@ const config: Config = {
       fontFamily: {
         lato: ["var(--font-lato)"],
       },
+      backgroundImage: {
+        "flower-pattern": "url('/flower-pattern.jpg')",
+      },
     },
   },
   plugins: [],
