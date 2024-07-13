@@ -27,7 +27,11 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = () => {
               <div className="flex items-center gap-3 relative ml-14">
                 <h1>APEX</h1>
                 <div className="relative w-16 h-20">
-                  <Image alt="Ruban Violet" src={"/ruban_violet.svg"} fill />
+                  <Image
+                    alt="Ruban Violet"
+                    src={"/vector/ruban_violet.svg"}
+                    fill
+                  />
                 </div>
               </div>
               <h2 className="ml-14">Violences conjugales</h2>
@@ -40,21 +44,21 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = () => {
             <div className="flex h-full container">
               <div className="bg-orange">
                 <div className="h-full flex flex-col mr-20 justify-center gap-y-14">
-                  <h3>
+                  <h4>
                     L’équipe d’<span className="font-black">APEX</span> est
                     dévouée à la lutte contre les violences conjugales.
-                  </h3>
+                  </h4>
                   <Button className="self-start">Notre Équipe</Button>
                 </div>
               </div>
               <div className="w-2 h-full grow bg-white"></div>
               <div className="bg-yellow">
                 <div className="h-full flex flex-col ml-20 items-end justify-center gap-y-14">
-                  <h3>
+                  <h4 className="text-right">
                     <span className="font-black">APEX</span> offre un soutien
                     essentiel aux victimes, promeut la sensibilisation et
                     propose des ressources juridiques.
-                  </h3>
+                  </h4>
                   <Button>Nos Actions</Button>
                 </div>
               </div>
@@ -63,7 +67,7 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = () => {
         </div>
         <div className="bg-yellow">
           <button className="bg-white w-2/3 rounded-tr-3xl py-1 flex items-center">
-            <h3 className="grow">Soutenir APEX</h3>
+            <h4 className="grow">Soutenir APEX</h4>
             <div className="size-9 relative mr-1 rounded-2xl ">
               <Image
                 className="rounded-2xl"
