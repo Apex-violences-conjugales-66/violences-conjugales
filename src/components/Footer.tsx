@@ -5,14 +5,14 @@ interface FooterProps {}
 
 const Footer: FunctionComponent<FooterProps> = () => {
   return (
-    <>
-      <div className="relative w-full h-[280px] mt-20">
+    <div aria-label="footer">
+      <div className="relative w-full h-[376px]  mb-1 mt-20">
         <Image
           alt="illustration"
-          src={"/footer-illustration.png"}
+          src={"/vector/separator-pattern2-1920.svg"}
           quality={100}
           fill
-          style={{ objectFit: "cover" }}
+          objectFit="cover"
         />
       </div>
       <div className="bg-purple py-16">
@@ -87,7 +87,8 @@ const Footer: FunctionComponent<FooterProps> = () => {
           </div>
         </div>
       </div>
-    </>
+      <div />
+    </div>
   );
 };
 

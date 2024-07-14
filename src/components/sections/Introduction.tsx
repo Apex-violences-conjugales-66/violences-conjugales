@@ -1,0 +1,50 @@
+import Image from "next/image";
+import { FunctionComponent } from "react";
+import { Button } from "../Button";
+import Title from "../Title";
+
+interface IntroductionProps {}
+
+const Introduction: FunctionComponent<IntroductionProps> = () => {
+  return (
+    <>
+      <div className="relative w-full h-[295px] mt-1 rotate-180">
+        <Image
+          alt="illustration"
+          src={"/vector/separator-pattern1-1920.svg"}
+          quality={100}
+          fill
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+      <div className="container flex py-24">
+        <div className="flex flex-col w-2/3 gap-y-10">
+          <Title>Présentation</Title>
+          <div className="space-y-4">
+            <p>
+              APEX accueille, écoute et accompagne les personnes touchées par
+              les violences conjugales, promouvant le respect, l'égalité
+              hommes/femmes, et la confidentialité.
+            </p>
+            <p>
+              Notre intervention repose sur le respect des victimes, en
+              favorisant leur autonomie et leur sécurité. Nous incluons
+              également le soutien aux enfants affectés. Notre approche met
+              l'accent sur la responsabilisation des individus, sans les
+              victimiser.
+            </p>
+            <p>
+              En plus de nos activités d'accompagnement, nous organisons des
+              formations professionnelles dans le domaine du travail social.
+            </p>
+          </div>
+          <Button variant="orange" className="self-end">
+            En savoir plus
+          </Button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Introduction;

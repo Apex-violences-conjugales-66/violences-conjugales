@@ -8,7 +8,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-white border-b-4 border-grey ",
+        default: "bg-white border-b-4 border-grey",
+        orange: "bg-orange border-b-4 border-yellow",
         nav: "bg-orange border-b-4 rounded-none rounded-b-xl border-yellow font-normal",
       },
       size: {

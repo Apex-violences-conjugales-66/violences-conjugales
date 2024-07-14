@@ -19,7 +19,7 @@ const Title: FunctionComponent<TitleProps> = ({ children, className }) => {
         />
         <h2 className="leading-none">{children}</h2>
       </div>
-      <div className="ml-2 w-full h-[6px] rounded-md bg-flower-pattern bg-cover" />
+      <div className="ml-2 w-full h-[6px] rounded-md bg-flower-pattern bg-cover shadow-md" />
     </div>
   );
 };
