@@ -20,6 +20,9 @@ const config: Config = {
       },
       blue: {
         DEFAULT: "#ADD8E6",
+        green: "#13a89d",
+        dark: "#1475bb",
+        hover: "#6eb4cb",
       },
       red: {
         DEFAULT: "#CA1010",
@@ -30,11 +33,17 @@ const config: Config = {
     },
     container: {
       center: true,
+      padding: "4rem",
       screens: {
-        sm: "450px",
-        md: "768px",
-        lg: "1056px",
+        md: "896px",
+        xl: "1184px",
       },
+    },
+    screens: {
+      sm: "450px",
+      md: "896px",
+      lg: "1024px",
+      xl: "1184px",
     },
     extend: {
       fontFamily: {

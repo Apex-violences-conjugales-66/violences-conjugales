@@ -30,9 +30,9 @@ body {
     @apply text-2xl font-bold;
   }
   h4 {
-    @apply text-xl font-bold;
+    @apply text-lg sm:text-xl font-bold;
   }
   h5 {
-    @apply text-xl font-light;
+    @apply text-lg sm:text-xl font-light;
   }
 }

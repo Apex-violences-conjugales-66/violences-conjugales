@@ -7,7 +7,7 @@ interface IntroductionProps {}
 
 const Introduction: FunctionComponent<IntroductionProps> = () => {
   return (
-    <>
+    <div aria-label="Introduction">
       <div className="relative w-full h-[295px] mt-1 rotate-180">
         <Image
           alt="illustration"
@@ -17,7 +17,7 @@ const Introduction: FunctionComponent<IntroductionProps> = () => {
           style={{ objectFit: "cover" }}
         />
       </div>
-      <div className="container flex py-24">
+      <div className="container flex py-24 relative">
         <div className="flex flex-col w-2/3 gap-y-10">
           <Title>Présentation</Title>
           <div className="space-y-4">
@@ -42,8 +42,9 @@ const Introduction: FunctionComponent<IntroductionProps> = () => {
             En savoir plus
           </Button>
         </div>
+        <Image alt="femme" src="/vector/femme.svg" width={500} height={500} />
       </div>
-    </>
+    </div>
   );
 };
 

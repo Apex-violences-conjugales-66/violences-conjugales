@@ -23,7 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={clsx(`${lato.variable}`, "font-lato text-grey")}>
+    <html
+      lang="en"
+      className={clsx(
+        `${lato.variable}`,
+        "font-lato text-grey text-xs leading-5 sm:text-sm md:text-base text-pretty"
+      )}
+    >
       <body>
         <div className="LayoutWrapper">
           <Navbar />

@@ -39,25 +39,21 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = () => {
           </div>
           <div className="bg-gradient-to-r from-orange from-50% via-yellow to-yellow mt-1 grow">
             <div className="flex h-full container">
-              <div className="bg-orange">
-                <div className="h-full flex flex-col mr-20 justify-center gap-y-14">
-                  <h4>
-                    L’équipe d’<span className="font-black">APEX</span> est
-                    dévouée à la lutte contre les violences conjugales.
-                  </h4>
-                  <Button className="self-start">Notre Équipe</Button>
-                </div>
+              <div className="bg-orange flex flex-col pr-20 justify-center gap-y-14 ">
+                <h4>
+                  L’équipe d’<span className="font-black">APEX</span> est
+                  dévouée à la lutte contre les violences conjugales.
+                </h4>
+                <Button className="self-start">Notre Équipe</Button>
               </div>
-              <div className="w-2 h-full grow bg-white"></div>
-              <div className="bg-yellow">
-                <div className="h-full flex flex-col ml-20 items-end justify-center gap-y-14">
-                  <h4 className="text-right">
-                    <span className="font-black">APEX</span> offre un soutien
-                    essentiel aux victimes, promeut la sensibilisation et
-                    propose des ressources juridiques.
-                  </h4>
-                  <Button>Nos Actions</Button>
-                </div>
+              <div className=" bg-white min-w-1" />
+              <div className="bg-yellow flex flex-col pl-20 items-end justify-center gap-y-14">
+                <h4 className="text-right">
+                  <span className="font-black">APEX</span> offre un soutien
+                  essentiel aux victimes, promeut la sensibilisation et propose
+                  des ressources juridiques.
+                </h4>
+                <Button>Nos Actions</Button>
               </div>
             </div>
           </div>

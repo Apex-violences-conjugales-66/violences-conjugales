@@ -1,35 +1,32 @@
-import Image from "next/image";
-import Link from "next/link";
-import { FunctionComponent } from "react";
+"use client";
+
+import { Squircle } from "corner-smoothing";
+import { FunctionComponent, ReactNode } from "react";
+import { SmoothCorners, SmoothCornersWrapper } from "react-smooth-corners";
+import { cn } from "../../../lib/utils";
 
 interface DonationCardProps {
-  title: string;
-  imageUrl: string;
-  url?: string;
+  className?: string;
+  children?: ReactNode;
 }
 
 const DonationCard: FunctionComponent<DonationCardProps> = ({
-  title,
-  imageUrl,
-  url,
+  className,
+  children,
 }) => {
-  return url ? (
-    <Link
-      href={url}
-      className="bg-white rounded-[40px] flex flex-col justify-center items-center gap-y-8 px-6 h-64 border-1"
-    >
-      <p>{title}</p>
-      <div className="h-16 w-52 relative">
-        <Image alt={title} src={imageUrl} fill />
-      </div>
-    </Link>
-  ) : (
-    <div className="bg-white rounded-[40px] flex flex-col justify-center items-center gap-y-8 px-6 h-64 border border-grey">
-      <p>{title}</p>
-      <div className="h-16 w-52 relative">
-        <Image alt={title} src={imageUrl} fill objectFit="contain" />
-      </div>
-    </div>
+  return (
+    <SmoothCornersWrapper corners="4" shadow="0px 0px 3px grey">
+      <SmoothCorners
+        corners="6"
+        as="button"
+        className={cn(
+          className,
+          "bg-white flex flex-col justify-center items-center px-6 size-60 font-bold hover:bg-blue-hover transition"
+        )}
+      >
+        {children}
+      </SmoothCorners>
+    </SmoothCornersWrapper>
   );
 };
 

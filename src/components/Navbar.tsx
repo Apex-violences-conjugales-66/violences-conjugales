@@ -27,7 +27,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({ className }) => {
           </div>
         </div>
         <Button
-          className="self-start"
+          className="self-start hidden md:block"
           variant="nav"
           size="nav"
           href="/formation"
