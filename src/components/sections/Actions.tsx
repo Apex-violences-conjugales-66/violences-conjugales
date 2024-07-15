@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FunctionComponent } from "react";
+import Accordion from "../Accordion";
 import Title from "../Title";
 
 interface ActionsProps {}
@@ -18,7 +19,9 @@ const Actions: FunctionComponent<ActionsProps> = () => {
       </div>
       <div className="container flex flex-col items-center mt-24">
         <Title>Nos Actions</Title>
-        <div></div>
+        <div>
+          <Accordion />
+        </div>
       </div>
     </>
   );
