@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FunctionComponent, ReactNode } from "react";
+import { cn } from "../../lib/utils";
 
 interface TitleProps {
   children?: ReactNode;
@@ -8,7 +9,10 @@ interface TitleProps {
 
 const Title: FunctionComponent<TitleProps> = ({ children, className }) => {
   return (
-    <div aria-label="title" className="size-fit flex flex-col relative">
+    <div
+      aria-label="title"
+      className={cn("size-fit flex flex-col relative", className)}
+    >
       <div className="flex gap-x-1">
         <Image
           className=" z-10"

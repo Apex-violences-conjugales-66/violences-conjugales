@@ -8,27 +8,36 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      grey: "#1E1E1E",
+      grey: {
+        DEFAULT: "#1E1E1E",
+        light: "#E4E4E4",
+      },
       white: "#fff",
       orange: {
         DEFAULT: "#FE945C",
-        light: "#FEA97D",
+        light: "#FFF7F0 ",
       },
       yellow: {
         DEFAULT: "#FFBD45",
-        light: "#FFCA6A",
+        light: "#FFF3DE",
       },
       blue: {
         DEFAULT: "#ADD8E6",
         green: "#13a89d",
         dark: "#1475bb",
         hover: "#6eb4cb",
+        light: "#F0FAFF",
       },
       red: {
         DEFAULT: "#CA1010",
       },
+      pink: {
+        DEFAULT: "#FFCCD6",
+        light: "#FFF0F3",
+      },
       purple: {
         DEFAULT: "#C9A2BC",
+        light: "#F0F0FF",
       },
     },
     container: {
@@ -41,7 +50,7 @@ const config: Config = {
     },
     screens: {
       sm: "450px",
-      md: "896px",
+      md: "768px",
       lg: "1024px",
       xl: "1184px",
     },

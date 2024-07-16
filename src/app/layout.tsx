@@ -5,6 +5,7 @@ import "./globals.css";
 
 import { Lato } from "next/font/google";
 import clsx from "clsx";
+import { cn } from "../../lib/utils";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(
+      className={cn(
         `${lato.variable}`,
         "font-lato text-grey text-xs leading-5 sm:text-sm md:text-base text-pretty"
       )}

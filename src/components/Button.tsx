@@ -14,7 +14,7 @@ const buttonVariants = cva(
       },
       size: {
         default: "py-2 px-10",
-        nav: "py-1 px-24",
+        nav: "py-1 px-12 xl:px-24",
       },
     },
     defaultVariants: {

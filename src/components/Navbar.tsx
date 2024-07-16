@@ -16,7 +16,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({ className }) => {
         "fixed w-full z-20 top-0 h-20 shadow-lg bg-white"
       )}
     >
-      <div className="container h-full flex items-center justify-between">
+      <div className="container h-full flex xl:grid xl:grid-cols-3 items-center justify-between">
         <div className="flex gap-x-6">
           <Link href="/" className="w-16 relative">
             <Image alt="Logo Apex" src="/vector/logo.svg" fill />
@@ -34,7 +34,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({ className }) => {
         >
           Soutenir <b>APEX</b>
         </Button>
-        <div className="flex gap-x-4">
+        <div className="flex gap-x-4 justify-end">
           <Image
             className="mt-[2px]"
             alt="search"

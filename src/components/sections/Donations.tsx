@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FunctionComponent } from "react";
-import DonationCard from "../cards/DonationCard";
+import DonationCard from "../ui/DonationCard/DonationCard";
 import Title from "../Title";
 
 interface DonationsProps {}
