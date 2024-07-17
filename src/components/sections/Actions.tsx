@@ -178,20 +178,85 @@ const Actions: FunctionComponent<ActionsProps> = () => {
               title="Les Personnes Auteures De Violences Conjugales - Service CPCA"
               className="bg-yellow-light border-yellow"
             >
-              <div>L'epade c trop bien</div>
+              <div className="space-y-2">
+                <p>
+                  Permanences et groupes de paroles hebdomadaires animés par
+                  deux intervenant.e.s sociaux d'APEX dans un lieu dédié.
+                </p>
+                <p>Entretiens individuels et accompagnement social.</p>
+                <p>Groupe de paroles 21 séances de 1h30 chacune.</p>
+                <p>
+                  Les participants sont invités à prendre conscience de
+                  l’étendue de leur violence qu'elle soit verbale,
+                  psychologique, physique, sexuelle, économique... ainsi que
+                  l’impact de cette dernière sur leurs proches et sur eux-mêmes.
+                </p>
+                <p>
+                  Cette approche peut leur permettre de passer de la notion de
+                  culpabilité à celle de responsabilité.
+                </p>
+              </div>
+              <div className="mt-8 flex gap-4 flex-col md:flex-row md:items-center justify-between">
+                <p className="font-light">
+                  Service CPCA -{" "}
+                  <span className="italic">
+                    Centre de Prise en Charge des Auteurs de violences
+                    conjugales
+                  </span>
+                </p>
+                <ContactInfo
+                  className="self-center flex-shrink-0"
+                  phone="06 70 22 90 19"
+                />
+              </div>
             </AccordionItem>
             <AccordionItem
               title="Les Adolescents Exposés Aux Violences Conjugales"
               className="bg-orange-light border-orange"
             >
-              <div>L'epade c trop bien</div>
+              <div className="flex flex-col gap-4">
+                Permanences et groupes de paroles bimensuels animés par une
+                psychologue et une intervenante sociale d'APEX, dans un lieu
+                dédié.
+                <ContactInfo
+                  className="self-center md:self-end"
+                  phone="04 68 63 50 24"
+                />
+              </div>
             </AccordionItem>
 
             <AccordionItem
               title="Prévention Chez Les Jeunes"
               className="bg-pink-light border-pink"
             >
-              <div>L'epade c trop bien</div>
+              <div className="flex flex-col space-y-4">
+                <p>
+                  La violence amoureuse des adolescents ressemble à celle qu’on
+                  retrouve chez les adultes dans les relations avec un
+                  partenaire intime, en ce qu’elle présente toutes les nuances
+                  possibles, depuis l’insulte et les mauvais traitements
+                  psychologiques, jusqu'à l’agression sexuelle et au meurtre.
+                </p>
+                <p>
+                  La prévention de la violence dans les relations amoureuses est
+                  au centre de nos préoccupations car 20% des jeunes en sont
+                  victimes.
+                </p>
+                <p>
+                  L'objectif de cette action est de promouvoir un changement des
+                  attitudes et des comportements pour prévenir le recours aux
+                  différentes formes de violences utilisées pour dominer et
+                  contrôler les partenaires amoureux.
+                </p>
+                <p className="italic font-light md:self-end">
+                  Les professeur.es et responsables de collèges et de lycées
+                  intéressé.es peuvent nous contacter
+                </p>
+                <ContactInfo
+                  className="self-center md:self-end"
+                  phone="04 68 63 50 24"
+                />
+              </div>
             </AccordionItem>
           </Accordion>
         </div>
