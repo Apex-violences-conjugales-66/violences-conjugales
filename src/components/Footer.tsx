@@ -1,20 +1,13 @@
 import { FunctionComponent } from "react";
 import Image from "next/image";
 import { Button } from "./Button";
+import Separator from "./ui/Separator";
 interface FooterProps {}
 
 const Footer: FunctionComponent<FooterProps> = () => {
   return (
-    <div aria-label="Footer">
-      <div className="relative w-full h-[376px] mb-1 mt-20">
-        <Image
-          alt="illustration"
-          src={"/vector/separator-pattern2-1920.svg"}
-          quality={100}
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </div>
+    <div className="Footer">
+      <Separator variant />
       <div className="bg-purple py-16">
         <div className="container flex flex-col gap-24 justify-between md:flex-row">
           <div className="flex flex-col gap-y-4">

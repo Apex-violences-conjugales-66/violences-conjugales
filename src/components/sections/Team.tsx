@@ -1,20 +1,13 @@
 import Image from "next/image";
 import { FunctionComponent } from "react";
+import Separator from "../ui/Separator";
 
 interface TeamProps {}
 
 const Team: FunctionComponent<TeamProps> = () => {
   return (
-    <div aria-label="Team">
-      <div className="relative w-full h-[295px]">
-        <Image
-          alt="illustration"
-          src={"/vector/separator-pattern1-1920.svg"}
-          quality={100}
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </div>
+    <div className="Team">
+      <Separator variant />
       <div className="mt-1 bg-gradient-to-r from-orange from-50% via-yellow to-yellow">
         <div className="container flex justify-center">
           <div className="bg-white min-w-1" />

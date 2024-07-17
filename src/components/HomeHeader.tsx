@@ -7,12 +7,9 @@ interface HomeHeaderProps {}
 const HomeHeader: FunctionComponent<HomeHeaderProps> = () => {
   //TODO add redirections on buttons and responsive
   return (
-    <>
+    <div className="HomeHeader">
       <div className="h-20" />
-      <div
-        aria-label="Header"
-        className="bg-gradient-to-r from-orange from-50% via-yellow to-yellow"
-      >
+      <div className="bg-gradient-to-r from-orange from-50% via-yellow to-yellow">
         <div className="h-[calc(100lvh-124px)] flex flex-col max-w-[1440px] mx-auto bg-white ">
           <div className="flex h-[450px] px-1">
             <div className="w-2/3 relative">
@@ -73,7 +70,7 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -5,24 +5,17 @@ import Accordion from "../ui/Accordion/Accordion";
 import AccordionItem from "../ui/Accordion/AccordionItem";
 import ContactInfo from "../ui/ContactInfo";
 import Divider from "../ui/Divider";
+import Separator from "../ui/Separator";
 
 interface ActionsProps {}
 
 const Actions: FunctionComponent<ActionsProps> = () => {
   return (
-    <div className="actions flex flex-col items-center">
-      <div className="relative w-full h-[295px] mt-1 rotate-180">
-        <Image
-          alt="illustration"
-          src={"/vector/separator-pattern1-1920.svg"}
-          quality={100}
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </div>
-      <Title className="mt-24">Nos Actions</Title>
-      <div className="w-full mt-24">
-        <div className="container flex flex-col items-center">
+    <div className="Actions">
+      <div className="flex flex-col items-center">
+        <Separator rotate />
+        <Title className="mt-24">Nos Actions</Title>
+        <div className="container flex flex-col items-center mt-24">
           <Accordion>
             <AccordionItem
               title="L'Escale"

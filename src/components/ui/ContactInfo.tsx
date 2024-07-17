@@ -29,7 +29,7 @@ const ContactInfo: FunctionComponent<ContactInfoProps> = ({
       {email && (
         <div className="flex items-center gap-x-2">
           <MdEmail size={24} />
-          <span className="mt-[-4px]">{email}</span>
+          <span className="-mt-1">{email}</span>
         </div>
       )}
     </div>
