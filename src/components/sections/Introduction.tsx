@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FunctionComponent } from "react";
-import { Button } from "../Button";
-import Title from "../Title";
+import { Button } from "../ui/Button";
+import Title from "../ui/Title";
 import Separator from "../ui/Separator";
 
 interface IntroductionProps {}
@@ -16,19 +16,19 @@ const Introduction: FunctionComponent<IntroductionProps> = () => {
           <div className="space-y-4">
             <p>
               APEX accueille, écoute et accompagne les personnes touchées par
-              les violences conjugales, promouvant le respect, l'égalité
+              les violences conjugales, promouvant le respect, l&rsquo;égalité
               hommes/femmes, et la confidentialité.
             </p>
             <p>
               Notre intervention repose sur le respect des victimes, en
               favorisant leur autonomie et leur sécurité. Nous incluons
               également le soutien aux enfants affectés. Notre approche met
-              l'accent sur la responsabilisation des individus, sans les
+              l&rsquo;accent sur la responsabilisation des individus, sans les
               victimiser.
             </p>
             <p>
-              En plus de nos activités d'accompagnement, nous organisons des
-              formations professionnelles dans le domaine du travail social.
+              En plus de nos activités d&rsquo;accompagnement, nous organisons
+              des formations professionnelles dans le domaine du travail social.
             </p>
           </div>
           <Button variant="orange" className="self-end">

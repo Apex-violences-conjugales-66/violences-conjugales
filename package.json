@@ -16,7 +16,6 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
-    "react-smooth-corners": "^1.0.4",
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {

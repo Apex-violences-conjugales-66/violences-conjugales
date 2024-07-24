@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FunctionComponent, ReactNode } from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 interface TitleProps {
   children?: ReactNode;

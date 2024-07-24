@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FunctionComponent } from "react";
-import Title from "../Title";
+import Title from "../ui/Title";
 import Separator from "../ui/Separator";
 import Swiper from "../ui/Swiper/Swiper";
 import SwiperCard from "../ui/Swiper/SwiperCard";
@@ -28,9 +28,9 @@ const Partners: FunctionComponent<PartnersProps> = () => {
             <SwiperCard>
               <h3>Institutionnels et financiers</h3>
               <p className="text-center">
-                Toutes nos actions s’inscrivent dans les différents plans
+                Toutes nos actions s&rsquo;inscrivent dans les différents plans
                 interministériels de lutte contre les violences faites aux
-                femmes, elles sont financées et soutenues par les acteurs
+                femmes, elles sont financées et soutenues par les acteurs
                 suivants
               </p>
               <div className="w-full flex flex-wrap grow justify-center gap-2">
@@ -104,11 +104,11 @@ const Partners: FunctionComponent<PartnersProps> = () => {
                       </li>
                       <li>Les avocats</li>
                       <li>La Maison de la justice</li>
-                      <li>La Maison d’Accès aux Droits</li>
+                      <li>La Maison d&rsquo;Accès aux Droits</li>
                       <li>France victimes 66</li>
                       <li>
-                        Le Centre d’Information des Droits de la Femme et de la
-                        Famille
+                        Le Centre d&rsquo;Information des Droits de la Femme et
+                        de la Famille
                       </li>
                     </ul>
                   </div>
@@ -122,7 +122,7 @@ const Partners: FunctionComponent<PartnersProps> = () => {
                     <ul>
                       <li>Enfance Catalane</li>
                       <li>UDAF</li>
-                      <li>Caisse d’Allocations Familiales</li>
+                      <li>Caisse d&rsquo;Allocations Familiales</li>
                       <li>Maisons Sociales de Proximité</li>
                     </ul>
                   </div>
@@ -130,18 +130,18 @@ const Partners: FunctionComponent<PartnersProps> = () => {
                   <div>
                     <h4>LOGEMENT - HEBERGEMENT</h4>
                     <li>
-                      Les Centres d’Hébergement et de Réinsertion Sociale et les
-                      services d’accueil d’urgence
+                      Les Centres d&rsquo;Hébergement et de Réinsertion Sociale
+                      et les services d&rsquo;accueil d&rsquo;urgence
                     </li>
                     <li>Habitat humanisme</li>
-                    <li>L’Agence Immobilière à Vocation Sociale</li>
-                    <li>L'Office 66 HLM</li>
+                    <li>L&rsquo;Agence Immobilière à Vocation Sociale</li>
+                    <li>L&rsquo;Office 66 HLM</li>
                   </div>
                   <Divider horizontal visible />
                   <div>
                     <h4>AIDE AUX MIGRANTS</h4>
                     <ul>
-                      <li>L’ASTI</li>
+                      <li>L&rsquo;ASTI</li>
                       <li>La Cimade</li>
                     </ul>
                   </div>

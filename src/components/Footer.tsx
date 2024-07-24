@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import Image from "next/image";
-import { Button } from "./Button";
+import { Button } from "./ui/Button";
 import Separator from "./ui/Separator";
 interface FooterProps {}
 
@@ -51,7 +51,7 @@ const Footer: FunctionComponent<FooterProps> = () => {
                   fill
                 />
               </div>
-              <h4>Effacer l'historique</h4>
+              <h4>Effacer l&rsquo;historique</h4>
             </div>
             <div className="flex items-center gap-x-4">
               <h5>

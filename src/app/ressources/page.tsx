@@ -1,3 +1,9 @@
-export default function Home() {
-  return <div>Hello, ressources</div>;
-}
+import { FunctionComponent } from "react";
+
+interface RessourcesProps {}
+
+const Ressources: FunctionComponent<RessourcesProps> = () => {
+  return <></>;
+};
+
+export default Ressources;
