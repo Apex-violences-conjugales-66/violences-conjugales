@@ -1,18 +1,11 @@
-import SectionRenderer from "@/components/SectionRenderer";
+import PageTemplate from "@/components/PageTemplate";
 import { FunctionComponent } from "react";
-import { getPageData, PageData } from "../../../lib/data";
 
 interface ProjetAssociatifProps {}
 
 const ProjetAssociatif: FunctionComponent<ProjetAssociatifProps> = () => {
-  const page: PageData = getPageData("projet-associatif");
-  return (
-    <>
-      {page.sections.map((section, index) => (
-        <SectionRenderer key={index} section={section} />
-      ))}
-    </>
-  );
+  const name = "projet-associatif";
+  return <PageTemplate name={name} />;
 };
 
 export default ProjetAssociatif;

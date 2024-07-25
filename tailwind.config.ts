@@ -57,6 +57,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         lato: ["var(--font-lato)"],
+        gothic: ["var(--font-gothic)"],
       },
       backgroundImage: {
         "flower-pattern": "url('/flower-pattern.jpg')",

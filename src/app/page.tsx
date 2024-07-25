@@ -1,19 +1,11 @@
-import HomeHeader from "@/components/HomeHeader";
-import Actions from "@/components/sections/Actions";
-import Donations from "@/components/sections/Donations";
-import Introduction from "@/components/sections/Introduction";
-import Partners from "@/components/sections/Partners";
-import Team from "@/components/sections/Team";
+import PageTemplate from "@/components/PageTemplate";
+import { FunctionComponent } from "react";
 
-export default function Home() {
-  return (
-    <>
-      <HomeHeader />
-      <Donations />
-      <Introduction />
-      <Team />
-      <Actions />
-      <Partners />
-    </>
-  );
-}
+interface HomeProps {}
+
+const Home: FunctionComponent<HomeProps> = () => {
+  const name = "home";
+  return <PageTemplate name={name} />;
+};
+
+export default Home;

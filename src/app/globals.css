@@ -22,6 +22,9 @@ ul {
     @apply text-lg sm:text-xl font-bold;
   }
   h5 {
-    @apply text-lg sm:text-xl font-light;
+    @apply text-lg sm:text-xl;
+  }
+  h6 {
+    @apply sm:text-lg ml-2;
   }
 }

@@ -1,0 +1,22 @@
+{
+  "sections": [
+    {
+      "name": "home-header"
+    },
+    {
+      "name": "donations"
+    },
+    {
+      "name": "introduction"
+    },
+    {
+      "name": "team"
+    },
+    {
+      "name": "actions"
+    },
+    {
+      "name": "partners"
+    }
+  ]
+}

@@ -1,3 +1,11 @@
-export default function Home() {
-  return <div>Hello, formation</div>;
-}
+import PageTemplate from "@/components/PageTemplate";
+import { FunctionComponent } from "react";
+
+interface FormationProps {}
+
+const Formation: FunctionComponent<FormationProps> = () => {
+  const name = "formation";
+  return <PageTemplate name={name} />;
+};
+
+export default Formation;

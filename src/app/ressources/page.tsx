@@ -1,9 +1,11 @@
+import PageTemplate from "@/components/PageTemplate";
 import { FunctionComponent } from "react";
 
 interface RessourcesProps {}
 
 const Ressources: FunctionComponent<RessourcesProps> = () => {
-  return <></>;
+  const name = "ressources";
+  return <PageTemplate name={name} />;
 };
 
 export default Ressources;

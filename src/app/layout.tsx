@@ -3,14 +3,19 @@ import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { Lato } from "next/font/google";
-import clsx from "clsx";
+import { Lato, League_Gothic } from "next/font/google";
 import { cn } from "../../lib/utils";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
   subsets: ["latin"],
   variable: "--font-lato",
+});
+
+const league_gothic = League_Gothic({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-gothic",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +33,8 @@ export default function RootLayout({
       lang="en"
       className={cn(
         `${lato.variable}`,
-        "font-lato text-grey text-xs leading-5 sm:text-sm md:text-base text-pretty"
+        `${league_gothic.variable}`,
+        "font-lato text-grey text-xs leading-5 sm:text-sm md:text-base text-pretty scroll-smooth"
       )}
     >
       <body>
