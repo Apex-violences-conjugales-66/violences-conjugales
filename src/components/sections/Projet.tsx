@@ -26,14 +26,14 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           </Link>
           <h6>1. Présentation de l&rsquo;équipe</h6>
           <h6>2. Les valeurs et principes d&rsquo;intervention</h6>
-          <h6>3. L'organisation</h6>
+          <h6>3. L&rsquo;organisation</h6>
           <Link href="#title-3">
             <h5>
               III - ACCOMPAGNEMENT DES PERSONNES EN PRISE AVEC LES VIOLENCES
               CONJUGALES
             </h5>
           </Link>
-          <h6>1. L'Escale</h6> <h6>2. Les Jeunes de 12 à 18 ans</h6>
+          <h6>1. L&rsquo;Escale</h6> <h6>2. Les Jeunes de 12 à 18 ans</h6>
           <h6>3. Les personnes auteures de violences conjugales</h6>
           <Link href="#title-4">
             <h5>IV - FINANCEURS ET PARTENAIRES</h5>
@@ -76,14 +76,14 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           et mettre en œuvre toute action éducative et d&rsquo;enseignement,
           études, recherches et expérimentation en matière de développement
           économique et humain et notamment en matière de violences conjugales.
-          <br /> L'association est dirigée par un conseil d&rsquo;administration
-          qui est composé de 2 à 10 membres élus par l&rsquo;assemblée générale
-          parmi les membres de l'association. Les membres du conseil
-          d&rsquo;administration sont élus pour 2 ans ; ils sont rééligibles. Le
-          conseil d&rsquo;administration se réunit au minimum 2 fois par an. Le
-          conseil d&rsquo;administration élit en son sein un bureau qui a pour
-          seule fonction la gestion courante de l'association. Il est composé de
-          2 à 3 personnes.
+          <br /> L&rsquo;association est dirigée par un conseil
+          d&rsquo;administration qui est composé de 2 à 10 membres élus par
+          l&rsquo;assemblée générale parmi les membres de l&rsquo;association.
+          Les membres du conseil d&rsquo;administration sont élus pour 2 ans ;
+          ils sont rééligibles. Le conseil d&rsquo;administration se réunit au
+          minimum 2 fois par an. Le conseil d&rsquo;administration élit en son
+          sein un bureau qui a pour seule fonction la gestion courante de
+          l&rsquo;association. Il est composé de 2 à 3 personnes.
           <br /> Devra être présent lors des réunions au minimum un salarié de
           l&rsquo;association.
           <br /> L&rsquo;association se compose de : membres actifs, membres
@@ -161,16 +161,16 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           confidentialité des échanges et de l&rsquo;identité des personnes
           accueillies, croyance à la remobilisation des ressources intérieures
           existantes, partenariat.
-          <br /> Nos principes d'interventions sont les suivants :<br /> La
-          violence, quel qu&rsquo;en soit la forme, ne peut être tolérée et doit
-          être punie par la loi. C&rsquo;est un moyen choisi pour dominer une
-          autre personne.
+          <br /> Nos principes d&rsquo;interventions sont les suivants :<br />{" "}
+          La violence, quel qu&rsquo;en soit la forme, ne peut être tolérée et
+          doit être punie par la loi. C&rsquo;est un moyen choisi pour dominer
+          une autre personne.
           <br /> Les notions de sécurité et de protection sont primordiales au
           sein de l&rsquo;association. Elles permettent aux personnes
           accueillies de trouver un espace qui leur est dédié.
           <br /> L&rsquo;accompagnement se déroule dans le respect de la
           personne, de son rythme, de son autonomie, en prenant en compte ses
-          capacités afin qu'elle puisse reprendre le contrôle de sa vie.
+          capacités afin qu&rsquo;elle puisse reprendre le contrôle de sa vie.
           <br />
           L&rsquo;accueil des enfants, victimes collatérales de la violence
           conjugale, est pris en compte. Nous nous assurons qu&rsquo;il se
@@ -197,7 +197,7 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           social. Certains membres de l&rsquo;équipe co-animent d&rsquo;ailleurs
           les formations dispensées par Option.
         </p>
-        <h5>3. L'organisation</h5>
+        <h5>3. L&rsquo;organisation</h5>
         <p>
           L&rsquo;équipe accueille les personnes dans des services et espaces
           différenciés :
@@ -275,7 +275,7 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           </Link>
         </div>
 
-        <h5>1. L'Escale</h5>
+        <h5>1. L&rsquo;Escale</h5>
         <p>
           L&rsquo;Escale est un lieu ressource pour les femmes victimes ou ayant
           été victimes de violences conjugales, accompagnées ou non
@@ -291,12 +291,13 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           de jeux pour l&rsquo;accueil des enfants. Un grand garage nous permet
           la mise en place d&rsquo;ateliers. Il peut aussi temporairement, sous
           certaines conditions, servir de dépôt d&rsquo;affaires pour les femmes
-          en attente d&rsquo;un hébergement. L'Escale est conçue pour être un
-          lieu convivial et chaleureux, où les femmes, accompagnées ou non
+          en attente d&rsquo;un hébergement. L&rsquo;Escale est conçue pour être
+          un lieu convivial et chaleureux, où les femmes, accompagnées ou non
           d&rsquo;enfants, viennent autant de fois qu&rsquo;elles le souhaitent,
-          au rythme qui leur convient, et restent le temps qu'elles souhaitent,
-          pour échanger entre elles (et avec l'intervenant si nécessaire) ou
-          tout simplement pour bénéficier d'un moment de calme.
+          au rythme qui leur convient, et restent le temps qu&rsquo;elles
+          souhaitent, pour échanger entre elles (et avec l&rsquo;intervenant si
+          nécessaire) ou tout simplement pour bénéficier d&rsquo;un moment de
+          calme.
           <br /> Certaines femmes accueillies en urgence, viennent passer la
           journée à l&rsquo;Escale.
           <br /> Les personnes contactent l&rsquo;Escale, soit pour un entretien
@@ -322,7 +323,7 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           <br /> En ce qui concerne les femmes vivant hors département nous
           recherchons des lieux proches de leur domicile afin qu&rsquo;elles
           puissent prendre contact avec des professionnels ou avec le 3919.
-          <br /> Notre soutien s'effectue à partir :
+          <br /> Notre soutien s&rsquo;effectue à partir :
         </p>
         <ul>
           <li> D&rsquo;entretiens individuels. </li>
@@ -455,9 +456,9 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           évènements. Nous avons également un soutien ponctuel des « Cargolettes
           du désert ». L&rsquo;argent récolté profite directement aux femmes
           (secours d&rsquo;urgence, repas, sortie, carte de bus…etc).
-          <br /> Nos actions s'inscrivent dans les différents plans triennaux
-          contre les violences conjugales proposés par l&rsquo;Etat dont le
-          dernier est 2017-2019.
+          <br /> Nos actions s&rsquo;inscrivent dans les différents plans
+          triennaux contre les violences conjugales proposés par l&rsquo;Etat
+          dont le dernier est 2017-2019.
           <br /> Nous sommes signataires :
         </p>
         <ul>
@@ -470,8 +471,10 @@ const Projet: FunctionComponent<ProjetProps> = () => {
             Du protocole sur la « Prévention de la récidive et traitement des
             personnes auteures de violences conjugales »
           </li>
-          <li>D'une convention avec le SPIP </li>
-          <li>D'une convention de partenariat avec le CHRS Mares I Nens </li>
+          <li>D&rsquo;une convention avec le SPIP </li>
+          <li>
+            D&rsquo;une convention de partenariat avec le CHRS Mares I Nens{" "}
+          </li>
           <li>
             De la Convention locale relative au traitement des mains courantes
             et des procès-verbaux de renseignements judiciaires
@@ -488,8 +491,8 @@ const Projet: FunctionComponent<ProjetProps> = () => {
             familiales
           </li>
           <li>
-            D&rsquo;une convention avec l'A.E.P.I. (Association Espace Polygone
-            Insertion)
+            D&rsquo;une convention avec l&rsquo;A.E.P.I. (Association Espace
+            Polygone Insertion)
           </li>
         </ul>
         <p>Nos principaux partenaires</p>
@@ -533,11 +536,11 @@ const Projet: FunctionComponent<ProjetProps> = () => {
         </ul>
         <p>
           Apex adhère à l&rsquo;UDAF, à la Fédération Nationale des Associations
-          et des Centres de prise en charge d'Auteurs de Violences Conjugales et
-          Familiales, au Collectif Droit Des Femmes 66, au Planning Familial 66
-          et 11, au Collectif Femmes Immigrées victimes de violences conjugales,
-          et aux associations : MRAP, France Victimes 66, LGBT+66,
-          L&rsquo;Amicale du Nid, Parenthèse, le Fil à Métisser, Femmes
+          et des Centres de prise en charge d&rsquo;Auteurs de Violences
+          Conjugales et Familiales, au Collectif Droit Des Femmes 66, au
+          Planning Familial 66 et 11, au Collectif Femmes Immigrées victimes de
+          violences conjugales, et aux associations : MRAP, France Victimes 66,
+          LGBT+66, L&rsquo;Amicale du Nid, Parenthèse, le Fil à Métisser, Femmes
           Solidaires 66, IDEM Question de Genre, ACAM-Point Rencontre 66,
           l&rsquo;Enfant Majuscule, le Relais Enfants Parents - Pyrénées
           Catalane, , Il faudra leur dire, ASSOSPHERE et ADESOL.

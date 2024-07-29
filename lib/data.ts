@@ -1,10 +1,17 @@
 import fs from "fs";
 import path from "path";
 
+export interface Memoir {
+  author: string;
+  title: string;
+  description: string;
+}
+
 export interface Section {
   name: string;
   title?: string;
   reverse?: boolean;
+  memoirs?: Memoir[];
 }
 
 export interface PageData {

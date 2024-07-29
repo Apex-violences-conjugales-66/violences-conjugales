@@ -11,16 +11,15 @@ interface ActionsProps {}
 
 const Actions: FunctionComponent<ActionsProps> = () => {
   return (
-    <div className="Actions">
+    <div className="Actions ">
       <div className="flex flex-col items-center">
         <Separator rotate />
-        <Title className="mt-24">Nos Actions</Title>
+        <Title id="actions" className="mt-24 scroll-mt-28">
+          Nos Actions
+        </Title>
         <div className="container flex flex-col items-center mt-24">
           <Accordion>
-            <AccordionItem
-              title="L'Escale"
-              className="bg-blue-light border-blue"
-            >
+            <AccordionItem title="L'Escale" color="blue">
               <div className="flex flex-col gap-y-4">
                 <p>
                   Un lieu de soutien dédié aux femmes victimes ou ayant été
@@ -85,10 +84,7 @@ const Actions: FunctionComponent<ActionsProps> = () => {
                 />
               </div>
             </AccordionItem>
-            <AccordionItem
-              title="Ateliers"
-              className="bg-purple-light border-purple"
-            >
+            <AccordionItem title="Ateliers" color="purple">
               <div className="flex flex-col gap-y-4">
                 <p>
                   L&rsquo;Escale offre un cadre propice à l&rsquo;expression, à
@@ -171,7 +167,7 @@ const Actions: FunctionComponent<ActionsProps> = () => {
             </AccordionItem>
             <AccordionItem
               title="Les Personnes Auteures De Violences Conjugales - Service CPCA"
-              className="bg-yellow-light border-yellow"
+              color="yellow"
             >
               <div className="space-y-2">
                 <p>
@@ -208,7 +204,7 @@ const Actions: FunctionComponent<ActionsProps> = () => {
             </AccordionItem>
             <AccordionItem
               title="Les Adolescents Exposés Aux Violences Conjugales"
-              className="bg-orange-light border-orange"
+              color="orange"
             >
               <div className="flex flex-col gap-4">
                 Permanences et groupes de paroles bimensuels animés par une
@@ -220,11 +216,7 @@ const Actions: FunctionComponent<ActionsProps> = () => {
                 />
               </div>
             </AccordionItem>
-
-            <AccordionItem
-              title="Prévention Chez Les Jeunes"
-              className="bg-pink-light border-pink"
-            >
+            <AccordionItem title="Prévention Chez Les Jeunes" color="pink">
               <div className="flex flex-col space-y-4">
                 <p>
                   La violence amoureuse des adolescents ressemble à celle

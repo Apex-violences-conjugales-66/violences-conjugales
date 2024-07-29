@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { FunctionComponent } from "react";
 import { cn } from "../../../lib/utils";
-import Divider from "../ui/Divider";
 import Separator from "../ui/Separator";
 
 interface HeaderProps {

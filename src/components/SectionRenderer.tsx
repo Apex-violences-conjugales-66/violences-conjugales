@@ -8,6 +8,9 @@ import Donations from "@/components/sections/Donations";
 import Introduction from "@/components/sections/Introduction";
 import Partners from "@/components/sections/Partners";
 import Team from "@/components/sections/Team";
+import Documents from "./sections/Documents";
+import Memoires from "./sections/Memoires";
+import Mediagraphie from "./sections/Mediagraphie";
 
 interface SectionRendererProps {
   section: Section;
@@ -33,6 +36,12 @@ const SectionRenderer: FunctionComponent<SectionRendererProps> = ({
       return <Partners />;
     case "team":
       return <Team />;
+    case "documents":
+      return <Documents />;
+    case "memoires":
+      return <Memoires memoirs={section.memoirs} />;
+    case "mediagraphie":
+      return <Mediagraphie />;
     default:
       return null;
   }

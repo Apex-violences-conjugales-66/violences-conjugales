@@ -40,7 +40,9 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = () => {
                   L’équipe d’<span className="font-black">APEX</span> est
                   dévouée à la lutte contre les violences conjugales.
                 </h4>
-                <Button className="self-start">Notre Équipe</Button>
+                <Button className="self-start" href="#team">
+                  Notre Équipe
+                </Button>
               </div>
               <div className=" bg-white min-w-1" />
               <div className="bg-yellow flex flex-col pl-20 items-end justify-center gap-y-14">
@@ -49,7 +51,7 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = () => {
                   essentiel aux victimes, promeut la sensibilisation et propose
                   des ressources juridiques.
                 </h4>
-                <Button>Nos Actions</Button>
+                <Button href="#actions">Nos Actions</Button>
               </div>
             </div>
           </div>

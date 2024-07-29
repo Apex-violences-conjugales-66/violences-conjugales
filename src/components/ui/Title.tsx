@@ -3,16 +3,14 @@ import { FunctionComponent, ReactNode } from "react";
 import { cn } from "../../../lib/utils";
 
 interface TitleProps {
+  id?: string;
   children?: ReactNode;
   className?: string;
 }
 
-const Title: FunctionComponent<TitleProps> = ({ children, className }) => {
+const Title: FunctionComponent<TitleProps> = ({ id, children, className }) => {
   return (
-    <div
-      aria-label="title"
-      className={cn("size-fit flex flex-col relative", className)}
-    >
+    <div id={id} className={cn("size-fit flex flex-col relative", className)}>
       <div className="flex gap-x-1">
         <Image
           className=" z-10"

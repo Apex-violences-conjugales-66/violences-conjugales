@@ -4,6 +4,52 @@
       "name": "header",
       "title": "NOS RESSOURCES",
       "reverse": false
+    },
+    {
+      "name": "documents"
+    },
+    {
+      "name": "memoires",
+      "memoirs": [
+        {
+          "author": "Karine MATHON",
+          "title": "Violences  conjugales dans les Pyrénées Orientales : Quelles sont les attentes des  femmes victimes de violences conjugales envers le médecin généraliste ?",
+          "description": "Thèse pour l'obtention du titre Docteure en Médecine - Sous la direction de François OLIVET"
+        },
+        {
+          "author": "Agnès Glory",
+          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
+          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+        },
+        {
+          "author": "Alexia Ridez",
+          "title": "Relation Mère-Enfant dans les situations de violences conjugales",
+          "description": "Mémoire du Master 1 Psychologie Clinique et Psychopathologie - Réflexions sur la relation entre les enfants en difficulté et leur mère dans un contexte de violences conjugales."
+        },
+        {
+          "author": "Agnès Glory",
+          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
+          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+        },
+        {
+          "author": "Agnès Glory",
+          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
+          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+        },
+        {
+          "author": "Alexia Ridez",
+          "title": "Relation Mère-Enfant dans les situations de violences conjugales",
+          "description": "Mémoire du Master 1 Psychologie Clinique et Psychopathologie - Réflexions sur la relation entre les enfants en difficulté et leur mère dans un contexte de violences conjugales."
+        },
+        {
+          "author": "Agnès Glory",
+          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
+          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+        }
+      ]
+    },
+    {
+      "name": "mediagraphie"
     }
   ]
 }

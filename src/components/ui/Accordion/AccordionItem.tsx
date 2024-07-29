@@ -8,12 +8,14 @@ interface AccordionItemProps {
   className?: string;
   title: string;
   children: ReactNode;
+  color: "orange" | "blue" | "yellow" | "purple" | "pink";
 }
 
 const AccordionItem: FunctionComponent<AccordionItemProps> = ({
   className,
   title,
   children,
+  color = "orange",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => {
@@ -21,11 +23,18 @@ const AccordionItem: FunctionComponent<AccordionItemProps> = ({
   };
 
   return (
-    <div className={cn("border rounded-md mb-3", className)}>
+    <div
+      className={cn(
+        "border rounded-md mb-3",
+        `bg-${color}-light border-${color}`,
+        className
+      )}
+    >
       <button
         className={cn(
           "w-full relative text-left py-4 transition-all px-6",
-          "hover:bg-grey-light hover:rounded-t-sm"
+          `hover:bg-${color}`,
+          isOpen && `bg-${color}`
         )}
         onClick={toggleOpen}
       >
