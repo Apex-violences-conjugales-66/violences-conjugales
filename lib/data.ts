@@ -1,17 +1,15 @@
+import { Book, Movie } from "@/components/sections/Mediagraphie";
+import { Memoir } from "@/components/sections/Memoires";
 import fs from "fs";
 import path from "path";
-
-export interface Memoir {
-  author: string;
-  title: string;
-  description: string;
-}
 
 export interface Section {
   name: string;
   title?: string;
   reverse?: boolean;
-  memoirs?: Memoir[];
+  memoirs: Memoir[];
+  books: Book[];
+  movies: Movie[];
 }
 
 export interface PageData {

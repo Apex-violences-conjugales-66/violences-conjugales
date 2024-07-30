@@ -12,44 +12,103 @@
       "name": "memoires",
       "memoirs": [
         {
-          "author": "Karine MATHON",
+          "author": "elem 1",
           "title": "Violences  conjugales dans les Pyrénées Orientales : Quelles sont les attentes des  femmes victimes de violences conjugales envers le médecin généraliste ?",
           "description": "Thèse pour l'obtention du titre Docteure en Médecine - Sous la direction de François OLIVET"
         },
         {
-          "author": "Agnès Glory",
+          "author": "elem 2",
           "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
           "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
         },
         {
-          "author": "Alexia Ridez",
+          "author": "elem 3",
+          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
+          "description": "Mémoire"
+        },
+        {
+          "author": "elem 4",
           "title": "Relation Mère-Enfant dans les situations de violences conjugales",
           "description": "Mémoire du Master 1 Psychologie Clinique et Psychopathologie - Réflexions sur la relation entre les enfants en difficulté et leur mère dans un contexte de violences conjugales."
         },
         {
-          "author": "Agnès Glory",
+          "author": "elem 5",
           "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
           "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
         },
         {
-          "author": "Agnès Glory",
+          "author": "elem 6",
           "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
           "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
         },
         {
-          "author": "Alexia Ridez",
+          "author": "elem 7",
+          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
+          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+        },
+        {
+          "author": "elem 8",
           "title": "Relation Mère-Enfant dans les situations de violences conjugales",
           "description": "Mémoire du Master 1 Psychologie Clinique et Psychopathologie - Réflexions sur la relation entre les enfants en difficulté et leur mère dans un contexte de violences conjugales."
         },
         {
-          "author": "Agnès Glory",
+          "author": "elem 9",
+          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
+          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+        },
+        {
+          "author": "elem 10",
+          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
+          "description": "Mémoire"
+        },
+        {
+          "author": "elem 11",
+          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
+          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+        },
+        {
+          "author": "elem 12",
           "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
           "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
         }
       ]
     },
     {
-      "name": "mediagraphie"
+      "name": "mediagraphie",
+      "books": [
+        {
+          "author": "BADINTER, E.",
+          "title": "L'un est l'autre",
+          "description": "Paris : ED. Jacob, 1986, 360 p"
+        },
+        {
+          "author": "BENSADON, N.",
+          "title": "Les droits de la femme des origines à nos jours.",
+          "description": "Paris : P.U.F. Que sais-je N° 1842, 1990 3èmè édition."
+        }
+      ],
+      "movies": [
+        {
+          "title": "Anna",
+          "description": "Johanna BEDEAU et Laurent BENAÏM, MIPROF, 2013, www.stop-violences-femmes.gouv.fr"
+        },
+        {
+          "title": "Fred et Marie",
+          "description": "Fédération de Wallonie, www.fredetmarie.be"
+        },
+        {
+          "title": "Jusqu’à la garde",
+          "description": "Xavier LEGRAND, 2017"
+        },
+        {
+          "title": "Ne dis rien",
+          "description": "Iciar BOLLAIN, 2004"
+        },
+        {
+          "title": "L’Emprise",
+          "description": "Claude-Michel ROME, 2015"
+        }
+      ]
     }
   ]
 }

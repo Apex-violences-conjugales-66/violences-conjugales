@@ -41,7 +41,7 @@ const SectionRenderer: FunctionComponent<SectionRendererProps> = ({
     case "memoires":
       return <Memoires memoirs={section.memoirs} />;
     case "mediagraphie":
-      return <Mediagraphie />;
+      return <Mediagraphie books={section.books} movies={section.movies} />;
     default:
       return null;
   }

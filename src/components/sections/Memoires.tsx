@@ -1,45 +1,47 @@
 import { FunctionComponent } from "react";
+import ContactInfo from "../ui/ContactInfo";
 import MemoirCard from "../ui/MemoirCard";
 import Title from "../ui/Title";
 
-interface Memoir {
+export interface Memoir {
   author: string;
   title: string;
   description: string;
 }
 
 interface MemoiresProps {
-  memoirs?: Memoir[];
+  memoirs: Memoir[];
 }
 
 const Memoires: FunctionComponent<MemoiresProps> = ({ memoirs }) => {
+  const n = memoirs.length;
+
   return (
     <div className="Memoires">
-      <div className="container flex flex-col items-center">
-        <Title>Mémoires</Title>
-        <p className="text-center">
-          APEX n&rsquo;est pas responsable du contenu des mémoires. Les
-          auteur.es restent maître.sses de leurs écrits. Vous trouverez
-          ci-dessous les titres, les types de mémoire et les auteur.es des
-          textes qui peuvent vous intéresser. Leur intégralité est disponible en
-          téléchargement.Par ailleurs si vous utilisez une partie des mémoires
-          pour vos propres travaux n&rsquo;oubliez pas d&rsquo;en citer les
-          auteur.es.Enfin, si des aspects des études restent en suspend, il est
-          possible d&rsquo;interroger les auteurs. Contactez nous, APEX fera son
-          possible pour leur transmettre les questions.
-        </p>
-        <div className="columns-3 gap-6 py-6">
-          {memoirs &&
-            memoirs.map((memoir, index) => (
-              <MemoirCard
-                className="w-full overflow-hidden mb-6"
-                key={index}
-                author={memoir.author}
-                title={memoir.title}
-                description={memoir.description}
-              />
-            ))}
+      <div className="container flex flex-col items-center gap-10">
+        <Title className="self-center">Mémoires</Title>
+        <div className="columns-1 gap-6 md:columns-2 xl:columns-3 [&>div]:overflow-hidden [&>div]:mb-6">
+          {memoirs.map((memoir, index) => (
+            <MemoirCard
+              key={index}
+              author={memoir.author}
+              title={memoir.title}
+              description={memoir.description}
+            />
+          ))}
         </div>
+        <p className="font-light flex flex-col text-center">
+          APEX n&rsquo;est pas responsable du contenu des mémoires.
+          <br />
+          <br />
+          Par ailleurs si vous utilisez une partie des mémoires pour vos propres
+          travaux n&rsquo;oubliez pas d&rsquo;en citer les auteur.es.
+          <br /> Si des aspects des études restent en suspend, il est possible
+          d&rsquo;interroger les auteurs <br />
+          Contactez nous, APEX fera son possible pour leur transmettre les
+          questions.
+        </p>
+        <ContactInfo phone="04 68 63 50 24" />
       </div>
     </div>
   );
