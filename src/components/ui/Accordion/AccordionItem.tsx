@@ -22,19 +22,41 @@ const AccordionItem: FunctionComponent<AccordionItemProps> = ({
     setIsOpen(!isOpen);
   };
 
+  const wrapperColorVariants = {
+    orange: "bg-orange-light border-orange",
+    blue: "bg-blue-light border-blue",
+    yellow: "bg-yellow-light border-yellow",
+    purple: "bg-purple-light border-purple",
+    pink: "bg-pink-light border-pink",
+  };
+  const bgColorVariants = {
+    orange: "bg-orange",
+    blue: "bg-blue",
+    yellow: "bg-yellow",
+    purple: "bg-purple",
+    pink: "bg-pink",
+  };
+  const hoverBgColorVariants = {
+    orange: "hover:bg-orange",
+    blue: "hover:bg-blue",
+    yellow: "hover:bg-yellow",
+    purple: "hover:bg-purple",
+    pink: "hover:bg-pink",
+  };
+
   return (
     <div
       className={cn(
         "border rounded-md mb-3",
-        `bg-${color}-light border-${color}`,
+        `${wrapperColorVariants[color]}`,
         className
       )}
     >
       <button
         className={cn(
           "w-full relative text-left py-4 transition-all px-6",
-          `hover:bg-${color}`,
-          isOpen && `bg-${color}`
+          `${hoverBgColorVariants[color]}`,
+          isOpen && `${bgColorVariants[color]}`
         )}
         onClick={toggleOpen}
       >

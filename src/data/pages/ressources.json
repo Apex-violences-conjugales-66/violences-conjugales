@@ -85,19 +85,56 @@
           "author": "BENSADON, N.",
           "title": "Les droits de la femme des origines à nos jours.",
           "description": "Paris : P.U.F. Que sais-je N° 1842, 1990 3èmè édition."
+        },
+        {
+          "author": "BOURDIEU P.",
+          "title": "La domination masculine",
+          "description": " Seuil, Paris, 1998, 142 pages."
+        },
+        {
+          "author": "BROUE J.",
+          "title": "GUEVREMONT, C. (Dir), 1989. Quand l'amour fait mal. Montréal",
+          "description": "Editions Saint-Martin."
+        },
+        {
+          "author": "BROUE J. GUEVREMONT C.",
+          "title": "Intervenir auprès des conjoints violents",
+          "description": "Ed. St Martin, Montréal, 1992, 117 pages."
+        },
+        {
+          "author": "CHESNAIS J-C.",
+          "title": "Histoire de la violence",
+          "description": "Laffont, Paris, 1981, 436 pages."
+        },
+        {
+          "author": "COLLECTIF",
+          "title": "Violence en famille : conflits privés, pudeurs publiques, les cahiers de la sécurité intérieure",
+          "description": "Paris, 1997, 259 pages."
+        },
+        {
+          "author": "COLLECTIF NATIONAL POUR LES DROITS DES FEMMES",
+          "title": "Contre les violences faites aux femmes une loi- cadre"
+        },
+        {
+          "author": "COUTENCEAU R",
+          "title": "Amour et violence : le défi de l'intimité"
         }
       ],
       "movies": [
         {
           "title": "Anna",
-          "description": "Johanna BEDEAU et Laurent BENAÏM, MIPROF, 2013, www.stop-violences-femmes.gouv.fr"
+          "description": "Johanna BEDEAU et Laurent BENAÏM, MIPROF, 2013",
+          "href": "https://arretonslesviolences.gouv.fr/",
+          "siteName": "arretonslesviolences.gouv.fr"
         },
         {
           "title": "Fred et Marie",
-          "description": "Fédération de Wallonie, www.fredetmarie.be"
+          "description": "Fédération de Wallonie",
+          "href": "http://www.fredetmarie.be/",
+          "siteName": "www.fredetmarie.be"
         },
         {
-          "title": "Jusqu’à la garde",
+          "title": "Jusqu'à la garde",
           "description": "Xavier LEGRAND, 2017"
         },
         {
@@ -105,7 +142,7 @@
           "description": "Iciar BOLLAIN, 2004"
         },
         {
-          "title": "L’Emprise",
+          "title": "L'Emprise",
           "description": "Claude-Michel ROME, 2015"
         }
       ]

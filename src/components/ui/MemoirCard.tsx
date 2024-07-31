@@ -5,7 +5,7 @@ interface MemoirCardProps {
   className?: string;
   author: string;
   title: string;
-  description: string;
+  description?: string;
 }
 
 const MemoirCard: FunctionComponent<MemoirCardProps> = ({
@@ -29,10 +29,12 @@ const MemoirCard: FunctionComponent<MemoirCardProps> = ({
         <span className="text-lg sm:text-xl font-bold">Titre : </span>
         {title}
       </div>
-      <div>
-        <span className="text-lg sm:text-xl font-bold">Description : </span>
-        {description}
-      </div>
+      {description && (
+        <div>
+          <span className="text-lg sm:text-xl font-bold">Description : </span>
+          {description}
+        </div>
+      )}
     </div>
   );
 };
