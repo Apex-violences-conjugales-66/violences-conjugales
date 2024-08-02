@@ -7,13 +7,24 @@ export interface Document {
   docPath: string;
 }
 
-interface DocumentsProps {}
+interface DocumentsProps {
+  documents: Document[];
+}
 
-const Documents: FunctionComponent<DocumentsProps> = () => {
+const Documents: FunctionComponent<DocumentsProps> = ({ documents }) => {
   return (
     <div className="Documents">
       <div className="container flex flex-col gap-10">
         <Title>Doc. Institutions</Title>
+        {documents.map((document, index) => (
+          <div key={index}>
+            <h2>{document.title}</h2>
+            <img src={document.imagePath} />
+            <a className="underline" href={document.docPath}>
+              Lien vers le document
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );

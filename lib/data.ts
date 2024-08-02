@@ -1,3 +1,4 @@
+import { Document } from "@/components/sections/Documents";
 import { Book, Movie } from "@/components/sections/Mediagraphie";
 import { Memoir } from "@/components/sections/Memoires";
 import fs from "fs";
@@ -10,6 +11,7 @@ export interface Section {
   memoirs: Memoir[];
   books: Book[];
   movies: Movie[];
+  documents: Document[];
 }
 
 export interface PageData {
