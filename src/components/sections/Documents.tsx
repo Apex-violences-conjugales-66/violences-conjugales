@@ -1,6 +1,12 @@
 import { FunctionComponent } from "react";
 import Title from "../ui/Title";
 
+export interface Document {
+  title: string;
+  imagePath: string;
+  docPath: string;
+}
+
 interface DocumentsProps {}
 
 const Documents: FunctionComponent<DocumentsProps> = () => {

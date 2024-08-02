@@ -6,7 +6,14 @@
       "reverse": false
     },
     {
-      "name": "documents"
+      "name": "documents",
+      "documents": [
+        {
+          "title": "document 1",
+          "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg",
+          "docPath": "/ressources/masculinite_a_l_epreuve_de_la_loi.pdf"
+        }
+      ]
     },
     {
       "name": "memoires",
