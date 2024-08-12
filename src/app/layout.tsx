@@ -37,13 +37,7 @@ export default function RootLayout({
         "font-lato text-grey text-xs leading-5 sm:text-sm md:text-base text-pretty scroll-smooth"
       )}
     >
-      <body>
-        <div className="LayoutWrapper">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

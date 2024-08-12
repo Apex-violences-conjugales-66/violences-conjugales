@@ -18,7 +18,7 @@ const Menu: FunctionComponent<MenuProps> = ({ className }) => {
 
   return (
     <div className={cn("mr-8 xl:mr-0", className)}>
-      <div className="hidden xl:flex xl:gap-x-6 items-center">
+      <div className="hidden xl:flex xl:gap-x-1 items-center">
         {navigationData.map((navigationItem, index) => (
           <NavLink key={index} to={navigationItem.path}>
             {navigationItem.label}

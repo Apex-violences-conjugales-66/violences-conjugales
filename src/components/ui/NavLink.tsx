@@ -19,8 +19,8 @@ const NavLink: FunctionComponent<NavLinkProps> = ({
   return (
     <Link
       className={cn(
-        "hover:underline underline-offset-4 xl:text-[19px]",
-        isActive && "text-orange underline",
+        "px-4 py-2 rounded-[4px] hover:bg-orange-light",
+        isActive && "text-orange bg-orange-light",
         className
       )}
       href={to}

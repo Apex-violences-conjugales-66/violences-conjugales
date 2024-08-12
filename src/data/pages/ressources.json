@@ -9,52 +9,134 @@
       "name": "documents",
       "documents": [
         {
-          "title": "document 1",
+          "id": 1,
+          "title": "Masculinité à l'épreuve",
           "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg",
           "docPath": "/ressources/masculinite_a_l_epreuve_de_la_loi.pdf"
         },
         {
+          "id": 2,
           "title": "doc 2",
           "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
           "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
         },
         {
+          "id": 3,
           "title": "document 3",
           "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg",
           "docPath": "/ressources/masculinite_a_l_epreuve_de_la_loi.pdf"
         },
         {
+          "id": 4,
           "title": "doc 4",
           "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
           "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
         },
         {
+          "id": 5,
           "title": "document 5",
           "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg",
           "docPath": "/ressources/masculinite_a_l_epreuve_de_la_loi.pdf"
         },
         {
+          "id": 6,
           "title": "doc 6",
           "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
           "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
         },
         {
+          "id": 7,
           "title": "document 7",
           "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg",
           "docPath": "/ressources/masculinite_a_l_epreuve_de_la_loi.pdf"
         },
         {
+          "id": 8,
           "title": "doc 8",
           "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
           "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
         },
         {
+          "id": 9,
           "title": "doc 9",
           "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
           "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
         },
         {
+          "id": 10,
           "title": "doc 10",
+          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
+          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+        },
+        {
+          "id": 11,
+          "title": "doc 11",
+          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
+          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+        },
+        {
+          "id": 12,
+          "title": "doc 12",
+          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
+          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+        },
+        {
+          "id": 13,
+          "title": "document 3",
+          "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg",
+          "docPath": "/ressources/masculinite_a_l_epreuve_de_la_loi.pdf"
+        },
+        {
+          "id": 14,
+          "title": "doc 4",
+          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
+          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+        },
+        {
+          "id": 15,
+          "title": "document 5",
+          "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg",
+          "docPath": "/ressources/masculinite_a_l_epreuve_de_la_loi.pdf"
+        },
+        {
+          "id": 16,
+          "title": "doc 6",
+          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
+          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+        },
+        {
+          "id": 17,
+          "title": "document 7",
+          "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg",
+          "docPath": "/ressources/masculinite_a_l_epreuve_de_la_loi.pdf"
+        },
+        {
+          "id": 18,
+          "title": "doc 8",
+          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
+          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+        },
+        {
+          "id": 19,
+          "title": "doc 9",
+          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
+          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+        },
+        {
+          "id": 20,
+          "title": "doc 10",
+          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
+          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+        },
+        {
+          "id": 21,
+          "title": "doc 11",
+          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
+          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+        },
+        {
+          "id": 22,
+          "title": "doc 12",
           "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
           "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
         }

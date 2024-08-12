@@ -1,6 +1,5 @@
 "use client";
 
-import { Squircle } from "corner-smoothing";
 import React from "react";
 import { FunctionComponent, ReactNode, useState } from "react";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
@@ -28,10 +27,7 @@ const Swiper: FunctionComponent<SwiperProps> = ({ children }) => {
   };
 
   return (
-    <Squircle
-      cornerRadius={80}
-      className="relative w-full overflow-hidden bg-white rounded-3xl py-8"
-    >
+    <div className="relative w-full overflow-hidden bg-white py-8">
       <div
         className={cn("flex h-full transition-transform duration-500")}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -44,7 +40,7 @@ const Swiper: FunctionComponent<SwiperProps> = ({ children }) => {
       </div>
       <button
         onClick={handlePrev}
-        className="absolute top-1/2 left-1 transform -translate-y-1/2 p-2"
+        className="absolute top-1/2 left-1 transform -translate-y-1/2 p-2 z-10"
       >
         <BiLeftArrow size={20} />
       </button>
@@ -54,7 +50,7 @@ const Swiper: FunctionComponent<SwiperProps> = ({ children }) => {
       >
         <BiRightArrow size={20} />
       </button>
-    </Squircle>
+    </div>
   );
 };
 
