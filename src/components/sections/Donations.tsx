@@ -12,7 +12,7 @@ const Donations: FunctionComponent<DonationsProps> = () => {
         <div className="container flex justify-center">
           <div className="bg-white min-w-1" />
           <div className=" w-full bg-blue flex flex-col items-center px-24 py-14 gap-y-14">
-            <Title>Faire un don</Title>
+            <Title style="blue">Faire un don</Title>
             <div className="w-full flex flex-wrap gap-14 justify-center xl:flex-nowrap xl:gap-0 xl:justify-between">
               <DonationCard>
                 <p className="text-center">

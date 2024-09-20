@@ -26,7 +26,7 @@ const Partners: FunctionComponent<PartnersProps> = () => {
         <div className="absolute w-2/3 h-1/3 bg-orange left-0 bottom-0" />
         <div className="absolute w-[calc(33.3%-4px)] h-[calc(66.6%-4px)] bg-yellow right-0 bottom-0" />
         <div className="container z-10 relative flex flex-col items-center gap-y-10">
-          <Title>Nos Partenaires</Title>
+          <Title style="orange">Nos Partenaires</Title>
           <Squircle cornerRadius={80}>
             <Swiper>
               <SwiperCard>

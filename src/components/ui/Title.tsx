@@ -6,22 +6,30 @@ interface TitleProps {
   id?: string;
   children?: ReactNode;
   className?: string;
+  style?: "default" | "orange" | "blue";
 }
 
-const Title: FunctionComponent<TitleProps> = ({ id, children, className }) => {
+const Title: FunctionComponent<TitleProps> = ({
+  id,
+  children,
+  className,
+  style = "default",
+}) => {
   return (
     <div id={id} className={cn("size-fit flex flex-col relative", className)}>
-      <div className="flex gap-x-1">
-        <Image
-          className=" z-10"
-          alt="Title Flower"
-          src="/vector/title-flower.svg"
-          width={24}
-          height={38}
-        />
-        <h2 className="leading-none">{children}</h2>
-      </div>
-      <div className="ml-2 w-full h-[6px] rounded-md bg-flower-pattern bg-cover shadow-md" />
+      <h2
+        className={cn(
+          "leading-none py-3 px-6 border-2 rounded-sm",
+          "before:w-6 before:h-1 before:content-[''] before:absolute before:top-0 before:left-2",
+          "after:w-6 after:h-1 after:content-[''] after:absolute after:bottom-0 after:right-2",
+          "hover:before:translate-x-[200%] hover:after:-translate-x-[200%] before:transition after:transition",
+          style == "default" && "border-orange before:bg-white after:bg-white",
+          style == "orange" && "border-white before:bg-orange after:bg-orange",
+          style == "blue" && "border-white before:bg-blue after:bg-blue"
+        )}
+      >
+        {children}
+      </h2>
     </div>
   );
 };
