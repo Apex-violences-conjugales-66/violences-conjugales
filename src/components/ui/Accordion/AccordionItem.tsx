@@ -54,7 +54,7 @@ const AccordionItem: FunctionComponent<AccordionItemProps> = ({
     >
       <button
         className={cn(
-          "w-full relative text-left py-4 transition-all px-6",
+          "w-full relative text-left py-4 hover:transition px-6",
           `${hoverBgColorVariants[color]}`,
           isOpen && `${bgColorVariants[color]}`
         )}

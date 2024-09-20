@@ -19,13 +19,14 @@ interface MediagraphieProps {
   books: Book[];
   movies: Movie[];
 }
+
 const Mediagraphie: FunctionComponent<MediagraphieProps> = ({
   books,
   movies,
 }) => {
   return (
-    <div className="Mediagraphie my-40">
-      <div className="container flex flex-col gap-20 items-center">
+    <div className="Mediagraphie mt-24 mb-4">
+      <div className="container flex flex-col gap-10 items-center">
         <Title>Médiagraphie</Title>
         <div className="flex gap-10">
           <div className="flex flex-col gap-16 items-center  w-1/2">

@@ -20,12 +20,12 @@ const Partners: FunctionComponent<PartnersProps> = () => {
   return (
     <div className="Partners">
       <Separator variant />
-      <div className="w-full relative py-56 flex">
+      <div className="w-full relative py-24 flex">
         <div className="absolute w-[calc(33.3%-4px)] h-[calc(66.6%-4px)] bg-yellow left-0 top-0" />
         <div className="absolute w-2/3 h-1/3 bg-orange right-0 top-0" />
         <div className="absolute w-2/3 h-1/3 bg-orange left-0 bottom-0" />
         <div className="absolute w-[calc(33.3%-4px)] h-[calc(66.6%-4px)] bg-yellow right-0 bottom-0" />
-        <div className="container z-10 relative flex flex-col items-center gap-y-16">
+        <div className="container z-10 relative flex flex-col items-center gap-y-10">
           <Title>Nos Partenaires</Title>
           <Squircle cornerRadius={80}>
             <Swiper>
@@ -37,7 +37,7 @@ const Partners: FunctionComponent<PartnersProps> = () => {
                   aux femmes, elles sont financées et soutenues par les acteurs
                   suivants
                 </p>
-                <div className="w-full flex flex-wrap grow justify-center gap-2">
+                <div className="w-full flex flex-wrap grow justify-center gap-2  mt-24 xl:mt-12">
                   {imagePartnersInstiPaths.map((path, index) => (
                     <div key={index} className="w-48 h-36 relative">
                       <Image

@@ -10,9 +10,9 @@ const Introduction: FunctionComponent<IntroductionProps> = () => {
   return (
     <div className="Introduction">
       <Separator rotate />
-      <div className="container flex py-24 relative">
+      <div className="container flex pt-14 relative">
         <div className="flex flex-col w-2/3 gap-y-10">
-          <Title>Présentation</Title>
+          <Title className="relative left-10">Présentation</Title>
           <div className="space-y-4">
             <p>
               APEX accueille, écoute et accompagne les personnes touchées par

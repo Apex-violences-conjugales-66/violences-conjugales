@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FunctionComponent } from "react";
 import DocumentCard from "../ui/DocumentModal/DocumentCard";
 import Swiper from "../ui/Swiper/Swiper";
@@ -29,8 +28,8 @@ const Documents: FunctionComponent<DocumentsProps> = ({ documents }) => {
   const chunkedDocuments = chunckArray(documents, 9);
 
   return (
-    <div className="Documents my-60">
-      <div className="container flex flex-col gap-20 items-center">
+    <div className="Documents mt-14">
+      <div className="container flex flex-col gap-2 items-center">
         <Title id="documents">Doc. Institutions</Title>
         <div className="w-full md:hidden">
           <Swiper>
@@ -42,11 +41,10 @@ const Documents: FunctionComponent<DocumentsProps> = ({ documents }) => {
                 <div className="flex flex-wrap gap-6 justify-center xl:justify-start xl:w-[912px] ">
                   {chunk.map((document, documentIndex) => (
                     <div key={`Document${documentIndex}`}>
-                      <Image
-                        alt={`Image${documentIndex}`}
-                        src={document.imagePath}
-                        style={{ objectFit: "cover" }}
-                        fill
+                      <DocumentCard
+                        id={document.id}
+                        title={document.title}
+                        imagePath={document.imagePath}
                       />
                     </div>
                   ))}
@@ -64,15 +62,11 @@ const Documents: FunctionComponent<DocumentsProps> = ({ documents }) => {
               >
                 <div className="flex flex-wrap gap-6 justify-center xl:justify-start xl:w-[912px] ">
                   {chunk.map((document, documentIndex) => (
-                    <div
-                      key={`Document${documentIndex}`}
-                      className="w-72 h-80 relative shadow-sm"
-                    >
-                      <Image
-                        alt={`Image${documentIndex}`}
-                        src={document.imagePath}
-                        style={{ objectFit: "cover" }}
-                        fill
+                    <div key={`Document${documentIndex}`}>
+                      <DocumentCard
+                        id={document.id}
+                        title={document.title}
+                        imagePath={document.imagePath}
                       />
                     </div>
                   ))}

@@ -4,13 +4,13 @@ import { cn } from "../../../lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
 
 const buttonVariants = cva(
-  "items-center rounded-xl justify-center text-xl font-bold",
+  "items-center rounded-xl justify-center text-xl font-bold transition-all",
   {
     variants: {
       variant: {
-        default: "bg-white border-b-4 border-grey",
-        orange: "bg-orange border-b-4 border-yellow",
-        nav: "bg-orange border-b-4 rounded-none rounded-b-xl border-yellow font-normal",
+        default: "bg-white border-b-4 border-grey hover:bg-grey-light",
+        orange: "bg-orange border-b-4 border-yellow hover:bg-yellow",
+        nav: "bg-orange border-b-4 rounded-none rounded-b-xl border-yellow font-normal hover:bg-yellow",
       },
       size: {
         default: "py-2 px-10",

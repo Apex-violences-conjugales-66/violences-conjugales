@@ -24,7 +24,7 @@ const DocumentCard: FunctionComponent<DocumentCardProps> = ({
   return (
     <div className="relative w-72 h-80 shadow-sm">
       <Image
-        className="hover:opacity-50 hover:cursor-pointer transition"
+        className="hover:opacity-50 hover:cursor-pointer"
         alt={title}
         src={imagePath}
         style={{ objectFit: "cover" }}

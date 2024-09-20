@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FunctionComponent } from "react";
 import { Button } from "./ui/Button";
 
@@ -57,9 +58,12 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = () => {
           </div>
         </div>
         <div className="bg-yellow">
-          <button className="bg-white w-2/3 flex items-center rounded-tr-3xl py-1 ">
+          <Link
+            href="#donations"
+            className="bg-white w-2/3 flex items-center text-center rounded-tr-3xl py-1 hover:bg-grey-light transition-all"
+          >
             <h4 className="grow">Soutenir APEX</h4>
-            <div className="size-9 relative mr-1 rounded-2xl ">
+            <div className="size-9 relative mr-1 rounded-2xl">
               <Image
                 className="rounded-2xl"
                 alt="Arrow Down Circle"
@@ -68,7 +72,7 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = () => {
                 style={{ objectFit: "cover" }}
               />
             </div>
-          </button>
+          </Link>
         </div>
       </div>
     </div>

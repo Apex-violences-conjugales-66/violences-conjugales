@@ -11,6 +11,8 @@ import Team from "@/components/sections/Team";
 import Documents from "./sections/Documents";
 import Memoires from "./sections/Memoires";
 import Mediagraphie from "./sections/Mediagraphie";
+import Formation from "./sections/Formation";
+import FormationShowcase from "./sections/FormationShowcase";
 
 interface SectionRendererProps {
   section: Section;
@@ -42,6 +44,10 @@ const SectionRenderer: FunctionComponent<SectionRendererProps> = ({
       return <Memoires memoirs={section.memoirs} />;
     case "mediagraphie":
       return <Mediagraphie books={section.books} movies={section.movies} />;
+    case "formation":
+      return <Formation formations={section.formations} />;
+    case "formationShowcase":
+      return <FormationShowcase />;
     default:
       return null;
   }

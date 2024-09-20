@@ -7,11 +7,11 @@ interface DonationsProps {}
 
 const Donations: FunctionComponent<DonationsProps> = () => {
   return (
-    <div className="Donations">
+    <div id="donations" className="Donations scroll-mt-[84px]">
       <div className="bg-gradient-to-r from-orange from-50% via-yellow to-yellow mt-1">
         <div className="container flex justify-center">
           <div className="bg-white min-w-1" />
-          <div className=" w-full bg-blue flex flex-col items-center p-24 gap-y-14">
+          <div className=" w-full bg-blue flex flex-col items-center px-24 py-14 gap-y-14">
             <Title>Faire un don</Title>
             <div className="w-full flex flex-wrap gap-14 justify-center xl:flex-nowrap xl:gap-0 xl:justify-between">
               <DonationCard>

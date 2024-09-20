@@ -6,7 +6,7 @@ interface ProjetProps {}
 
 const Projet: FunctionComponent<ProjetProps> = () => {
   return (
-    <div className="container my-40 relative">
+    <div className="container my-14 relative">
       <div
         id="sommaire"
         className="mx-16 border border-orange relative scroll-mt-28"

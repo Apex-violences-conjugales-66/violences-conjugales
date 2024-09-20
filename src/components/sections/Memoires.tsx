@@ -17,9 +17,9 @@ const Memoires: FunctionComponent<MemoiresProps> = ({ memoirs }) => {
   const n = memoirs.length;
 
   return (
-    <div className="Memoires mt-60">
+    <div className="Memoires mt-24">
       <div className="container flex flex-col items-center gap-10">
-        <Title className="self-center mb-10">Mémoires</Title>
+        <Title className="self-center">Mémoires</Title>
         <div className="columns-1 gap-6 md:columns-2 xl:columns-3 [&>div]:overflow-hidden [&>div]:mb-6">
           {memoirs.map((memoir, index) => (
             <MemoirCard

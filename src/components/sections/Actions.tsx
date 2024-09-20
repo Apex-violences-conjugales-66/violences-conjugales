@@ -14,10 +14,10 @@ const Actions: FunctionComponent<ActionsProps> = () => {
     <div className="Actions ">
       <div className="flex flex-col items-center">
         <Separator rotate />
-        <Title id="actions" className="mt-24 scroll-mt-28">
+        <Title id="actions" className="mt-14 scroll-mt-28">
           Nos Actions
         </Title>
-        <div className="container flex flex-col items-center mt-24">
+        <div className="container flex flex-col items-center mt-10">
           <Accordion>
             <AccordionItem title="L'Escale" color="blue">
               <div className="flex flex-col gap-y-4">

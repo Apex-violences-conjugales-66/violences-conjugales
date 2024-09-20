@@ -2,13 +2,14 @@ import { FunctionComponent } from "react";
 import Image from "next/image";
 import { Button } from "./ui/Button";
 import Separator from "./ui/Separator";
+import Link from "next/link";
 interface FooterProps {}
 
 const Footer: FunctionComponent<FooterProps> = () => {
   return (
     <div className="Footer">
       <Separator variant />
-      <div className="bg-purple py-16">
+      <div className="bg-purple py-16 relative">
         <div className="container flex flex-col gap-24 justify-between md:flex-row">
           <div className="flex flex-col gap-y-4">
             <div className="flex gap-x-4">
@@ -24,20 +25,25 @@ const Footer: FunctionComponent<FooterProps> = () => {
                 <span className="font-light text-[22px]">04 68 63 50 24</span>
               </div>
             </div>
-            <div className="w-60 flex gap-x-4 justify-between">
-              <div className="flex flex-col gap-y-4">
-                <a>Menu 1</a>
-                <a>Menu 1</a>
-                <a>Menu 1</a>
-                <a>Menu 1</a>
-              </div>
-              <div className="w-[2px] rounded-md bg-grey" />
-              <div className="flex flex-col gap-y-4">
-                <a>Menu 1</a>
-                <a>Menu 1</a>
-                <a>Menu 1</a>
-                <a>Menu 1</a>
-              </div>
+            <div className="w-60 flex flex-col gap-y-3 items-center font-bold uppercase border py-4">
+              <Link href={"/"} className="hover:opacity-65 transition">
+                Acceuil
+              </Link>
+              <Link
+                href={"/projet-associatif"}
+                className="hover:opacity-65 transition"
+              >
+                Le Projet
+              </Link>
+              <Link href={"/formation"} className="hover:opacity-65 transition">
+                La Formation
+              </Link>
+              <Link
+                href={"/ressources"}
+                className="hover:opacity-65 transition"
+              >
+                Nos Ressources
+              </Link>
             </div>
           </div>
           <div className="flex flex-col gap-y-4">
@@ -68,17 +74,17 @@ const Footer: FunctionComponent<FooterProps> = () => {
               <h4>Annuler la saisie semi-automatique</h4>
             </div>
             <h5>La procédure suivant votre navigateur :</h5>
-            <div className="flex flex-wrap gap-x-12 gap-y-4 justify-evenly">
+            <div className="flex flex-wrap gap-x-12 gap-y-4 justify-evenly mt-2">
               <Button>Chrome</Button>
               <Button>Firefox</Button>
               <Button>Safari</Button>
             </div>
-            <p className="text-sm self-end">
-              <span className="italic">Copyright @ AEPirlot </span> 2024 |
-              Mentions légales
-            </p>
           </div>
         </div>
+        <p className="text-sm absolute bottom-2 right-10">
+          © 2024 &nbsp;&nbsp; APEX | AEPirlot &nbsp;&nbsp; All rights reserved
+          &nbsp;&nbsp; Mentions légales.
+        </p>
       </div>
       <div />
     </div>

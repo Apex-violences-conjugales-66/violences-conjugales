@@ -42,7 +42,7 @@ const DocumentDetail: FunctionComponent<DocumentDetailProps> = ({
               <h2>{document.title}</h2>
               <button
                 onClick={handleClose}
-                className="hover:rotate-180 transition duration-700"
+                className="hover:opacity-65 transition"
               >
                 <RxCross2 size={32} />
               </button>
@@ -55,17 +55,19 @@ const DocumentDetail: FunctionComponent<DocumentDetailProps> = ({
                 fill
               />
             </div>
-            <div className="flex gap-4">
-              Voir le document :
-              <Link
-                href={document.docPath}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                {document.docPath}
-              </Link>
-            </div>
+            {document.docPath && (
+              <div className="flex gap-4">
+                Voir le document :
+                <Link
+                  href={document.docPath}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  {document.docPath}
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       )}
