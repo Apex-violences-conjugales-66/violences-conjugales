@@ -2,7 +2,7 @@
 
 import { Squircle } from "corner-smoothing";
 import { FunctionComponent, ReactNode } from "react";
-import { cn } from "../../../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 interface DonationCardProps {
   className?: string;

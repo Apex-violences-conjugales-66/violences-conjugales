@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { getPageData, PageData } from "../../lib/data";
+import { getPageData, PageData } from "../lib/data";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import SectionRenderer from "./SectionRenderer";

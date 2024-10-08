@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { FaLocationDot, FaPhoneVolume } from "react-icons/fa6";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 import Divider from "./Divider";
 
 interface ContactInfoProps {

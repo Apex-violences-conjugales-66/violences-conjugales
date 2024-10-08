@@ -2,7 +2,7 @@
 
 import React, { FunctionComponent, ReactNode, useState } from "react";
 import { GoDash, GoPlus } from "react-icons/go";
-import { cn } from "../../../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 interface AccordionItemProps {
   className?: string;

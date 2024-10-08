@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 
 interface MemoirCardProps {
   className?: string;

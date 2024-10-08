@@ -3,7 +3,7 @@
 import React from "react";
 import { FunctionComponent, ReactNode, useState } from "react";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
-import { cn } from "../../../../lib/utils";
+import { cn } from "../../../lib/utils";
 
 interface SwiperProps {
   className?: string;

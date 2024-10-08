@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FunctionComponent } from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "../lib/utils";
 import { Button } from "./ui/Button";
 import Menu from "./ui/Menu";
 

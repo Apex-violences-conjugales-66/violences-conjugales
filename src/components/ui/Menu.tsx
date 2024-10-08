@@ -2,7 +2,7 @@
 
 import { FunctionComponent, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { cn } from "../../../lib/utils";
+import { cn } from "../../lib/utils";
 import NavLink from "./NavLink";
 import navigationData from "@/data/navigationData";
 

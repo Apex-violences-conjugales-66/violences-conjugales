@@ -1,3 +1,4 @@
+import { ANNEE_BULLETIN } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { FunctionComponent } from "react";
@@ -94,10 +95,12 @@ const Formation: FunctionComponent<FormationProps> = ({ formations }) => {
         </div>
       </div>
       <div className="mt-6">
-        <h3 className="mb-2">Catalogue de Formation 2024-2025</h3>
+        <h3 className="mb-2">
+          Catalogue de Formation {ANNEE_BULLETIN}-{ANNEE_BULLETIN + 1}
+        </h3>
         <div>
-          Découvrez notre offre de formation pour la fin de 2024 et l'année
-          2025.
+          Découvrez notre offre de formation pour la fin de {ANNEE_BULLETIN} et
+          l'année {ANNEE_BULLETIN + 1}.
           <br /> Vous trouverez ci-dessous les formations proposées en
           inter-entreprise.
           <br /> <br /> Téléchargez notre{" "}
@@ -107,7 +110,7 @@ const Formation: FunctionComponent<FormationProps> = ({ formations }) => {
             rel="noopener noreferrer"
             className="text-orange hover:underline"
           >
-            catalogue des formations 2025
+            catalogue des formations {ANNEE_BULLETIN + 1}
           </Link>
         </div>
         {formations.map((formation, index) => (
@@ -191,12 +194,12 @@ const Formation: FunctionComponent<FormationProps> = ({ formations }) => {
           ci-dessous, puis de nous le renvoyer par mail ou par courrier.
         </div>
         <Link
-          href="/formation/Bulletin-d-inscription-2024.pdf"
+          href={`/formation/Bulletin-d-inscription-${ANNEE_BULLETIN}.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className="text-orange hover:underline self-center mt-4"
         >
-          Bulletin d'inscription 2024
+          Bulletin d'inscription {ANNEE_BULLETIN}
         </Link>
       </div>
     </div>

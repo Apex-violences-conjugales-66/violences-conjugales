@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { Section } from "../../lib/data";
+import { Section } from "../lib/data";
 import Header from "./sections/Header";
 import Projet from "./sections/Projet";
 import HomeHeader from "@/components/HomeHeader";

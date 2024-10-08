@@ -1,7 +1,7 @@
+import { cva, VariantProps } from "class-variance-authority";
 import Link from "next/link";
 import { ComponentProps, FunctionComponent } from "react";
-import { cn } from "../../../lib/utils";
-import { VariantProps, cva } from "class-variance-authority";
+import { cn } from "../../lib/utils";
 
 const buttonVariants = cva(
   "items-center rounded-xl justify-center text-xl font-bold transition-all",

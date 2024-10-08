@@ -1,10 +1,8 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import "./globals.css";
 
 import { Lato, League_Gothic } from "next/font/google";
-import { cn } from "../../lib/utils";
+import { cn } from "../lib/utils";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],

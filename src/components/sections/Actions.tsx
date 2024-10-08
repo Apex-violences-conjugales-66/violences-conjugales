@@ -14,7 +14,7 @@ const Actions: FunctionComponent<ActionsProps> = () => {
     <div className="Actions ">
       <div className="flex flex-col items-center">
         <Separator rotate />
-        <Title id="actions" className="mt-14 scroll-mt-28">
+        <Title id="actions" className="mt-14 scroll-mt-56">
           Nos Actions
         </Title>
         <div className="container flex flex-col items-center mt-10">

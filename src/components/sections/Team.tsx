@@ -10,7 +10,7 @@ const Team: FunctionComponent<TeamProps> = () => {
       <Separator variant />
       <div
         id="team"
-        className="mt-1 bg-gradient-to-r from-orange from-50% via-yellow to-yellow scroll-mt-24"
+        className="mt-1 bg-gradient-to-r from-orange from-50% via-yellow to-yellow scroll-mt-48"
       >
         <div className="container flex justify-center">
           <div className="bg-white min-w-1" />
