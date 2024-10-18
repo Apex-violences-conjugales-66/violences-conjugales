@@ -140,20 +140,23 @@ const Footer: FunctionComponent<FooterProps> = () => {
                       </span>
                     </li>
                     <li>
-                      <span>Sélectionner "Paramètres".</span>
-                    </li>
-                    <li>
-                      <span>Aller dans "Confidentialité et sécurité".</span>
+                      <span>Sélectionner &quot;Paramètres&quot;.</span>
                     </li>
                     <li>
                       <span>
-                        Cliquer sur "Effacer les données de navigation".
+                        Aller dans &quot;Confidentialité et sécurité&quot;.
                       </span>
                     </li>
                     <li>
                       <span>
-                        Choisir l'intervalle de temps à effacer (dernière heure,
-                        24h, etc.).
+                        Cliquer sur &quot;Effacer les données de
+                        navigation&quot;.
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        Choisir l&rsquo;intervalle de temps à effacer (dernière
+                        heure, 24h, etc.).
                       </span>
                     </li>
                     <li>
@@ -163,7 +166,7 @@ const Footer: FunctionComponent<FooterProps> = () => {
                       </span>
                     </li>
                     <li>
-                      <span>Cliquer sur "Effacer les données".</span>
+                      <span>Cliquer sur &quot;Effacer les données&quot;.</span>
                     </li>
                   </ul>
                 </div>
@@ -176,23 +179,26 @@ const Footer: FunctionComponent<FooterProps> = () => {
                       </span>
                     </li>
                     <li>
-                      <span>Sélectionner "Paramètres".</span>
+                      <span>Sélectionner &quot;Paramètres&quot;.</span>
                     </li>
                     <li>
                       <span>
-                        Dans la section "Remplissage automatique", cliquer sur
-                        les catégories concernées :
+                        Dans la section &quot;Remplissage automatique&quot;,
+                        cliquer sur les catégories concernées :
                       </span>
                     </li>
                     <ul>
                       <li>
-                        "Mots de passe" pour gérer les mots de passe
+                        &quot;Mots de passe&quot; pour gérer les mots de passe
                         enregistrés.
                       </li>
-                      <li>"Moyens de paiement" pour les cartes bancaires.</li>
                       <li>
-                        "Adresses et plus" pour les adresses et informations
-                        personnelles.
+                        &quot;Moyens de paiement&quot; pour les cartes
+                        bancaires.
+                      </li>
+                      <li>
+                        &quot;Adresses et plus&quot; pour les adresses et
+                        informations personnelles.
                       </li>
                     </ul>
                     <li>
@@ -203,16 +209,17 @@ const Footer: FunctionComponent<FooterProps> = () => {
                     </li>
                     <ul>
                       <li>
-                        Pour les mots de passe, désactiver "Proposer
-                        d'enregistrer les mots de passe".
+                        Pour les mots de passe, désactiver &quot;Proposer
+                        d&rsquo;enregistrer les mots de passe&quot;.
                       </li>
                       <li>
-                        Pour les moyens de paiement, désactiver "Enregistrer et
-                        remplir les moyens de paiement".
+                        Pour les moyens de paiement, désactiver
+                        &quot;Enregistrer et remplir les moyens de
+                        paiement&quot;.
                       </li>
                       <li>
-                        Pour les adresses, désactiver "Enregistrer et remplir
-                        les adresses".
+                        Pour les adresses, désactiver &quot;Enregistrer et
+                        remplir les adresses&quot;.
                       </li>
                     </ul>
                   </ul>
@@ -228,33 +235,36 @@ const Footer: FunctionComponent<FooterProps> = () => {
                   <ul className="list-decimal [&>li>span]:relative [&>li>span]:left-2">
                     <li>
                       <span>
-                        Cliquer sur <strong>"Safari"</strong> dans la barre de
-                        menu en haut à gauche.
+                        Cliquer sur <strong>&quot;Safari&quot;</strong> dans la
+                        barre de menu en haut à gauche.
                       </span>
                     </li>
                     <li>
                       <span>
-                        Sélectionner <strong>"Effacer l'historique"</strong>.
+                        Sélectionner{" "}
+                        <strong>&quot;Effacer l&rsquo;historique&quot;</strong>.
                       </span>
                     </li>
                     <li>
                       <span>
-                        Dans la fenêtre qui s'affiche, choisir l’
+                        Dans la fenêtre qui s&rsquo;affiche, choisir l&rsquo;
                         <strong>intervalle de temps</strong> (dernière heure,
-                        aujourd'hui, aujourd'hui et hier, ou tout l'historique).
+                        aujourd&rsquo;hui, aujourd&rsquo;hui et hier, ou tout
+                        l&rsquo;historique).
                       </span>
                     </li>
                     <li>
                       <span>
-                        Cliquer sur <strong>"Effacer l'historique"</strong> pour
-                        confirmer.
+                        Cliquer sur{" "}
+                        <strong>&quot;Effacer l&rsquo;historique&quot;</strong>{" "}
+                        pour confirmer.
                       </span>
                     </li>
                   </ul>
                   <p>
                     <em>
-                      *Cela supprimera l'historique de navigation ainsi que les
-                      cookies et autres données de sites web.*
+                      *Cela supprimera l&rsquo;historique de navigation ainsi
+                      que les cookies et autres données de sites web.*
                     </em>
                   </p>
                 </div>
@@ -265,19 +275,19 @@ const Footer: FunctionComponent<FooterProps> = () => {
                   <ul className="list-decimal [&>li>span]:relative [&>li>span]:left-2 [&>li>ul]:pl-4">
                     <li>
                       <span>
-                        Cliquer sur <strong>"Safari"</strong> dans la barre de
-                        menu en haut.
+                        Cliquer sur <strong>&quot;Safari&quot;</strong> dans la
+                        barre de menu en haut.
                       </span>
                     </li>
                     <li>
                       <span>
-                        Sélectionner <strong>"Préférences"</strong>.
+                        Sélectionner <strong>&quot;Préférences&quot;</strong>.
                       </span>
                     </li>
                     <li>
                       <span>
-                        Aller à l'onglet{" "}
-                        <strong>"Remplissage automatique"</strong>.
+                        Aller à l&rsquo;onglet{" "}
+                        <strong>&quot;Remplissage automatique&quot;</strong>.
                       </span>
                     </li>
                     <li>
@@ -289,8 +299,8 @@ const Footer: FunctionComponent<FooterProps> = () => {
                         <li>
                           <span>
                             <strong>
-                              Désélectionner "Utiliser les informations de mes
-                              contacts"
+                              Désélectionner &quot;Utiliser les informations de
+                              mes contacts&quot;
                             </strong>{" "}
                             pour les adresses et informations personnelles.
                           </span>
@@ -298,15 +308,17 @@ const Footer: FunctionComponent<FooterProps> = () => {
                         <li>
                           <span>
                             <strong>
-                              Désélectionner "Noms d’utilisateur et mots de
-                              passe"
+                              Désélectionner &quot;Noms d&rsquo;utilisateur et
+                              mots de passe&quot;
                             </strong>{" "}
                             pour les mots de passe enregistrés.
                           </span>
                         </li>
                         <li>
                           <span>
-                            <strong>Désélectionner "Cartes de crédit"</strong>{" "}
+                            <strong>
+                              Désélectionner &quot;Cartes de crédit&quot;
+                            </strong>{" "}
                             pour les informations bancaires.
                           </span>
                         </li>
@@ -315,8 +327,8 @@ const Footer: FunctionComponent<FooterProps> = () => {
                     <li>
                       <span>
                         Pour gérer les données existantes, cliquez sur{" "}
-                        <strong>"Modifier"</strong> à côté de chaque catégorie
-                        et supprimez les informations enregistrées si
+                        <strong>&quot;Modifier&quot;</strong> à côté de chaque
+                        catégorie et supprimez les informations enregistrées si
                         nécessaire.
                       </span>
                     </li>
@@ -339,35 +351,41 @@ const Footer: FunctionComponent<FooterProps> = () => {
                     </li>
                     <li>
                       <span>
-                        Sélectionner <strong>"Paramètres"</strong>.
+                        Sélectionner <strong>&quot;Paramètres&quot;</strong>.
                       </span>
                     </li>
                     <li>
                       <span>
                         Dans le menu à gauche, cliquer sur{" "}
                         <strong>
-                          "Confidentialité, recherche et services"
+                          &quot;Confidentialité, recherche et services&quot;
                         </strong>
                         .
                       </span>
                     </li>
                     <li>
                       <span>
-                        Faire défiler jusqu’à la section{" "}
-                        <strong>"Effacer les données de navigation"</strong> et
-                        cliquez sur{" "}
-                        <strong>"Choisir les éléments à effacer"</strong>.
+                        Faire défiler jusqu&rsquo;à la section{" "}
+                        <strong>
+                          &quot;Effacer les données de navigation&quot;
+                        </strong>{" "}
+                        et cliquez sur{" "}
+                        <strong>
+                          &quot;Choisir les éléments à effacer&quot;
+                        </strong>
+                        .
                       </span>
                     </li>
                     <li>
                       <span>
-                        Choisir l'intervalle de temps et les types de données à
-                        supprimer (historique, cookies, cache, etc.).
+                        Choisir l&rsquo;intervalle de temps et les types de
+                        données à supprimer (historique, cookies, cache, etc.).
                       </span>
                     </li>
                     <li>
                       <span>
-                        Cliquer sur <strong>"Effacer maintenant"</strong> pour
+                        Cliquer sur{" "}
+                        <strong>&quot;Effacer maintenant&quot;</strong> pour
                         confirmer.
                       </span>
                     </li>
@@ -386,20 +404,21 @@ const Footer: FunctionComponent<FooterProps> = () => {
                     </li>
                     <li>
                       <span>
-                        Sélectionner <strong>"Paramètres"</strong>.
+                        Sélectionner <strong>&quot;Paramètres&quot;</strong>.
                       </span>
                     </li>
                     <li>
                       <span>
                         Dans le menu à gauche, cliquer sur{" "}
-                        <strong>"Profils"</strong>.
+                        <strong>&quot;Profils&quot;</strong>.
                       </span>
                     </li>
                     <li>
                       <span>
-                        Choisir <strong>"Informations personnelles"</strong> et{" "}
-                        <strong>"Mots de passe"</strong> pour gérer la saisie
-                        automatique.
+                        Choisir{" "}
+                        <strong>&quot;Informations personnelles&quot;</strong>{" "}
+                        et <strong>&quot;Mots de passe&quot;</strong> pour gérer
+                        la saisie automatique.
                       </span>
                     </li>
                     <li>
@@ -410,7 +429,7 @@ const Footer: FunctionComponent<FooterProps> = () => {
                             des adresses et informations personnelles,
                             désactiver{" "}
                             <strong>
-                              "Enregistrer et remplir les adresses"
+                              &quot;Enregistrer et remplir les adresses&quot;
                             </strong>
                             .
                           </span>
@@ -419,7 +438,8 @@ const Footer: FunctionComponent<FooterProps> = () => {
                           <span>
                             des mots de passe, désactiver{" "}
                             <strong>
-                              "Proposer d’enregistrer les mots de passe"
+                              &quot;Proposer d&rsquo;enregistrer les mots de
+                              passe&quot;
                             </strong>
                             .
                           </span>
@@ -427,11 +447,13 @@ const Footer: FunctionComponent<FooterProps> = () => {
                         <li>
                           <span>
                             des moyens de paiement, allez dans{" "}
-                            <strong>"Informations de paiement"</strong> et
-                            désactiver{" "}
                             <strong>
-                              "Enregistrer et remplir les informations de
-                              paiement"
+                              &quot;Informations de paiement&quot;
+                            </strong>{" "}
+                            et désactiver{" "}
+                            <strong>
+                              &quot;Enregistrer et remplir les informations de
+                              paiement&quot;
                             </strong>
                             .
                           </span>
@@ -441,9 +463,10 @@ const Footer: FunctionComponent<FooterProps> = () => {
                     <li>
                       <span>
                         Vous pouvez également supprimer les informations
-                        enregistrées en cliquant sur <strong>"Modifier"</strong>{" "}
-                        ou <strong>"Supprimer"</strong> à côté de chaque donnée
-                        existante.
+                        enregistrées en cliquant sur{" "}
+                        <strong>&quot;Modifier&quot;</strong> ou{" "}
+                        <strong>&quot;Supprimer&quot;</strong> à côté de chaque
+                        donnée existante.
                       </span>
                     </li>
                   </ul>

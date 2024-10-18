@@ -29,8 +29,8 @@ const Formation: FunctionComponent<FormationProps> = ({ formations }) => {
             <p>
               Depuis août 2021, nous sommes fiers de vous annoncer que notre
               organisme de formation a obtenu la certification QUALIOPI. Cette
-              reconnaissance témoigne de notre engagement envers l'excellence et
-              la qualité dans le domaine de la formation.
+              reconnaissance témoigne de notre engagement envers
+              l&rsquo;excellence et la qualité dans le domaine de la formation.
             </p>
 
             <h3 className="mt-6 mb-2">
@@ -38,11 +38,11 @@ const Formation: FunctionComponent<FormationProps> = ({ formations }) => {
             </h3>
             <p>
               QUALIOPI est un label qui garantit la qualité des prestataires
-              d'actions concourant au développement des compétences. Elle
-              s'applique aux actions de formation, aux bilans de compétences, à
-              la validation des acquis de l'expérience, et à la formation par
-              apprentissage. Cette certification, délivrée par des
-              certificateurs indépendants, assure une qualité reconnue,
+              d&rsquo;actions concourant au développement des compétences. Elle
+              s&rsquo;applique aux actions de formation, aux bilans de
+              compétences, à la validation des acquis de l&rsquo;expérience, et
+              à la formation par apprentissage. Cette certification, délivrée
+              par des certificateurs indépendants, assure une qualité reconnue,
               permettant aux organismes de formation de bénéficier de fonds
               publics ou mutualisés. Elle atteste également de la rigueur des
               processus mis en place et offre une visibilité accrue de nos
@@ -76,8 +76,8 @@ const Formation: FunctionComponent<FormationProps> = ({ formations }) => {
         <div className="text-justify mt-6 ">
           <h3 className="mb-2">Nos Offres de Formation</h3>
           <p>
-            Nous continuons d'organiser des sessions de formation adaptées à vos
-            besoins :
+            Nous continuons d&rsquo;organiser des sessions de formation adaptées
+            à vos besoins :
           </p>
           <ul>
             <li>
@@ -89,9 +89,10 @@ const Formation: FunctionComponent<FormationProps> = ({ formations }) => {
               intra.
             </li>
           </ul>
-          Toutes nos formations sont dispensées par les intervenant.e.s d'APEX,
-          formé.e.s par notre partenaire québécois, l&rsquo;organisme Option -
-          Une alternative à la violence conjugale et familiale.
+          Toutes nos formations sont dispensées par les intervenant.e.s
+          d&rsquo;APEX, formé.e.s par notre partenaire québécois,
+          l&rsquo;organisme Option - Une alternative à la violence conjugale et
+          familiale.
         </div>
       </div>
       <div className="mt-6">
@@ -100,7 +101,7 @@ const Formation: FunctionComponent<FormationProps> = ({ formations }) => {
         </h3>
         <div>
           Découvrez notre offre de formation pour la fin de {ANNEE_BULLETIN} et
-          l'année {ANNEE_BULLETIN + 1}.
+          l&rsquo;année {ANNEE_BULLETIN + 1}.
           <br /> Vous trouverez ci-dessous les formations proposées en
           inter-entreprise.
           <br /> <br /> Téléchargez notre{" "}
@@ -166,7 +167,7 @@ const Formation: FunctionComponent<FormationProps> = ({ formations }) => {
             </ul>
             <p className="mb-6">Possibilité de prise en charge par les OPCO.</p>
             <p>
-              <b>Modalités d'accès à nos formations :</b>
+              <b>Modalités d&rsquo;accès à nos formations :</b>
             </p>
             <ul>
               <li>
@@ -175,7 +176,8 @@ const Formation: FunctionComponent<FormationProps> = ({ formations }) => {
               </li>
               <li>
                 {" "}
-                Délais d'accès : Jusqu'à 48h avant le début de la formation.
+                Délais d&rsquo;accès : Jusqu&rsquo;à 48h avant le début de la
+                formation.
               </li>
               <li>
                 Accessible aux personnes en situation de handicap (nous
@@ -189,9 +191,10 @@ const Formation: FunctionComponent<FormationProps> = ({ formations }) => {
         </div>
         <Divider horizontal visible className="mt-6 mb-2 xl:my-2" />
         <div>
-          Si vous souhaitez vous inscrire à l'une de nos formations, merci de
-          télécharger et de remplir intégralement le bulletin d'inscription
-          ci-dessous, puis de nous le renvoyer par mail ou par courrier.
+          Si vous souhaitez vous inscrire à l&rsquo;une de nos formations, merci
+          de télécharger et de remplir intégralement le bulletin
+          d&rsquo;inscription ci-dessous, puis de nous le renvoyer par mail ou
+          par courrier.
         </div>
         <Link
           href={`/formation/Bulletin-d-inscription-${ANNEE_BULLETIN}.pdf`}
@@ -199,7 +202,7 @@ const Formation: FunctionComponent<FormationProps> = ({ formations }) => {
           rel="noopener noreferrer"
           className="text-orange hover:underline self-center mt-4"
         >
-          Bulletin d'inscription {ANNEE_BULLETIN}
+          Bulletin d&rsquo;inscription {ANNEE_BULLETIN}
         </Link>
       </div>
     </div>
