@@ -10,7 +10,7 @@ ul {
 
 @layer base {
   h1 {
-    @apply text-5xl font-black;
+    @apply text-sm xl:text-5xl font-black;
   }
   h2 {
     @apply text-3xl font-black;

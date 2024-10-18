@@ -1,5 +1,9 @@
-import { FunctionComponent } from "react";
+"use client";
+
+import { FunctionComponent, useState } from "react";
 import DocumentCard from "../ui/DocumentModal/DocumentCard";
+import DocumentDetail from "../ui/Modal/DocumentDetail";
+import DocumentModal from "../ui/Modal/DocumentModal";
 import Swiper from "../ui/Swiper/Swiper";
 import Title from "../ui/Title";
 
@@ -13,19 +17,22 @@ export interface Document {
 interface DocumentsProps {
   documents: Document[];
 }
+const chunckArray = (array: Document[], size: number) => {
+  const result = [];
+  for (let i = 0; i < array.length; i += size) {
+    result.push(array.slice(i, i + size));
+  }
+  return result;
+};
 
 const Documents: FunctionComponent<DocumentsProps> = ({ documents }) => {
-  const chunckArray = (array: Document[], size: number) => {
-    const result = [];
-    for (let i = 0; i < array.length; i += size) {
-      result.push(array.slice(i, i + size));
-    }
-    return result;
-  };
-
   const xsChunkedDocuments = chunckArray(documents, 2);
   const smChunkedDocuments = chunckArray(documents, 4);
   const chunkedDocuments = chunckArray(documents, 9);
+
+  const [documentModalOpen, setDocumentModalOpen] = useState(false);
+  const [documentId, setDocumentId] = useState(0);
+  const [documentTitle, setDocumentTitle] = useState("");
 
   return (
     <div className="Documents mt-14">
@@ -45,6 +52,10 @@ const Documents: FunctionComponent<DocumentsProps> = ({ documents }) => {
                         id={document.id}
                         title={document.title}
                         imagePath={document.imagePath}
+                        onClick={() => {
+                          setDocumentModalOpen(true);
+                          setDocumentId(document.id);
+                        }}
                       />
                     </div>
                   ))}
@@ -67,6 +78,10 @@ const Documents: FunctionComponent<DocumentsProps> = ({ documents }) => {
                         id={document.id}
                         title={document.title}
                         imagePath={document.imagePath}
+                        onClick={() => {
+                          setDocumentModalOpen(true);
+                          setDocumentId(document.id);
+                        }}
                       />
                     </div>
                   ))}
@@ -89,6 +104,11 @@ const Documents: FunctionComponent<DocumentsProps> = ({ documents }) => {
                         id={document.id}
                         title={document.title}
                         imagePath={document.imagePath}
+                        onClick={() => {
+                          setDocumentModalOpen(true);
+                          setDocumentId(document.id);
+                          setDocumentTitle(document.title);
+                        }}
                       />
                     </div>
                   ))}
@@ -96,6 +116,15 @@ const Documents: FunctionComponent<DocumentsProps> = ({ documents }) => {
               </div>
             ))}
           </Swiper>
+          {documentModalOpen && (
+            <DocumentModal
+              isOpen={documentModalOpen}
+              handleClose={() => setDocumentModalOpen(!documentModalOpen)}
+              title={documentTitle}
+            >
+              <DocumentDetail id={documentId} documents={documents} />
+            </DocumentModal>
+          )}
         </div>
       </div>
     </div>

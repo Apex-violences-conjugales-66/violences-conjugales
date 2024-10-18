@@ -1,21 +1,21 @@
 import { Squircle } from "corner-smoothing";
 import { FunctionComponent, useEffect, useRef } from "react";
-import { Button } from "../Button";
+import { RxCross2 } from "react-icons/rx";
 import ReactPortal from "./ReactPortal";
 
-interface FooterModalProps {
+interface DocumentModalProps {
   children: React.ReactNode;
   isOpen: boolean;
-  browser: string;
   handleClose: () => void;
+  title: string;
 }
 
-const FooterModal: FunctionComponent<FooterModalProps> = ({
+const DocumentModal: FunctionComponent<DocumentModalProps> = ({
   children,
   isOpen,
   handleClose,
-  browser,
-}: FooterModalProps) => {
+  title,
+}: DocumentModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
   //close on Escape key
   useEffect(() => {
@@ -54,15 +54,16 @@ const FooterModal: FunctionComponent<FooterModalProps> = ({
         <Squircle
           ref={modalRef}
           cornerRadius={40}
-          className="fixed flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 box-border min-w-fit min-h-fit overflow-hidden p-8 z-50 bg-purple"
+          className="fixed flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 box-border w-5/6 h-5/6 overflow-hidden p-8 z-50 bg-white"
         >
-          <div className="flex justify-between gap-14 mb-4">
-            <h2 className="font-bold">
-              Marche à suivre pour <span className="font-black">{browser}</span>
-            </h2>
-            <Button className="self-end" onClick={handleClose}>
-              Fermer
-            </Button>
+          <div className="flex justify-between mb-6">
+            <h3>{title}</h3>
+            <button
+              onClick={handleClose}
+              className="hover:opacity-65 transition"
+            >
+              <RxCross2 size={32} />
+            </button>
           </div>
           <div className="box-border h-full flex flex-col gap-y-4">
             {children}
@@ -73,4 +74,4 @@ const FooterModal: FunctionComponent<FooterModalProps> = ({
   );
 };
 
-export default FooterModal;
+export default DocumentModal;
