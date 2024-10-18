@@ -1,7 +1,7 @@
 "use client";
 
 import { FunctionComponent, useState } from "react";
-import DocumentCard from "../ui/DocumentModal/DocumentCard";
+import DocumentCard from "../ui/DocumentCard";
 import DocumentDetail from "../ui/Modal/DocumentDetail";
 import DocumentModal from "../ui/Modal/DocumentModal";
 import Swiper from "../ui/Swiper/Swiper";

@@ -51,10 +51,9 @@ const DocumentModal: FunctionComponent<DocumentModalProps> = ({
     <ReactPortal wrapperId="react-portal-modal-container">
       <>
         <div className="fixed top-0 left-0 w-screen h-screen z-40 bg-grey opacity-90 flex" />
-        <Squircle
+        <div
           ref={modalRef}
-          cornerRadius={40}
-          className="fixed flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 box-border w-5/6 h-5/6 overflow-hidden p-8 z-50 bg-white"
+          className="rounded-sm fixed flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 box-border w-5/6 h-5/6 overflow-hidden p-8 z-50 bg-white"
         >
           <div className="flex justify-between mb-6">
             <h3>{title}</h3>
@@ -68,7 +67,7 @@ const DocumentModal: FunctionComponent<DocumentModalProps> = ({
           <div className="box-border h-full flex flex-col gap-y-4">
             {children}
           </div>
-        </Squircle>
+        </div>
       </>
     </ReactPortal>
   );
