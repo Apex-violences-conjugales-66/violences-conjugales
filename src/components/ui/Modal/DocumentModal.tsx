@@ -54,7 +54,7 @@ const DocumentModal: FunctionComponent<DocumentModalProps> = ({
         <Squircle
           ref={modalRef}
           cornerRadius={40}
-          className="fixed flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 box-border w-5/6 h-5/6 overflow-hidden p-8 z-50 bg-white"
+          className="fixed flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 box-border h-5/6 overflow-hidden p-8 z-50 bg-white"
         >
           <div className="flex justify-between mb-6">
             <h3>{title}</h3>

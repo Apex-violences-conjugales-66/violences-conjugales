@@ -10,9 +10,9 @@ const Introduction: FunctionComponent<IntroductionProps> = () => {
   return (
     <div className="Introduction">
       <Separator rotate />
-      <div className="container flex pt-14 relative">
-        <div className="flex flex-col w-2/3 gap-y-10">
-          <Title className="relative left-10">Présentation</Title>
+      <div className="container flex flex-col md:flex-row pt-14 relative">
+        <div className="w-full flex flex-col md:w-2/3 items-center md:items-start gap-y-10">
+          <Title className="left-10 self-start">Présentation</Title>
           <div className="space-y-4">
             <p>
               APEX accueille, écoute et accompagne les personnes touchées par
@@ -35,7 +35,9 @@ const Introduction: FunctionComponent<IntroductionProps> = () => {
             En savoir plus
           </Button>
         </div>
-        <Image alt="femme" src="/vector/femme.svg" width={500} height={500} />
+        <div className="my-8 md:my-0 relative min-w-[280px] min-h-[280px] xl:min-w-[500px] xl:min-h-[500px]">
+          <Image alt="femme" src="/vector/femme.svg" fill />
+        </div>
       </div>
     </div>
   );

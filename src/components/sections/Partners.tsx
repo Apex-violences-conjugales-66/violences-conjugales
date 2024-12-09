@@ -23,11 +23,14 @@ const Partners: FunctionComponent<PartnersProps> = () => {
       <div className="w-full relative py-24 flex">
         <div className="absolute w-[calc(33.3%-4px)] h-[calc(66.6%-4px)] bg-yellow left-0 top-0" />
         <div className="absolute w-2/3 h-1/3 bg-orange right-0 top-0" />
+        <div className="absolute w-1/3 h-full bg-orange right-1/3 top-0" />
         <div className="absolute w-2/3 h-1/3 bg-orange left-0 bottom-0" />
         <div className="absolute w-[calc(33.3%-4px)] h-[calc(66.6%-4px)] bg-yellow right-0 bottom-0" />
-        <div className="container z-10 relative flex flex-col items-center gap-y-10">
-          <Title style="orange">Nos Partenaires</Title>
-          <Squircle cornerRadius={80}>
+        <div className="container z-10 relative flex flex-col items-center justify-between gap-y-10">
+          <Title style="orange" className="left-10">
+            Nos Partenaires
+          </Title>
+          <Squircle cornerRadius={80} className="hidden xl:block">
             <Swiper>
               <SwiperCard>
                 <h3>Institutionnels et financiers</h3>
@@ -154,6 +157,36 @@ const Partners: FunctionComponent<PartnersProps> = () => {
               </SwiperCard>
             </Swiper>
           </Squircle>
+          <div className="xl:hidden relative w-full">
+            <Swiper>
+              {imagePartnersInstiPaths.map((path, index) => (
+                <SwiperCard key={index}>
+                  <div className="w-48 h-36 relative">
+                    <Image
+                      alt={`Image ${index + 1}`}
+                      src={path}
+                      fill
+                      sizes="(max-width: 250px)"
+                      style={{ objectFit: "contain" }}
+                    />
+                  </div>
+                </SwiperCard>
+              ))}
+              {imagePartnersAssoPaths.map((path, index) => (
+                <SwiperCard key={index}>
+                  <div className="w-48 h-36 relative">
+                    <Image
+                      alt={`Image ${index + 1}`}
+                      src={path}
+                      fill
+                      sizes="(max-width: 250px)"
+                      style={{ objectFit: "contain" }}
+                    />
+                  </div>
+                </SwiperCard>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
       <Separator rotate />

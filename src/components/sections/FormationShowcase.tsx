@@ -10,7 +10,7 @@ const FormationShowcase: FunctionComponent<FormationShowcaseProps> = () => {
     <div className="container flex flex-col gap-y-10 pt-14 ">
       <Title className="relative left-10">L'Organisme de Formation</Title>
       <div className="flex flex-col gap-y-6">
-        <div className="flex gap-x-14">
+        <div className="flex flex-col md:flex-row gap-x-14 gap-y-4">
           <p>
             Notre organisme de formation, certifié QUALIOPI depuis août 2021,
             s'engage à offrir des formations de haute qualité, reconnues et
@@ -30,7 +30,7 @@ const FormationShowcase: FunctionComponent<FormationShowcaseProps> = () => {
             />
           </div>
         </div>
-        <div className="flex flex-row-reverse gap-x-14">
+        <div className="flex flex-col md:flex-row-reverse gap-x-14 gap-y-4">
           <div className="flex flex-col gap-y-6">
             <p>
               Nous proposons un catalogue de formations, notamment sur les
@@ -44,7 +44,7 @@ const FormationShowcase: FunctionComponent<FormationShowcaseProps> = () => {
               En savoir plus
             </Button>
           </div>
-          <div className="relative min-h-[260px] min-w-[540px] shadow-md rounded-2xl">
+          <div className="relative w-full min-h-[200px] md:w-auto md:min-h-[260px] md:min-w-[350px] xl:min-w-[540px] shadow-md rounded-2xl">
             <Image
               className="rounded-2xl"
               alt="groupe de formation"

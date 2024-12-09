@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FunctionComponent } from "react";
+import { RxCross2 } from "react-icons/rx";
 import { cn } from "../lib/utils";
 import { Button } from "./ui/Button";
 import Menu from "./ui/Menu";
@@ -15,7 +16,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({ className }) => {
       <nav
         className={cn(
           className,
-          "fixed w-full z-20 top-0 h-20 shadow-md bg-white"
+          "fixed w-full z-20 top-0 h-[80px] shadow-md bg-white"
         )}
       >
         <div className="container h-full flex items-center justify-between">
@@ -38,17 +39,20 @@ const Navbar: FunctionComponent<NavbarProps> = ({ className }) => {
           >
             Soutenir <b>APEX</b>
           </Button>
+          <div className="hidden w-[30px] h-[30px] md:block xl:hidden" />
           <Menu />
         </div>
         <Link
           href="https://www.google.com/"
-          className="absolute h-14 w-14 flex flex-col justify-end gap-y-1 items-center bg-red top-6 right-0"
+          className="absolute h-[56px] w-[56px] flex flex-col justify-center items-center bg-red top-[0px] xl:top-[24px] right-0 rounded-sm"
         >
-          <Image alt="Quitter" src="/vector/cross.svg" width={16} height={16} />
-          <span className="text-white text-[13px] mb-1">Quitter</span>
+          <RxCross2 size={30} color="white" />
+          <span className="text-white text-[13px] md:leading-tight">
+            Quitter
+          </span>
         </Link>
       </nav>
-      <div className="h-20" />
+      <div className="h-[80px]" />
     </>
   );
 };

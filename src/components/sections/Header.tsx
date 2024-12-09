@@ -19,11 +19,11 @@ const Header: FunctionComponent<HeaderProps> = ({ title, reverse }) => {
       >
         <div
           className={cn(
-            "flex h-[450px] max-w-[1440px] w-full bg-white px-1",
-            reverse && "flex-row-reverse"
+            "flex flex-col md:flex-row h-[450px] max-w-[1440px] w-full bg-white px-1",
+            reverse && "md:flex-row-reverse"
           )}
         >
-          <div className="w-2/3 relative">
+          <div className="h-[250px] md:w-2/3 md:h-auto relative">
             <Image
               alt="Header Art"
               src={"/header_art.jpg"}
@@ -33,8 +33,8 @@ const Header: FunctionComponent<HeaderProps> = ({ title, reverse }) => {
           </div>
           <div
             className={cn(
-              "w-1/3 flex items-center justify-center px-5",
-              reverse ? "bg-orange mr-1" : "bg-yellow ml-1"
+              "h-[200px] md:w-1/3 md:h-auto mt-1 md:mt-0 flex items-center justify-center px-5",
+              reverse ? "bg-orange md:mr-1" : "bg-yellow md:ml-1"
             )}
           >
             <h1 className="text-center">{title}</h1>
