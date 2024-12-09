@@ -9,12 +9,12 @@ const Projet: FunctionComponent<ProjetProps> = () => {
     <div className="container my-14 relative">
       <div
         id="sommaire"
-        className="mx-16 border border-orange relative scroll-mt-28"
+        className="xl:mx-16 border border-orange relative scroll-mt-[112px]"
       >
         <span className="text-5xl font-gothic absolute right-16 -top-6 bg-white px-1">
           AU SOMMAIRE
         </span>
-        <div className="p-11 space-y-1">
+        <div className="p-11 space-y-1 [&>*>h5]:my-2 md:[&>*>h5]:my-1">
           <Link href="#title-1">
             <h5>I - CREATION ET ADMINISTRATION DE L&rsquo;ASSOCIATION</h5>
           </Link>
@@ -51,14 +51,14 @@ const Projet: FunctionComponent<ProjetProps> = () => {
       </div>
       <div className="mt-12 space-y-4 [&>ul]:inside [&>ul]:ml-4">
         <div className="flex gap-x-5 items-center">
-          <h4 id="title-1" className="scroll-mt-24">
+          <h4 id="title-1" className="scroll-mt-[92px]">
             I - CREATION ET ADMINISTRATION DE L&rsquo;ASSOCIATION
           </h4>
           <Link
             href="#sommaire"
-            className="mt-1 border rounded-md px-2 pt-[2px] bg-grey/10 hover:bg-white transition"
+            className="mt-1 rounded-md px-4 py-1 bg-grey/10 hover:bg-white transition"
           >
-            <BsArrowReturnRight size={24} />
+            <BsArrowReturnRight size={16} />
           </Link>
         </div>
         <p>
@@ -115,15 +115,15 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           <li>Jacques LORIEUX, retraité (membre d&rsquo;honneur)</li>
         </ul>
         <div className="flex gap-x-5 items-center">
-          <h4 id="title-2" className="scroll-mt-24">
+          <h4 id="title-2" className="scroll-mt-[92px] uppercase">
             II - APEX : Violences conjugales de l&rsquo;intervention à la
             formation
           </h4>
           <Link
             href="#sommaire"
-            className="mt-1 border rounded-md px-2 pt-[2px] bg-grey/10 hover:bg-white transition"
+            className="mt-1 rounded-md px-4 py-1 bg-grey/10 hover:bg-white transition"
           >
-            <BsArrowReturnRight size={24} />
+            <BsArrowReturnRight size={16} />
           </Link>
         </div>
 
@@ -263,15 +263,15 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           </li>
         </ul>
         <div className="flex gap-x-5 items-center">
-          <h4 id="title-3" className="scroll-mt-24">
+          <h4 id="title-3" className="scroll-mt-[92px] uppercase">
             III - Accompagnement des personnes en prise avec les violences
             conjugales
           </h4>
           <Link
             href="#sommaire"
-            className="mt-1 border rounded-md px-2 pt-[2px] bg-grey/10 hover:bg-white transition"
+            className="mt-1 rounded-md px-4 py-1 bg-grey/10 hover:bg-white transition"
           >
-            <BsArrowReturnRight size={24} />
+            <BsArrowReturnRight size={16} />
           </Link>
         </div>
 
@@ -409,14 +409,14 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           et l&rsquo;entourage.
         </p>
         <div className="flex gap-x-5 items-center">
-          <h4 id="title-4" className="scroll-mt-24">
-            IV - FINANCEURS et PARTENAIRES
+          <h4 id="title-4" className="scroll-mt-[92px]">
+            IV - FINANCEURS ET PARTENAIRES
           </h4>
           <Link
             href="#sommaire"
-            className="mt-1 border rounded-md px-2 pt-[2px] bg-grey/10 hover:bg-white transition"
+            className="mt-1 rounded-md px-4 py-1 bg-grey/10 hover:bg-white transition"
           >
-            <BsArrowReturnRight size={24} />
+            <BsArrowReturnRight size={16} />
           </Link>
         </div>
 
@@ -546,14 +546,14 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           Catalane, , Il faudra leur dire, ASSOSPHERE et ADESOL.
         </p>
         <div className="flex gap-x-5 items-center">
-          <h4 id="title-5" className="scroll-mt-24">
+          <h4 id="title-5" className="scroll-mt-[92px]">
             V - ANALYSE ET RÉFLEXION
           </h4>
           <Link
             href="#sommaire"
-            className="mt-1 border rounded-md px-2 pt-[2px] bg-grey/10 hover:bg-white transition"
+            className="mt-1 rounded-md px-4 py-1 bg-grey/10 hover:bg-white transition"
           >
-            <BsArrowReturnRight size={24} />
+            <BsArrowReturnRight size={16} />
           </Link>
         </div>
 
@@ -670,14 +670,14 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           </li>
         </ul>
         <div className="flex gap-x-5 items-center">
-          <h4 id="title-6" className="scroll-mt-24">
+          <h4 id="title-6" className="scroll-mt-[92px]">
             VI - LA FORMATION PROFESSIONNELLE CONTINUE
           </h4>
           <Link
             href="#sommaire"
-            className="mt-1 border rounded-md px-2 pt-[2px] bg-grey/10 hover:bg-white transition"
+            className="mt-1 rounded-md px-4 py-1 bg-grey/10 hover:bg-white transition"
           >
-            <BsArrowReturnRight size={24} />
+            <BsArrowReturnRight size={16} />
           </Link>
         </div>
 

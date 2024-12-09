@@ -11,133 +11,68 @@
         {
           "id": 1,
           "title": "Masculinité à l'épreuve",
-          "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg"
+          "imagePath": "/docs/masculinite_a_l_epreuve_de_la_loi.jpg",
+          "docPath": "/docs/masculinite_a_l_epreuve_de_la_loi.pdf"
         },
         {
           "id": 2,
-          "title": "doc 2",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+          "title": "Féminicide LeMonde",
+          "imagePath": "/docs/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
+          "docPath": "/docs/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
         },
         {
           "id": 3,
-          "title": "document 3",
-          "imagePath": "/ressources/depliant-violences-conjugales-2019.jpg",
-          "docPath": "/ressources/depliant-violences-conjugales-2019.pdf"
+          "title": "Dépliant Violences conjugales 2019",
+          "imagePath": "/docs/depliant-violences-conjugales-2019.jpg",
+          "docPath": "/docs/depliant-violences-conjugales-2019.pdf"
         },
         {
           "id": 4,
-          "title": "doc 4",
-          "imagePath": "/ressources/Convention-des-droits-de-l-enfant.jpg",
-          "docPath": "/ressources/Convention-des-droits-de-l-enfant.pdf"
+          "title": "Convention des droits de l'enfant",
+          "imagePath": "/docs/Convention-des-droits-de-l-enfant.jpg",
+          "docPath": "/docs/Convention-des-droits-de-l-enfant.pdf"
         },
         {
           "id": 5,
-          "title": "document 5",
-          "imagePath": "/ressources/Le-surendettement-et-les-femmes.jpg",
-          "docPath": "/ressources/Le-surendettement-et-les-femmes.pdf"
+          "title": "Le surendettement et les femmes",
+          "imagePath": "/docs/Le-surendettement-et-les-femmes.jpg",
+          "docPath": "/docs/Le-surendettement-et-les-femmes.pdf"
         },
         {
           "id": 6,
-          "title": "doc 6",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+          "title": "1001 raisons de proposer également une prise en charge à l'auteur",
+          "imagePath": "/docs/1001_raisons_de_proposer_egalement_une_prise_en_charge_a_lauteur.jpg",
+          "docPath": "/docs/1001_raisons_de_proposer_egalement_une_prise_en_charge_a_lauteur.pdf"
         },
         {
           "id": 7,
-          "title": "document 7",
-          "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg",
-          "docPath": "/ressources/masculinite_a_l_epreuve_de_la_loi.pdf"
+          "title": "Guide pratique de l'ordonnade de protection",
+          "imagePath": "/docs/Guide_pratique_de_lordonnande_de_protection.jpg",
+          "docPath": "/docs/Guide_pratique_de_lordonnande_de_protection.pdf"
         },
         {
           "id": 8,
-          "title": "doc 8",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+          "title": "Femme violence",
+          "imagePath": "/docs/fs_femmes_violence_reperer_HAS.jpg",
+          "docPath": "/docs/fs_femmes_violence_reperer_HAS.pdf"
         },
         {
           "id": 9,
-          "title": "doc 9",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+          "title": "Guide animateur/animatrice",
+          "imagePath": "/docs/Guide_animateur_animatrice_vie_relationnelle.jpg",
+          "docPath": "/docs/Guide_animateur_animatrice_vie_relationnelle.pdf"
         },
         {
           "id": 10,
-          "title": "doc 10",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+          "title": "Guide contre l'harcelement sexuel 2019",
+          "imagePath": "/docs/Guide_contre_harcelement_sexuel_DGT_2019.jpg",
+          "docPath": "/docs/Guide_contre_harcelement_sexuel_DGT_2019.pdf"
         },
         {
           "id": 11,
-          "title": "doc 11",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
-        },
-        {
-          "id": 12,
-          "title": "doc 12",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
-        },
-        {
-          "id": 13,
-          "title": "document 3",
-          "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg",
-          "docPath": "/ressources/masculinite_a_l_epreuve_de_la_loi.pdf"
-        },
-        {
-          "id": 14,
-          "title": "doc 4",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
-        },
-        {
-          "id": 15,
-          "title": "document 5",
-          "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg",
-          "docPath": "/ressources/masculinite_a_l_epreuve_de_la_loi.pdf"
-        },
-        {
-          "id": 16,
-          "title": "doc 6",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
-        },
-        {
-          "id": 17,
-          "title": "document 7",
-          "imagePath": "/ressources/masculinite_a_l_epreuve_de_la_loi.jpg",
-          "docPath": "/ressources/masculinite_a_l_epreuve_de_la_loi.pdf"
-        },
-        {
-          "id": 18,
-          "title": "doc 8",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
-        },
-        {
-          "id": 19,
-          "title": "doc 9",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
-        },
-        {
-          "id": 20,
-          "title": "doc 10",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
-        },
-        {
-          "id": 21,
-          "title": "doc 11",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
-        },
-        {
-          "id": 22,
-          "title": "doc 12",
-          "imagePath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.jpg",
-          "docPath": "/ressources/Feminicides-LeMonde-N23449-MaiJuin2020.pdf"
+          "title": "Guide pour une communication publique sans stéréotype de sexe",
+          "imagePath": "/docs/guide_pour_une_communication_publique_sans_stereotype_de_sexe_vf_2016_11_02.compressed.jpg",
+          "docPath": "/docs/guide_pour_une_communication_publique_sans_stereotype_de_sexe_vf_2016_11_02.compressed.pdf"
         }
       ]
     },
@@ -145,64 +80,100 @@
       "name": "memoires",
       "memoirs": [
         {
-          "author": "Michel",
+          "author": "Karine MATHON",
           "title": "Violences  conjugales dans les Pyrénées Orientales : Quelles sont les attentes des  femmes victimes de violences conjugales envers le médecin généraliste ?",
-          "description": "Thèse pour l'obtention du titre Docteure en Médecine - Sous la direction de François OLIVET"
+          "description": "Thèse pour l'obtention du titre Docteure en Médecine - Sous la direction de François OLIVET",
+          "docPath": "/memoirs/violence-conjugales-po-attentes-femmes-victimes.pdf"
         },
         {
-          "author": "elem 2",
+          "author": "Agnès Glory",
           "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
-          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte",
+          "docPath": "/memoirs/paroles-de-femmes.pdf"
         },
         {
-          "author": "elem 3",
-          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
-          "description": "Mémoire"
-        },
-        {
-          "author": "elem 4",
+          "author": "Laëtitia Capon",
           "title": "Relation Mère-Enfant dans les situations de violences conjugales",
-          "description": "Mémoire du Master 1 Psychologie Clinique et Psychopathologie - Réflexions sur la relation entre les enfants en difficulté et leur mère dans un contexte de violences conjugales."
+          "description": "Mémoire du Master 1 Psychologie Clinique et Psychopathologie - Réflexions sur la relation entre les enfants en difficulté et leur mère dans un contexte de violences conjugales",
+          "docPath": "/memoirs/relation-mere-enfant.pdf"
         },
         {
-          "author": "elem 5",
-          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
-          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+          "author": "Laëtitia Capon",
+          "title": "Communiquer : lorsque le corps « s’en mêle »",
+          "description": "Mémoire d'obtention du diplôme d'Educatrice Spécialisée - 2014",
+          "docPath": "/memoirs/communiquer-lorsque-corps-mele.pdf"
         },
         {
-          "author": "elem 6",
-          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
-          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+          "author": "Delphine Caufopé",
+          "title": "Les enfants exposés aux violences conjugales",
+          "description": "mémoire de fin d'études du Diplôme d'état d'Assistante de Service Social - Quel accompagnement l'assistant de service social peut il proposer à ces enfants ?",
+          "docPath": "/memoirs/enfants-exposes-violences-conjugales.pdf"
         },
         {
-          "author": "elem 7",
-          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
-          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+          "author": "Françoise Jouan",
+          "title": "L’homme erra pour quat’sous",
+          "description": "Mémoire DSTS - réflexion autour de la difficile insertion des personnes SDF",
+          "docPath": "/memoirs/l_homme_erra_pour_quatsous.doc"
         },
         {
-          "author": "elem 8",
-          "title": "Relation Mère-Enfant dans les situations de violences conjugales",
-          "description": "Mémoire du Master 1 Psychologie Clinique et Psychopathologie - Réflexions sur la relation entre les enfants en difficulté et leur mère dans un contexte de violences conjugales."
+          "author": "Marc Beauvais",
+          "title": "Le passager de l'appui",
+          "description": "Mémoire professionnel (diplôme d'Etat de Technicien en Intervention Sociale et Familiale) - Les conséquences de l'intervention masculine dans le secteur de l'aide à domicile",
+          "docPath": "/memoirs/passager_appui.doc"
         },
         {
-          "author": "elem 9",
-          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
-          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+          "author": "Sandrine Esposito",
+          "title": "Crises et chuchotements",
+          "description": "Rapport de stage professionnel - Réflexion autour de la notion d'accueil dans l'urgence sociale",
+          "docPath": "/memoirs/crises_et_chuchotements.doc"
         },
         {
-          "author": "elem 10",
-          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
-          "description": "Mémoire"
+          "author": "Evelyne Llong",
+          "title": "Rue de la liberté",
+          "description": "Mémoire Conseillère en économie sociale et familiale - La CESF au contact des jeunes SDF",
+          "docPath": "/memoirs/rue_de_la_liberte.doc"
         },
         {
-          "author": "elem 11",
-          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
-          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+          "author": "Clémence Kelili",
+          "title": "Expliquer le mal par le mâle",
+          "description": "Mémoire Assistante en service social - En quoi, chez l'assistante sociale, la maîtrise de l'approche systémique peut-elle favoriser le contact avec l'auteur de violence domestique",
+          "docPath": "/memoirs/expliquer_le_mal_par_le_male.doc"
         },
         {
-          "author": "elem 12",
-          "title": "Paroles de femmes - à la croisée des cultures et des histoires individuelles",
-          "description": "Mémoire  pour l'obtention du Master 2 de Sciences Humaines et Sociales -  Spécialité Psychologie de la santé à l' Institut Lumière Lyon II - Sous la direction de Frédéric Villetorte"
+          "author": "Frédérique Lecomte",
+          "title": "Les mères gitanes : moteur de changements",
+          "description": "Mémoire de Conseillère en économie sociale et familiale - Réflexions à partir d'une étude dans une association de Perpignan sur les possibilités de changements de la communauté à l'initiative des 'mères'",
+          "docPath": "/memoirs/meres_gitanes_moteur_changements.doc"
+        },
+        {
+          "author": "Aurélie PEREZ",
+          "title": "La re-co-naissance de la femme victime de violences conjugales",
+          "description": "De la sphère privée à la sphère publique - Mémoire D.I.U de victimologie - Réflexion pluridisciplinaire sur les outils victimologies",
+          "docPath": "/memoirs/re-co-naissance_femme-victime.doc"
+        },
+        {
+          "author": "Muriel Guillaumes",
+          "title": "Est-ce de la faute d’Epiméthée",
+          "description": "Mémoire DESS - Étude et création d'un projet d'accueil des auteurs de violence dans le couple",
+          "docPath": "/memoirs/est_ce_de_la_faute_d_epimethee.doc"
+        },
+        {
+          "author": "Muriel Guillaumes",
+          "title": "Les déliaisons dangereuses",
+          "description": "Mémoire maîtrise AES - L'urgence sociale à l'aune des politiques libérales",
+          "docPath": "/memoirs/les_deliaisons_dangereuses.doc"
+        },
+        {
+          "author": "Jacques Lorieux",
+          "title": "Il bat de l'elle",
+          "description": "Mémoire DSTS - Les travailleurs sociaux évoluant entre les femmes victimes de violence et l'idéologie libérale",
+          "docPath": "/memoirs/il_bat_de_l_elle.doc"
+        },
+        {
+          "author": "Mathilde Autret",
+          "title": "L'accompagnement des auteurs de violences conjugales et intrafamiliales",
+          "description": "Les violences au sein du couple et de la famille - Mémoire professionnel de Conseil Conjugal et Familial",
+          "docPath": "/memoirs/accompagnement_auteurs _violences_conjugales_et_intrafamiliales.pdf"
         }
       ]
     },

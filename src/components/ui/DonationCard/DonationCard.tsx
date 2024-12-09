@@ -19,7 +19,7 @@ const DonationCard: FunctionComponent<DonationCardProps> = ({
       as="button"
       className={cn(
         className,
-        "bg-white flex flex-col justify-center items-center px-6 size-60 font-bold hover:bg-blue-hover transition"
+        "flex flex-col items-center justify-center bg-white size-[200px] xl:size-[240px] px-6 font-bold hover:bg-blue-hover transition"
       )}
     >
       {children}

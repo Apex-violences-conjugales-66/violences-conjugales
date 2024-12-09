@@ -16,7 +16,7 @@ const Footer: FunctionComponent<FooterProps> = () => {
     <div className="Footer">
       <Separator variant />
       <div className="bg-purple py-16 relative">
-        <div className="container flex flex-col gap-24 justify-between md:flex-row">
+        <div className="container flex flex-col gap-10 xl:gap-24 justify-between xl:flex-row">
           <div className="flex flex-col gap-y-4">
             <div className="flex gap-x-4">
               <div className="relative w-16 h-20">
@@ -26,12 +26,12 @@ const Footer: FunctionComponent<FooterProps> = () => {
                   fill
                 />
               </div>
-              <div className="flex flex-col justify-center ">
+              <div className="flex flex-col justify-center">
                 <span className="font-bold text-xl">APEX</span>
                 <span className="font-light text-[22px]">04 68 63 50 24</span>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative self-center md:self-start">
               <div
                 className={cn(
                   "w-60 flex flex-col gap-y-3 text-xl items-center font-bold rounded-sm border-2 py-4",
@@ -119,7 +119,7 @@ const Footer: FunctionComponent<FooterProps> = () => {
             </div>
           </div>
         </div>
-        <p className="text-sm absolute bottom-2 right-10">
+        <p className="text-sm absolute bottom-2 left-1/2 text-center -translate-x-1/2 md:translate-x-0 md:left-auto md:right-10">
           © 2024 &nbsp;&nbsp; APEX | AEPirlot &nbsp;&nbsp; All rights reserved
           &nbsp;&nbsp; Mentions légales.
         </p>

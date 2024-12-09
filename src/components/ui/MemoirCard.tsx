@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FunctionComponent } from "react";
 import { cn } from "../../lib/utils";
 
@@ -6,6 +7,7 @@ interface MemoirCardProps {
   author: string;
   title: string;
   description?: string;
+  docPath?: string;
 }
 
 const MemoirCard: FunctionComponent<MemoirCardProps> = ({
@@ -13,6 +15,7 @@ const MemoirCard: FunctionComponent<MemoirCardProps> = ({
   author,
   title,
   description,
+  docPath,
 }) => {
   return (
     <div
@@ -27,7 +30,13 @@ const MemoirCard: FunctionComponent<MemoirCardProps> = ({
       </div>
       <div>
         <span className="text-lg sm:text-xl font-bold">Titre : </span>
-        {title}
+        {docPath ? (
+          <a className="underline" href={docPath} target="_blank">
+            {title}
+          </a>
+        ) : (
+          title
+        )}
       </div>
       {description && (
         <div>

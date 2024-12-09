@@ -1,7 +1,7 @@
 "use client";
 
 import { FunctionComponent, useState } from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross1, RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { cn } from "../../lib/utils";
 import NavLink from "./NavLink";
 import navigationData from "@/data/navigationData";
@@ -17,7 +17,12 @@ const Menu: FunctionComponent<MenuProps> = ({ className }) => {
   };
 
   return (
-    <div className={cn("mr-8 xl:mr-0", className)}>
+    <div
+      className={cn(
+        "mr-8 xl:mr-0 md:absolute md:right-[56px] xl:static",
+        className
+      )}
+    >
       <div className="hidden xl:flex xl:gap-x-1 items-center">
         {navigationData.map((navigationItem, index) => (
           <NavLink key={index} to={navigationItem.path}>
@@ -26,17 +31,17 @@ const Menu: FunctionComponent<MenuProps> = ({ className }) => {
         ))}
       </div>
       <button className="xl:hidden" onClick={toggleOpen}>
-        <RxHamburgerMenu size={30} />
-        {isOpen && (
-          <div>
-            {navigationData.map((navigationItem, index) => (
-              <NavLink key={index} to={navigationItem.path}>
-                {navigationItem.label}
-              </NavLink>
-            ))}
-          </div>
-        )}
+        {!isOpen && <RxHamburgerMenu size={30} />}
       </button>
+      {isOpen && (
+        <div className="absolute flex-col gap-y-2 top-[80px] right-[0px] w-max md:right-[-88px] md:top-[52px] flex md:flex-row bg-white md:gap-x-1 p-[16px] shadow-md xl:hidden rounded-bl-sm">
+          {navigationData.map((navigationItem, index) => (
+            <NavLink key={index} to={navigationItem.path}>
+              {navigationItem.label}
+            </NavLink>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

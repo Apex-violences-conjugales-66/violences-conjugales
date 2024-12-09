@@ -7,6 +7,7 @@ export interface Memoir {
   author: string;
   title: string;
   description?: string;
+  docPath?: string;
 }
 
 interface MemoiresProps {
@@ -27,6 +28,7 @@ const Memoires: FunctionComponent<MemoiresProps> = ({ memoirs }) => {
               author={memoir.author}
               title={memoir.title}
               description={memoir.description}
+              docPath={memoir.docPath}
             />
           ))}
         </div>

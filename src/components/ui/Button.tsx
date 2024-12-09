@@ -4,7 +4,7 @@ import { ComponentProps, FunctionComponent } from "react";
 import { cn } from "../../lib/utils";
 
 const buttonVariants = cva(
-  "items-center rounded-xl justify-center text-xl font-bold transition-all",
+  "items-center rounded-xl justify-center text-base lg:text-xl font-bold transition-all",
   {
     variants: {
       variant: {
