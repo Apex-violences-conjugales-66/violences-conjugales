@@ -8,18 +8,18 @@ interface FormationShowcaseProps {}
 const FormationShowcase: FunctionComponent<FormationShowcaseProps> = () => {
   return (
     <div className="container flex flex-col gap-y-10 pt-14 ">
-      <Title className="relative left-10">L'Organisme de Formation</Title>
+      <Title className="relative left-10">L&rsquo;Organisme de Formation</Title>
       <div className="flex flex-col gap-y-6">
         <div className="flex flex-col md:flex-row gap-x-14 gap-y-4">
           <p>
             Notre organisme de formation, certifié QUALIOPI depuis août 2021,
-            s'engage à offrir des formations de haute qualité, reconnues et
-            adaptées aux besoins des professionnels. <br />
+            s&rsquo;engage à offrir des formations de haute qualité, reconnues
+            et adaptées aux besoins des professionnels. <br />
             <br />
             La certification QUALIOPI atteste de la rigueur de nos processus et
-            nous permet d'accéder à des financements publics ou mutualisés,
-            garantissant ainsi des prestations conformes aux attentes des
-            entreprises et des participants.
+            nous permet d&rsquo;accéder à des financements publics ou
+            mutualisés, garantissant ainsi des prestations conformes aux
+            attentes des entreprises et des participants.
           </p>
           <div className="relative min-h-[100px] min-w-[250px] border border-blue">
             <Image
@@ -37,8 +37,8 @@ const FormationShowcase: FunctionComponent<FormationShowcaseProps> = () => {
               violences conjugales, destiné aux professionnels du secteur
               social, judiciaire, médical et paramédical. <br />
               <br />
-              Pour en savoir plus sur nos offres et modalités d'inscription,
-              visitez la page dédiée.
+              Pour en savoir plus sur nos offres et modalités
+              d&rsquo;inscription, visitez la page dédiée.
             </p>
             <Button href="/formation" variant="orange" className="self-center">
               En savoir plus
