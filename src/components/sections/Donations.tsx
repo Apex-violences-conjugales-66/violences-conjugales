@@ -127,14 +127,15 @@ const Donations: FunctionComponent<DonationsProps> = () => {
                 <h3>Soutenez notre action en nous envoyant un chèque</h3>
                 <p>
                   Vous pouvez nous soutenir par chèque. <br />
-                  Pour cela, merci de libeller le chèque à l'ordre suivant :
+                  Pour cela, merci de libeller le chèque à l&rsquo;ordre suivant
+                  :
                 </p>
                 <ul className="list-none">
                   <li>
                     <strong>Ordre</strong> : Apex
                   </li>
                   <li>
-                    <strong>Adresse d’envoi</strong> :<br />
+                    <strong>Adresse d&rsquo;envoi</strong> :<br />
                     Maison pour les familles, 3 rue Déodat de Séverac
                     <br />
                     66000
