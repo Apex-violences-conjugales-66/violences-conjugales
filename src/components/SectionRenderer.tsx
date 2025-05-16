@@ -37,7 +37,13 @@ const SectionRenderer: FunctionComponent<SectionRendererProps> = ({
     case "partners":
       return <Partners />;
     case "team":
-      return <Team />;
+      return (
+        <Team
+          conseil={section.conseil}
+          administrateurs={section.administrateurs}
+          personnel={section.personnel}
+        />
+      );
     case "documents":
       return <Documents documents={section.documents} />;
     case "memoires":
