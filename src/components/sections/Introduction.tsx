@@ -31,7 +31,11 @@ const Introduction: FunctionComponent<IntroductionProps> = () => {
               des formations professionnelles dans le domaine du travail social.
             </p>
           </div>
-          <Button variant="orange" className="self-end">
+          <Button
+            href="/projet-associatif"
+            variant="orange"
+            className="self-end"
+          >
             En savoir plus
           </Button>
         </div>
