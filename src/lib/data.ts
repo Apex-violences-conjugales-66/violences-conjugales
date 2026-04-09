@@ -2,6 +2,7 @@ import { Document } from "@/components/sections/Documents";
 import { Formation } from "@/components/sections/Formation";
 import { Book, Movie } from "@/components/sections/Mediagraphie";
 import { Memoir } from "@/components/sections/Memoires";
+import { Membre } from "@/components/sections/Team";
 import fs from "fs";
 import path from "path";
 
@@ -9,6 +10,9 @@ export interface Section {
   name: string;
   title?: string;
   reverse?: boolean;
+  personnel: Membre[];
+  conseil: Membre[];
+  administrateurs: Membre[];
   memoirs: Memoir[];
   books: Book[];
   movies: Movie[];

@@ -1,20 +1,19 @@
+import { Squircle } from "corner-smoothing";
 import { FunctionComponent, useEffect, useRef } from "react";
-import { RxCross2 } from "react-icons/rx";
+import { Button } from "../Button";
 import ReactPortal from "./ReactPortal";
 
-interface DocumentModalProps {
+interface DonationModalProps {
   children: React.ReactNode;
   isOpen: boolean;
   handleClose: () => void;
-  title: string;
 }
 
-const DocumentModal: FunctionComponent<DocumentModalProps> = ({
+const DonationModal: FunctionComponent<DonationModalProps> = ({
   children,
   isOpen,
   handleClose,
-  title,
-}: DocumentModalProps) => {
+}: DonationModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
   //close on Escape key
   useEffect(() => {
@@ -50,26 +49,25 @@ const DocumentModal: FunctionComponent<DocumentModalProps> = ({
     <ReactPortal wrapperId="react-portal-modal-container">
       <>
         <div className="fixed top-0 left-0 w-screen h-screen z-40 bg-grey opacity-90 flex" />
-        <div
+        <Squircle
           ref={modalRef}
-          className="fixed flex flex-col top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 box-border h-5/6 overflow-hidden p-8 z-50 bg-white"
+          cornerRadius={40}
+          className="fixed flex flex-col gap-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 box-border min-w-fit min-h-fit overflow-hidden p-8 px-20 z-50 bg-white"
         >
-          <div className="flex justify-between mb-6">
-            <h3>{title}</h3>
-            <button
-              onClick={handleClose}
-              className="hover:opacity-65 transition"
-            >
-              <RxCross2 size={32} />
-            </button>
-          </div>
           <div className="box-border h-full flex flex-col gap-y-4">
             {children}
           </div>
-        </div>
+          <Button
+            className="self-center"
+            variant="orange"
+            onClick={handleClose}
+          >
+            Fermer
+          </Button>
+        </Squircle>
       </>
     </ReactPortal>
   );
 };
 
-export default DocumentModal;
+export default DonationModal;

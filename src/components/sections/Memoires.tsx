@@ -15,8 +15,6 @@ interface MemoiresProps {
 }
 
 const Memoires: FunctionComponent<MemoiresProps> = ({ memoirs }) => {
-  const n = memoirs.length;
-
   return (
     <div className="Memoires mt-24">
       <div className="container flex flex-col items-center gap-10">

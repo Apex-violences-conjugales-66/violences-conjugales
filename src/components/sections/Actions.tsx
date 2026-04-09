@@ -47,6 +47,7 @@ const Actions: FunctionComponent<ActionsProps> = () => {
                       <li>Port-Vendres</li>
                       <li>Saint-Paul-de-Fenouillet</li>
                       <li>Bourg-Madame</li>
+                      <li>Villelongue-dels-Monts</li>
                     </ul>
                   </div>
                 </div>
@@ -171,8 +172,9 @@ const Actions: FunctionComponent<ActionsProps> = () => {
             >
               <div className="space-y-2">
                 <p>
-                  Permanences et groupes de paroles hebdomadaires animés par
-                  deux intervenant.e.s sociaux d&rsquo;APEX dans un lieu dédié.
+                  Permanences, stage de responsabilisation et groupes de paroles
+                  hebdomadaires animés par deux intervenant.e.s sociaux
+                  d&rsquo;APEX dans un lieu dédié.
                 </p>
                 <p>Entretiens individuels et accompagnement social.</p>
                 <p>Groupe de paroles 21 séances de 1h30 chacune.</p>
