@@ -1,13 +1,13 @@
-import { Lato, League_Gothic } from "next/font/google";
+import { Amatic_SC, Roboto } from "next/font/google";
 
-export const lato = Lato({
-  weight: ["100", "300", "400", "700", "900"],
+export const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
   subsets: ["latin"],
-  variable: "--font-lato",
+  variable: "--font-roboto",
 });
 
-export const league_gothic = League_Gothic({
-  weight: "400",
+export const amatic_sc = Amatic_SC({
+  weight: ["400", "700"],
   subsets: ["latin"],
-  variable: "--font-gothic",
+  variable: "--font-amatic_sc",
 });

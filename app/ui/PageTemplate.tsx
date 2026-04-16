@@ -1,23 +1,22 @@
-import { getPageData, PageData } from "@/app/lib/data";
+"use client";
+
+import { Section } from "@/app/lib/definitions.sections";
 import Footer from "@/app/ui/Footer";
 import Navbar from "@/app/ui/Navbar";
 import SectionRenderer from "@/app/ui/SectionRenderer";
-import { FunctionComponent } from "react";
-interface PageTemplateProps {
-  name: string;
-}
+import StickyDonationButton from "@/app/ui/StickyDonationButton";
+import { usePathname } from "next/navigation";
 
-const PageTemplate: FunctionComponent<PageTemplateProps> = ({ name }) => {
-  const page: PageData = getPageData(name);
+export default function PageTemplate({ sections }: { sections: Section[] }) {
+  const pathname = usePathname();
   return (
-    <>
+    <main>
       <Navbar />
-      {page.sections.map((section, index) => (
-        <SectionRenderer key={index} section={section} />
-      ))}
+      {sections.map((section, index) => {
+        return <SectionRenderer key={index} section={section} />;
+      })}
+      {pathname != "/donate" && <StickyDonationButton />}
       <Footer />
-    </>
+    </main>
   );
-};
-
-export default PageTemplate;
+}

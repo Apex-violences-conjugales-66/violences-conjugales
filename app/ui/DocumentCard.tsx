@@ -3,31 +3,27 @@
 import Image from "next/image";
 import { FunctionComponent } from "react";
 
-interface DocumentCardProps {
-  id: number;
-  title: string;
-  imagePath: string;
-  onClick: () => void;
-}
-
-const DocumentCard: FunctionComponent<DocumentCardProps> = ({
+export default function DocumentCard({
   id,
-  title,
-  imagePath,
+  name,
+  documentUrl,
   onClick,
-}) => {
+}: {
+  id: number;
+  name: string;
+  documentUrl: string;
+  onClick: () => void;
+}) {
   return (
     <button onClick={onClick} className="relative w-72 h-80 shadow-sm">
       <Image
         className="hover:opacity-50 hover:cursor-pointer"
-        alt={title}
-        src={imagePath}
+        alt={name}
+        src={documentUrl}
         style={{ objectFit: "cover" }}
         fill
         sizes="288px, 320px"
       />
     </button>
   );
-};
-
-export default DocumentCard;
+}

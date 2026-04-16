@@ -1,7 +1,7 @@
+import { amatic_sc, roboto } from "@/app/ui/fonts";
 import type { Metadata } from "next";
-import "@/app/globals.css";
-import { cn } from "./lib/utils";
-import { lato, league_gothic } from "@/app/ui/fonts";
+import { cn } from "@/app/lib/utils";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "APEX | Violences Conjugales",
@@ -17,9 +17,9 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        `${lato.variable}`,
-        `${league_gothic.variable}`,
-        "font-lato text-grey text-xs leading-5 sm:text-sm md:text-base text-pretty scroll-smooth",
+        `${roboto.variable}`,
+        `${amatic_sc.variable}`,
+        "font-roboto text-gray-800 font-light text-pretty",
       )}
     >
       <body>{children}</body>

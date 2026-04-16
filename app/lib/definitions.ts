@@ -1,13 +1,6 @@
 // This file contains type definitions for your data.
 // It describes the shape of the data, and what data type each property should accept.
 
-export type User = {
-  id: string;
-  name: string;
-  email: string;
-  password: string;
-};
-
 export type Partner = {
   id: string;
   name: string;
@@ -19,13 +12,20 @@ export type Member = {
   id: string;
   name: string;
   title: string;
-  type: "bureau" | "administration" | "team";
+  type: "bureau" | "administration" | "equipe";
 };
 
 export type Catalogue = {
   id: string;
   year: number;
-  url: string;
+  catalogueUrl: string;
+  uploadedAt: Date;
+};
+
+export type Bulletin = {
+  id: string;
+  year: number;
+  bulletinUrl: string;
   uploadedAt: Date;
 };
 
@@ -40,7 +40,7 @@ export type Formation = {
 };
 
 export type DocumentResource = {
-  id: string;
+  id: number;
   name: string;
   documentUrl: string;
 };
@@ -65,4 +65,11 @@ export type Movie = {
   title: string;
   description: string;
   movieUrl: string;
+};
+
+export type DocumentCardProps = {
+  id: string;
+  name: string;
+  documentUrl: string;
+  onClick: () => void;
 };

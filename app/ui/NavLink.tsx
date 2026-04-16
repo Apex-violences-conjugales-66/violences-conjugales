@@ -5,25 +5,25 @@ import { FunctionComponent, ReactNode } from "react";
 
 interface NavLinkProps {
   className?: string;
-  to: string;
+  href: string;
   children?: ReactNode;
 }
 
 const NavLink: FunctionComponent<NavLinkProps> = ({
   children,
   className,
-  to,
+  href,
 }) => {
   const pathname = usePathname();
-  const isActive = pathname === to;
+  const isActive = pathname === href;
   return (
     <Link
       className={cn(
-        "px-4 py-2 rounded-[4px] hover:bg-orange-light",
-        isActive && "text-orange bg-orange-light",
+        "font-amatic_sc font-bold text-lg sm:text-2xl px-4 py-2 rounded-[4px] hover:bg-orange-100 transition-all duration-300",
+        isActive && "text-orange-400 bg-orange-100 translate-y-[-8px]",
         className,
       )}
-      href={to}
+      href={href}
     >
       {children}
     </Link>

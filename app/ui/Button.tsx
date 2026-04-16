@@ -1,60 +1,55 @@
 import { cn } from "@/app/lib/utils";
-import { cva, VariantProps } from "class-variance-authority";
 import Link from "next/link";
-import { ComponentProps, FunctionComponent } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-const buttonVariants = cva(
-  "items-center rounded-xl justify-center text-base lg:text-xl font-bold transition-all",
-  {
-    variants: {
-      variant: {
-        default: "bg-white border-b-4 border-grey hover:bg-grey-light",
-        orange: "bg-orange border-b-4 border-yellow hover:bg-yellow",
-        nav: "bg-orange border-b-4 rounded-none rounded-b-xl border-yellow font-normal hover:bg-yellow",
-      },
-      size: {
-        default: "py-2 px-10",
-        nav: "py-1 px-12 xl:px-24",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default",
-    },
-  },
-);
-
-interface ButtonProps
-  extends ComponentProps<"button">, VariantProps<typeof buttonVariants> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "default" | "homeheader";
+  size?: "default" | "sm";
   href?: string;
+  icon?: ReactNode;
+  iconPosition?: "left" | "right";
 }
 
-const Button: FunctionComponent<ButtonProps> = ({
+export default function Button({
+  variant = "default",
+  size = "default",
+  href,
   className,
   children,
-  href,
-  variant,
-  size,
+  icon,
+  iconPosition = "left",
   ...props
-}) => {
+}: ButtonProps) {
+  const classes = cn(
+    "flex items-center gap-4 font-amatic_sc font-bold transition-colors",
+    {
+      "bg-orange-400 text-white px-6 py-2 rounded-full hover:bg-orange-500":
+        variant === "default",
+    },
+    {
+      "text-xl md:text-3xl tracking-wide": size === "default",
+    },
+    className,
+  );
+
+  const content = (
+    <>
+      {iconPosition === "left" && icon}
+      <span className="mb-1">{children}</span>
+      {iconPosition === "right" && icon}
+    </>
+  );
+
   if (href) {
     return (
-      <Link
-        href={href}
-        className={cn(buttonVariants({ variant, size, className }))}
-      >
-        {children}
+      <Link href={href} className={classes}>
+        {content}
       </Link>
     );
   }
   return (
-    <button
-      className={cn(buttonVariants({ variant, size, className }))}
-      {...props}
-    >
-      {children}
+    <button className={classes} {...props}>
+      {content}
     </button>
   );
-};
-
-export { Button, buttonVariants };
+}

@@ -1,8 +1,8 @@
 "use client";
 
 import { cn } from "@/app/lib/utils";
-import { Button } from "@/app/ui/Button";
-import FooterModal from "@/app/ui/Modal/FooterModal";
+import Button from "@/app/ui/Button";
+import FooterModal from "@/app/ui/FooterModal";
 import Separator from "@/app/ui/Separator";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,7 +15,14 @@ const Footer: FunctionComponent<FooterProps> = () => {
   const [footerModalType, setFooterModalType] = useState("");
   return (
     <div className="Footer">
-      <Separator variant />
+      <div className="">
+        <Image
+          alt="illustration"
+          src="/separator.png"
+          width={3496}
+          height={348}
+        />
+      </div>
       <div className="bg-purple py-16 relative">
         <div className="container flex flex-col gap-10 xl:gap-24 justify-between xl:flex-row">
           <div className="flex flex-col gap-y-4">

@@ -1,11 +1,7 @@
+import { getSections } from "@/app/lib/data";
 import PageTemplate from "@/app/ui/PageTemplate";
-import { FunctionComponent } from "react";
 
-interface ProjetAssociatifProps {}
-
-const ProjetAssociatif: FunctionComponent<ProjetAssociatifProps> = () => {
-  const name = "projet-associatif";
-  return <PageTemplate name={name} />;
-};
-
-export default ProjetAssociatif;
+export default async function ProjetPage() {
+  const sections = await getSections("projet");
+  return <PageTemplate sections={sections} />;
+}

@@ -1,7 +1,7 @@
 const navigationData = [
-  { path: "/", label: "Acceuil" },
+  { path: "/donate", label: "Faire un don" },
   { path: "/projet-associatif", label: "Le Projet" },
-  { path: "/formation", label: "La Formation" },
+  { path: "/formation", label: "Formations" },
   { path: "/ressources", label: "Nos Ressources" },
 ];
 
