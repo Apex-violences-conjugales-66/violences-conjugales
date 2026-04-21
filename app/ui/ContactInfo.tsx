@@ -1,8 +1,6 @@
-import { FunctionComponent } from "react";
-import { FaLocationDot } from "react-icons/fa6";
-import { MdEmail, MdLocalPhone } from "react-icons/md";
 import { cn } from "@/app/lib/utils";
 import Divider from "@/app/ui/Divider";
+import { Mail, Map, Phone } from "lucide-react";
 
 interface ContactInfoProps {
   className?: string;
@@ -14,7 +12,7 @@ interface ContactInfoProps {
   address3?: string;
 }
 
-const ContactInfo: FunctionComponent<ContactInfoProps> = ({
+export default function ContactInfo({
   className,
   phone,
   email,
@@ -22,20 +20,23 @@ const ContactInfo: FunctionComponent<ContactInfoProps> = ({
   address1,
   address2,
   address3,
-}) => {
+}: ContactInfoProps) {
   return (
     <div
-      className={cn("p-2 rounded-sm border border-grey size-fit", className)}
+      className={cn(
+        "p-2 rounded-sm border border-gray-800 size-fit shrink-0 bg-white",
+        className,
+      )}
     >
       {horaires && <p className="whitespace-pre-line">{horaires}</p>}
       {phone && (
         <div className="flex items-center gap-x-2">
-          <MdLocalPhone size={24} /> <span className="">{phone}</span>
+          <Phone fill="#1f2937" size={24} /> <span className="">{phone}</span>
         </div>
       )}
       {email && (
         <div className="flex items-center gap-x-2">
-          <MdEmail size={24} />
+          <Mail size={24} />
           <span className="-mt-1">{email}</span>
         </div>
       )}
@@ -43,7 +44,7 @@ const ContactInfo: FunctionComponent<ContactInfoProps> = ({
         <>
           <Divider horizontal className="my-1" />
           <div className="flex gap-x-2">
-            <FaLocationDot size={24} />
+            <Map size={24} />
             <div className="flex flex-col items-start">
               {address1}
               {address2 && <span>{address2}</span>}
@@ -54,6 +55,4 @@ const ContactInfo: FunctionComponent<ContactInfoProps> = ({
       )}
     </div>
   );
-};
-
-export default ContactInfo;
+}

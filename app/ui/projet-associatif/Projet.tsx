@@ -1,22 +1,22 @@
 import SectionComponent from "@/app/ui/SectionComponent";
+import Title from "@/app/ui/Title";
 import { ArrowUp } from "lucide-react";
 import Link from "next/link";
 import { FunctionComponent } from "react";
-import { BsArrowReturnRight } from "react-icons/bs";
 
 interface ProjetProps {}
 
 const Projet: FunctionComponent<ProjetProps> = () => {
   return (
-    <SectionComponent isFirst={true} className="container ">
+    <SectionComponent isFirst isLast className="container">
       <div
         id="sommaire"
-        className="xl:mx-16 border border-orange-400 relative scroll-m-96 scroll-smooth"
+        className="xl:mx-16 border-2 border-orange-600 relative scroll-m-96 scroll-smooth mt-10 md:mt-0"
       >
-        <span className="text-orange-400 text-3xl md:text-5xl font-amatic_sc absolute right-6 md:right-16 -top-5 md:-top-6 bg-white px-1">
+        <Title className="text-3xl md:text-5xl font-amatic_sc absolute right-6 md:right-16 -top-5 md:-top-6 bg-white ">
           AU SOMMAIRE
-        </span>
-        <div className="p-4 md:p-11 space-y-1 [&>*>h5]:my-2 md:[&>*>h5]:my-1">
+        </Title>
+        <div className="px-4 py-10 md:p-11 space-y-1 [&>*>h5]:my-2 md:[&>*>h5]:my-1">
           <Link href="#title-1">
             <h5>I - CREATION ET ADMINISTRATION DE L&rsquo;ASSOCIATION</h5>
           </Link>

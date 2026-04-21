@@ -1,55 +1,73 @@
 import { Member } from "@/app/lib/definitions";
+import Divider from "@/app/ui/Divider";
+import SectionComponent from "@/app/ui/SectionComponent";
 import Title from "@/app/ui/Title";
+import Image from "next/image";
 
 export default function Team({ members }: { members: Member[] }) {
-  const conseil = members.filter((m) => m.type === "bureau");
-  const administrateurs = members.filter((m) => m.type === "administration");
+  const bureau = members.filter((m) => m.type === "bureau");
+  const conseil = members.filter((m) => m.type === "administration");
   const personnel = members.filter((m) => m.type === "equipe");
   return (
-    <div className="Team">
-      <div
-        id="team"
-        className="mt-1 bg-gradient-to-r from-orange from-50% via-yellow to-yellow scroll-mt-48"
-      >
-        <div className="container flex justify-center">
-          <div className="flex flex-col gap-y-10 items-center w-full bg-white px-2 xl:px-20 py-14 gap-x-2">
-            <Title>Notre Equipe</Title>
-            <div className="flex flex-col text-center xl:text-left xl:flex-row md:justify-between gap-6 xl:gap-2 w-full [&>div>h4]:mb-1">
-              <div className="flex flex-col flex-1">
-                <ul className="list-none">
-                  {conseil.map((personne, index) => (
-                    <li key={index}>
-                      {personne.name} <span className="ml-2" />
-                      <em className="font-bold">{personne.title}</em>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex flex-col flex-1">
-                <ul className="list-none">
-                  {administrateurs.map((personne, index) => (
-                    <li key={index}>
-                      {personne.name} <span className="ml-2" />
-                      <em className="font-bold">{personne.title}</em>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex flex-col flex-1">
-                <ul className="list-none">
-                  {personnel.map((personne, index) => (
-                    <li key={index}>
-                      {personne.name}
-                      <span className="ml-2" />
-                      <em className="font-bold">{personne.title}</em>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+    <SectionComponent withSideBorders bgColor="orange">
+      <div className="container py-10 flex flex-col">
+        <Title bgColor="orange" className="self-center">
+          Notre Equipe
+        </Title>
+        <div className="flex flex-col md:flex-row w-full justify-center gap-4 gap-x-8  px-8">
+          <div>
+            <div className="flex items-center gap-4 mb-2 md:mb-6">
+              <h2>Le Bureau</h2>
+              <Image
+                alt="team"
+                src="/vector/bureau.svg"
+                width={40}
+                height={40}
+              />
             </div>
+            <Divider horizontal className="mb-6" />
+            {bureau.map((personne) => (
+              <div key={personne.id}>
+                <p>{personne.name}</p>
+                <p className="font-thin text-sm -mt-1">{personne.title}</p>
+              </div>
+            ))}
+
+            <div className="mt-8">
+              <div className="flex items-center gap-4 mb-2 md:mb-6">
+                <h2>Le Conseil</h2>
+                <Image
+                  alt="conseil"
+                  src="/vector/administration.svg"
+                  width={40}
+                  height={40}
+                />
+              </div>
+              <Divider horizontal className="mb-6" />
+              {conseil.map((personne) => (
+                <div key={personne.id}>
+                  <p>{personne.name}</p>
+                  <p className="font-thin text-sm -mt-1">{personne.title}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <Divider />
+          <div className="mt-4 md:mt-0">
+            <div className="flex items-center gap-4 mb-2 md:mb-6">
+              <h2>L&apos;equipe</h2>
+              <Image alt="team" src="/vector/team.svg" width={40} height={40} />
+            </div>
+            <Divider horizontal className="mb-6" />
+            {personnel.map((personne) => (
+              <div key={personne.id}>
+                <p>{personne.name}</p>
+                <p className="font-thin text-sm -mt-1">{personne.title}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </SectionComponent>
   );
 }

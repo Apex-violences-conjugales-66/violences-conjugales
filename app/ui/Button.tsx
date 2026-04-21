@@ -23,7 +23,7 @@ export default function Button({
   const classes = cn(
     "flex items-center gap-4 font-amatic_sc font-bold transition-colors",
     {
-      "bg-orange-400 text-white px-6 py-2 rounded-full hover:bg-orange-500":
+      "bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-white hover:text-orange-600 border-2 border-orange-600":
         variant === "default",
     },
     {

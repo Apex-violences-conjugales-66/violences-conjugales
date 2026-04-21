@@ -1,49 +1,46 @@
+import { Memoir } from "@/app/lib/definitions";
 import ContactInfo from "@/app/ui/ContactInfo";
+import Divider from "@/app/ui/Divider";
+import Heart from "@/app/ui/icons/Heart";
 import MemoirCard from "@/app/ui/MemoirCard";
+import SectionComponent from "@/app/ui/SectionComponent";
 import Title from "@/app/ui/Title";
-import { FunctionComponent } from "react";
-export interface Memoir {
-  author: string;
-  title: string;
-  description?: string;
-  docPath?: string;
-}
+import Image from "next/image";
 
-interface MemoiresProps {
-  memoirs: Memoir[];
-}
-
-const Memoires: FunctionComponent<MemoiresProps> = ({ memoirs }) => {
+export default function Memoires({ memoirs }: { memoirs: Memoir[] }) {
   return (
-    <div className="Memoires mt-24">
-      <div className="container flex flex-col items-center gap-10">
-        <Title className="self-center">Mémoires</Title>
-        <div className="columns-1 gap-6 md:columns-2 xl:columns-3 [&>div]:overflow-hidden [&>div]:mb-6">
-          {memoirs.map((memoir, index) => (
-            <MemoirCard
-              key={index}
-              author={memoir.author}
-              title={memoir.title}
-              description={memoir.description}
-              docPath={memoir.docPath}
-            />
+    <SectionComponent isLast>
+      <div className="container flex flex-col gap-4 ">
+        <div className="flex flex-col ">
+          <Title className="self-center">Mémoires</Title>
+          <div className="flex flex-col">
+            <p className="font-light">
+              <b>APEX</b> n&rsquo;est pas responsable du contenu des mémoires.
+              <br />
+              Si vous utilisez une partie des mémoires pour vos propres travaux
+              n&rsquo;oubliez pas d&rsquo;en citer les auteur.es
+              <Heart className="w-8 inline-block ml-1" />
+            </p>
+            <div className="flex gap-4 items-center self-end">
+              <p>Contactez-nous pour plus d&rsquo;informations</p>
+              <ContactInfo phone="04 68 63 50 24" className="shrink-0" />
+            </div>
+          </div>
+        </div>
+        <div className="columns-1 md:columns-2 xl:columns-3 space-y-4">
+          {memoirs.map((memoir) => (
+            <div key={memoir.id} className="overflow-hidden">
+              <MemoirCard
+                id={memoir.id}
+                author={memoir.author}
+                title={memoir.title}
+                description={memoir.description}
+                documentUrl={memoir.documentUrl}
+              />
+            </div>
           ))}
         </div>
-        <p className="font-light flex flex-col text-center">
-          APEX n&rsquo;est pas responsable du contenu des mémoires.
-          <br />
-          Par ailleurs si vous utilisez une partie des mémoires pour vos propres
-          travaux n&rsquo;oubliez pas d&rsquo;en citer les auteur.es.
-          <br />
-          <br /> Si des aspects des études restent en suspend, il est possible
-          d&rsquo;interroger les auteurs <br />
-          Contactez nous, APEX fera son possible pour leur transmettre les
-          questions.
-        </p>
-        <ContactInfo phone="04 68 63 50 24" />
       </div>
-    </div>
+    </SectionComponent>
   );
-};
-
-export default Memoires;
+}

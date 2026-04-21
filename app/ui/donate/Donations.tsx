@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function Donations() {
   return (
-    <SectionComponent isFirst={true} withSideBorders={true}>
-      <div className="container w-full py-14 gap-8 flex flex-col items-center">
-        <Title style="blue">Faire un don</Title>
+    <SectionComponent isFirst isLast withSideBorders bgColor="blue">
+      <div className="container w-full py-14 flex flex-col items-center">
+        <Title bgColor="blue">Faire un don</Title>
         <div className="w-full flex flex-col gap-4">
           <div>
             <h3 className="mb-2">Pourquoi donner ?</h3>

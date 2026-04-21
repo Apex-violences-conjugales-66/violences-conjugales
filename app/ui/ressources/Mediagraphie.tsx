@@ -1,19 +1,7 @@
+import { Book, Movie } from "@/app/lib/definitions";
 import Divider from "@/app/ui/Divider";
-import Title from "@/app/ui/Title";
+import SectionComponent from "@/app/ui/SectionComponent";
 import { FunctionComponent } from "react";
-
-export interface Movie {
-  title: string;
-  description: string;
-  href?: string;
-  siteName?: string;
-}
-
-export interface Book {
-  author: string;
-  title: string;
-  description: string;
-}
 
 interface MediagraphieProps {
   books: Book[];
@@ -25,12 +13,12 @@ const Mediagraphie: FunctionComponent<MediagraphieProps> = ({
   movies,
 }) => {
   return (
-    <div className="Mediagraphie mt-24 mb-4">
-      <div className="container w-full flex flex-col gap-10 items-center ">
-        <Title>Médiagraphie</Title>
+    <SectionComponent bgColor="orange">
+      <div className="container py-14 flex flex-col items-center">
         <div className="flex flex-col md:flex-row gap-10">
-          <div className="flex flex-col gap-16 items-center md:w-1/2">
-            <h3 className="underline underline-offset-4">Littérature</h3>
+          <div className="flex flex-col gap-4 md:gap-8 md:w-1/2">
+            <h2>Littérature</h2>
+            <Divider horizontal />
             <div className="space-y-4">
               {books.map((book, index) => (
                 <p key={"book" + index}>
@@ -40,26 +28,25 @@ const Mediagraphie: FunctionComponent<MediagraphieProps> = ({
             </div>
           </div>
           <Divider />
-          <div className="flex flex-col gap-16 items-center md:w-1/2">
-            <h3>
-              <span className="underline underline-offset-4">Films</span> | 
-              <span className="underline underline-offset-4">
-                Courts-Métrages
-              </span>
-            </h3>
+          <div className="flex flex-col gap-4 md:gap-8 md:w-1/2">
+            <h2>Films | Courts-Métrages</h2>
+            <Divider horizontal />
             <div className="space-y-4">
               {movies.map((movie, index) => (
                 <p key={"movie" + index}>
-                  <b>{movie.title}</b>    {movie.description}   
-                  {movie.href && (
-                    <a
-                      className="underline"
-                      target="_blank"
-                      href={movie.href}
-                      rel="noopener noreferrer"
-                    >
-                      {movie.siteName}
-                    </a>
+                  <b>{movie.title}</b> {movie.description}
+                  {movie.movieUrl && (
+                    <>
+                      <br />
+                      <a
+                        className="underline"
+                        target="_blank"
+                        href={movie.movieUrl}
+                        rel="noopener noreferrer"
+                      >
+                        {movie.movieUrl}
+                      </a>
+                    </>
                   )}
                 </p>
               ))}
@@ -67,7 +54,7 @@ const Mediagraphie: FunctionComponent<MediagraphieProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </SectionComponent>
   );
 };
 

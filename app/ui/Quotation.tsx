@@ -19,7 +19,7 @@ export default function Quotation({
     <div className="flex flex-col items-end">
       <div
         className={cn(
-          "flex w-fit font-amatic_sc font-bold text-xl md:text-4xl text-center relative",
+          "flex w-fit font-amatic_sc font-bold text-xl sm:text-2xl md:text-4xl text-center relative",
           className,
         )}
       >

@@ -9,9 +9,9 @@ export default function DocumentsSection({
   documents: DocumentResource[];
 }) {
   return (
-    <SectionComponent isFirst={true} withSideBorders={true} bgColor="orange">
-      <div className="container w-full py-14 flex flex-col items-center">
-        <Title id="documents">Doc. Institutions</Title>
+    <SectionComponent isFirst={true}>
+      <div className="container w-full flex flex-col items-center">
+        <Title>Doc. Institutions</Title>
         <DocumentsGallery documents={documents} />
       </div>
     </SectionComponent>

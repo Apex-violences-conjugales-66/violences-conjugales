@@ -1,37 +1,25 @@
+import { Memoir } from "@/app/lib/definitions";
 import { cn } from "@/app/lib/utils";
-import Link from "next/link";
-import { FunctionComponent } from "react";
 
-interface MemoirCardProps {
-  className?: string;
-  author: string;
-  title: string;
-  description?: string;
-  docPath?: string;
-}
-
-const MemoirCard: FunctionComponent<MemoirCardProps> = ({
-  className,
-  author,
-  title,
-  description,
-  docPath,
-}) => {
+export default function MemoirCard(
+  { author, title, description, documentUrl }: Memoir,
+  className?: string,
+) {
   return (
     <div
       className={cn(
-        "border border-orange p-6 w-80 flex flex-col h-fit gap-y-2",
+        "border border-orange p-4 flex flex-col h-fit gap-y-2 rounded-sm",
         className,
       )}
     >
       <div>
-        <span className="text-lg sm:text-xl font-bold">Auteur : </span>
+        <span className="text-lg font-bold">Auteur </span>: 
         {author}
       </div>
       <div>
-        <span className="text-lg sm:text-xl font-bold">Titre : </span>
-        {docPath ? (
-          <a className="underline" href={docPath} target="_blank">
+        <span className="text-lg font-bold">Titre </span>: 
+        {documentUrl ? (
+          <a className="underline" href={documentUrl} target="_blank">
             {title}
           </a>
         ) : (
@@ -40,12 +28,10 @@ const MemoirCard: FunctionComponent<MemoirCardProps> = ({
       </div>
       {description && (
         <div>
-          <span className="text-lg sm:text-xl font-bold">Description : </span>
+          <span className="text-lg font-bold">Description </span>: 
           {description}
         </div>
       )}
     </div>
   );
-};
-
-export default MemoirCard;
+}

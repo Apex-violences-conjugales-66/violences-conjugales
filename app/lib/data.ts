@@ -1,3 +1,5 @@
+"use server";
+
 import postgres from "postgres";
 import {
   Book,
@@ -8,11 +10,12 @@ import {
   Member,
   Memoir,
   Movie,
+  Partner,
 } from "@/app/lib/definitions";
 import { Section } from "@/app/lib/definitions.sections";
 
 const sql = postgres(process.env.POSTGRES_URL!, {
-  ssl: require,
+  ssl: "require",
   transform: postgres.camel,
 });
 
@@ -65,6 +68,19 @@ export async function fetchDocuments() {
   }
 }
 
+export async function fetchDocumentById(
+  id: number,
+): Promise<DocumentResource | null> {
+  try {
+    const data = await sql<DocumentResource[]>`
+      SELECT * FROM document_resources WHERE id = ${id}
+    `;
+    return data[0] ?? null;
+  } catch {
+    throw new Error("Failed to fetch document");
+  }
+}
+
 export async function fetchMovies() {
   try {
     const data = await sql<Movie[]>`SELECT * FROM movies`;
@@ -92,18 +108,28 @@ export async function fetchMemoirs() {
   }
 }
 
+export async function fetchPartners() {
+  try {
+    const data = await sql<Partner[]>`SELECT * FROM partners`;
+    return data;
+  } catch (error) {
+    throw new Error("Failed to fetch partners");
+  }
+}
+
 export async function getSections(
   page: "home" | "donate" | "projet" | "formation" | "ressources",
 ): Promise<Section[]> {
   switch (page) {
     case "home": {
       const members = await fetchMembers();
+      const partners = await fetchPartners();
       return [
         { name: "homeheader" },
         { name: "introduction" },
         { name: "actions" },
-        { name: "partners" },
         { name: "team", members },
+        { name: "partners", partners },
         { name: "formationShowcase" },
       ];
     }

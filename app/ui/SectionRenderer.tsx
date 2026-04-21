@@ -23,7 +23,7 @@ export default function SectionRenderer({ section }: { section: Section }) {
     case "actions":
       return <Actions />;
     case "partners":
-      return <Partners />;
+      return <Partners partners={section.partners} />;
     case "team":
       return <Team members={section.members} />;
     case "projet":

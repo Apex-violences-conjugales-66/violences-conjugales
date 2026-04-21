@@ -1,52 +1,66 @@
 import { cn } from "@/app/lib/utils";
-import { Children, ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface SectionComponentProps {
   children: ReactNode;
   className?: string;
   isFirst?: Boolean;
+  isLast?: Boolean;
   withSideBorders?: Boolean;
-  bgColor?: "blue" | "orange";
+  bgColor?: "blue" | "orange" | "light";
 }
 
 export default function SectionComponent({
   children,
   className,
   isFirst = false,
+  isLast = false,
   withSideBorders = false,
-  bgColor = "blue",
+  bgColor,
 }: SectionComponentProps) {
   return withSideBorders ? (
     <section
       className={cn(
-        "py-20 md:py-40",
+        "pt-12 md:pt-20",
         isFirst &&
-          "pt-[var(--navbar-height)] lg:pt-[var(--navbar-height-lg)] mt-14",
+          "pt-[var(--navbar-height)] lg:pt-[var(--navbar-height-lg)] mt-4 md:mt-14",
+        isLast && "pb-4 md:pb-14",
         className,
       )}
     >
       <div
         className={cn(
-          "flex justify-center",
+          "w-full",
           bgColor === "blue" && "bg-blue-50",
           bgColor === "orange" && "bg-orange-50",
+          bgColor === "light" && "bg-[#fffaf7]",
         )}
       >
-        <div className="bg-white min-w-1 min-h-1" />
-        <div>{children}</div>
-        <div className="bg-white min-w-1 min-h-1" />
+        <div className="container flex">
+          <div className="bg-white w-1" />
+          <div className="flex-1">{children}</div>
+          <div className="bg-white w-1" />
+        </div>
       </div>
     </section>
   ) : (
     <section
       className={cn(
-        "py-20 md:py-40",
+        "pt-12 md:pt-20",
         isFirst &&
-          "pt-[var(--navbar-height)] lg:pt-[var(--navbar-height-lg)] mt-14",
+          "pt-[var(--navbar-height)] lg:pt-[var(--navbar-height-lg)] mt-4 md:mt-14",
+        isLast && "pb-4 md:pb-14",
         className,
       )}
     >
-      {children}
+      <div
+        className={cn(
+          bgColor === "blue" && "bg-blue-50",
+          bgColor === "orange" && "bg-orange-50",
+        )}
+      >
+        {children}
+      </div>
     </section>
   );
 }

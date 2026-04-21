@@ -13,7 +13,11 @@ export default function PageTemplate({ sections }: { sections: Section[] }) {
     <main>
       <Navbar />
       {sections.map((section, index) => {
-        return <SectionRenderer key={index} section={section} />;
+        return (
+          <div key={section.name + index}>
+            <SectionRenderer section={section} />
+          </div>
+        );
       })}
       {pathname != "/donate" && <StickyDonationButton />}
       <Footer />

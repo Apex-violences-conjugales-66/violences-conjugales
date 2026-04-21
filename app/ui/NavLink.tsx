@@ -19,8 +19,8 @@ const NavLink: FunctionComponent<NavLinkProps> = ({
   return (
     <Link
       className={cn(
-        "font-amatic_sc font-bold text-lg sm:text-2xl px-4 py-2 rounded-[4px] hover:bg-orange-100 transition-all duration-300",
-        isActive && "text-orange-400 bg-orange-100 translate-y-[-8px]",
+        "font-amatic_sc font-bold sm:text-xl md:text-2xl px-4 py-2 rounded-[4px] hover:bg-orange-600 hover:text-white transition-colors",
+        isActive && "text-white bg-orange-600",
         className,
       )}
       href={href}

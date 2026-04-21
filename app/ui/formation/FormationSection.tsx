@@ -15,11 +15,8 @@ export default async function FormationSection({
   bulletinUrl: string;
   formations: Formation[];
 }) {
-  console.log("🚀 ~ FormationSection ~ catalogueUrl:", catalogueUrl);
-  console.log("🚀 ~ FormationSection ~ bulletinUrl:", bulletinUrl);
-
   return (
-    <SectionComponent isFirst={true} withSideBorders={true} bgColor="orange">
+    <SectionComponent isFirst isLast withSideBorders bgColor="orange">
       <div className="container py-14">
         <div className="flex flex-col xl:flex-row gap-x-6 justify-between">
           <div className="xl:w-2/3 text-justify">
@@ -54,7 +51,7 @@ export default async function FormationSection({
               href="/formation/qualianor-certification.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full h-full relative border border-blue-dark hover:border-white hover:opacity-75 transition"
+              className="w-full h-full relative border border-blue-dark bg-white hover:border-white hover:opacity-75 transition"
             >
               <Image
                 alt="logo qualiopi"
@@ -115,7 +112,7 @@ export default async function FormationSection({
           </div>
           {formations.map((formation, index) => (
             <div key={formation.id}>
-              <Divider horizontal visible className="my-4" />
+              <Divider horizontal className="my-4" />
               <div>
                 <p>
                   <b>Formation:</b> {formation.name}
@@ -146,11 +143,13 @@ export default async function FormationSection({
           <h3 className="mb-2">Informations et Inscriptions</h3>
           <div className="flex flex-col-reverse xl:flex-row-reverse gap-6">
             <div className="xl:w-1/2 flex flex-col gap-2 text-center items-center">
-              Pour toute information ou pour vous inscrire à nos formations,
-              veuillez contacter:
-              <span className="mt-6">
-                <b>Valérie FONTIMPE ou Christine GUILLAUMES</b>
-              </span>
+              <p>
+                Pour toute information ou pour vous inscrire à nos formations,
+                veuillez contacter:
+                <span className="mt-6">
+                  <b>Valérie FONTIMPE ou Christine GUILLAUMES</b>
+                </span>
+              </p>
               <ContactInfo
                 phone="04 68 63 50 24 | 06 72 37 57 80"
                 email="apex-formation@hotmail.com"
@@ -191,7 +190,7 @@ export default async function FormationSection({
               </div>
             </div>
           </div>
-          <Divider horizontal visible className="mt-6 mb-2 xl:my-2" />
+          <Divider horizontal className="mt-6 mb-2 xl:my-2" />
           <div>
             Si vous souhaitez vous inscrire à l&rsquo;une de nos formations,
             merci de télécharger et de remplir intégralement le bulletin

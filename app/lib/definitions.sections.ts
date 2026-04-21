@@ -5,6 +5,7 @@ import {
   Member,
   Memoir,
   Movie,
+  Partner,
 } from "@/app/lib/definitions";
 
 export interface SectionBase {
@@ -17,9 +18,13 @@ export interface ISectionSimple extends SectionBase {
     | "introduction"
     | "donations"
     | "actions"
-    | "partners"
     | "formationShowcase"
     | "projet";
+}
+
+export interface ISectionPartners extends SectionBase {
+  name: "partners";
+  partners: Partner[];
 }
 
 export interface ISectionTeam extends SectionBase {
@@ -56,4 +61,5 @@ export type Section =
   | ISectionFormation
   | ISectionDocumentsSection
   | ISectionMediagraphie
-  | ISectionMemoires;
+  | ISectionMemoires
+  | ISectionPartners;

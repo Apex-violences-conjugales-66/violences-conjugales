@@ -2,21 +2,18 @@ import Accordion from "@/app/ui/Accordion";
 import AccordionItem from "@/app/ui/AccordionItem";
 import ContactInfo from "@/app/ui/ContactInfo";
 import Divider from "@/app/ui/Divider";
+import SectionComponent from "@/app/ui/SectionComponent";
 import Title from "@/app/ui/Title";
 import { FunctionComponent } from "react";
 
-interface ActionsProps {}
-
-const Actions: FunctionComponent<ActionsProps> = () => {
+export default function Actions() {
   return (
-    <div className="Actions my-20 ">
-      <div className="flex flex-col items-center gap-10">
-        <Title id="actions" className="scroll-mt-56">
-          Nos Actions
-        </Title>
+    <SectionComponent>
+      <div className="flex flex-col items-center">
+        <Title>Nos Actions</Title>
         <div className="container flex flex-col items-center">
           <Accordion>
-            <AccordionItem title="L'Escale" color="orange">
+            <AccordionItem title="L'Escale" color="orange" open>
               <div className="flex flex-col gap-y-4">
                 <p>
                   Un lieu de soutien dédié aux femmes victimes ou ayant été
@@ -249,8 +246,6 @@ const Actions: FunctionComponent<ActionsProps> = () => {
           </Accordion>
         </div>
       </div>
-    </div>
+    </SectionComponent>
   );
-};
-
-export default Actions;
+}

@@ -1,0 +1,27 @@
+export default function Heart({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 57 55"
+      fill="none"
+      className={className}
+    >
+      <ellipse
+        cx="35.1"
+        cy="29.8"
+        fill="currentColor"
+        rx="11.5"
+        ry="21.8"
+        transform="rotate(31 35 30)"
+      />
+      <ellipse
+        cx="22.4"
+        cy="27.1"
+        fill="currentColor"
+        rx="15.1"
+        ry="23.2"
+        transform="rotate(-21 22 27)"
+      />
+    </svg>
+  );
+}

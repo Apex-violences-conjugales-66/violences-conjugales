@@ -1,0 +1,17 @@
+export default function Padlock({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 30 34"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M23 0C24.1046 2.57702e-07 25 0.895431 25 2V13.333H29C29.5522 13.333 29.9998 13.7809 30 14.333V32.333C30 32.8853 29.5523 33.333 29 33.333H1C0.447716 33.333 0 32.8853 0 32.333V14.333C0.000165022 13.7809 0.447817 13.333 1 13.333H5V2C5 0.895431 5.89543 1.61064e-08 7 0H23ZM10 13.333H20V6.66699H10V13.333Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
