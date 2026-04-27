@@ -41,7 +41,7 @@ export default function Navbar() {
             </button>
           </div>
           <Link href="/" className="-translate-x-1/2 lg:translate-x-0">
-            <LogoApex className="w-16" />
+            <LogoApex />
           </Link>
           <div className="hidden lg:flex flex-shrink-0 flex-grow justify-center gap-6">
             {navigationData.map((item, index) => (

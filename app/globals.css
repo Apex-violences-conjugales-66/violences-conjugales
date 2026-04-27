@@ -5,6 +5,7 @@
 :root {
   --navbar-height: 6rem;
   --navbar-height-lg: 8rem;
+  --sidenav-width: 300px;
 }
 
 ul {

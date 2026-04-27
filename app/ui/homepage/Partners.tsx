@@ -31,6 +31,7 @@ export default function Partners({ partners }: { partners: Partner[] }) {
                       alt={institutionel.name}
                       src={institutionel.imageUrl}
                       fill
+                      sizes="96px"
                       className="object-contain border border-gray-50 rounded-sm"
                     />
                   </div>
@@ -55,6 +56,7 @@ export default function Partners({ partners }: { partners: Partner[] }) {
                       alt={associatif.name}
                       src={associatif.imageUrl}
                       fill
+                      sizes="96px"
                       className="object-contain border border-gray-50 rounded-sm"
                     />
                   </div>

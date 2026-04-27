@@ -125,14 +125,14 @@ export default function Donations() {
               </a>
             </div>
           </div>
-        </div>
-        <div className="flex flex-col gap-2 md:items-center">
-          <h3>Don déductible des impôts</h3>
-          <p className="text-sm md:text-center md:w-2/3">
-            APEX est une association d&apos;intérêt général, les dons
-            bénéficient de la réduction sur le revenu (art.200 du CGI) et de la
-            réduction d&apos;impôts sur les sociétés (art. 238 du CGI)
-          </p>
+          <div className="flex flex-col gap-2 md:items-center">
+            <h3>Don déductible des impôts</h3>
+            <p className="text-sm md:text-center md:w-2/3">
+              APEX est une association d&apos;intérêt général, les dons
+              bénéficient de la réduction sur le revenu (art.200 du CGI) et de
+              la réduction d&apos;impôts sur les sociétés (art. 238 du CGI)
+            </p>
+          </div>
         </div>
       </div>
     </SectionComponent>

@@ -5,8 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Formation } from "@/app/lib/definitions";
 import SectionComponent from "@/app/ui/SectionComponent";
+import Title from "@/app/ui/Title";
 
-export default async function FormationSection({
+export default function FormationSection({
   catalogueUrl,
   bulletinUrl,
   formations,
@@ -17,7 +18,10 @@ export default async function FormationSection({
 }) {
   return (
     <SectionComponent isFirst isLast withSideBorders bgColor="orange">
-      <div className="container py-14">
+      <div className="container py-14 flex flex-col">
+        <Title bgColor="orange" className="self-center">
+          Nos Formations
+        </Title>
         <div className="flex flex-col xl:flex-row gap-x-6 justify-between">
           <div className="xl:w-2/3 text-justify">
             <h3 className="mb-2">

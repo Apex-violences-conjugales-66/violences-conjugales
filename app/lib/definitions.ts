@@ -1,6 +1,15 @@
 // This file contains type definitions for your data.
 // It describes the shape of the data, and what data type each property should accept.
 
+export type FormEntry =
+  | "members"
+  | "partners"
+  | "formations"
+  | "books"
+  | "movies"
+  | "documentResources"
+  | "memoirs";
+
 export type Partner = {
   id: string;
   name: string;

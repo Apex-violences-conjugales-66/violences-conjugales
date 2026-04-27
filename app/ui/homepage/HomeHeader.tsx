@@ -14,7 +14,7 @@ export default function HomeHeader() {
           className="w-full lg:w-1/2"
         />
         <div className="flex flex-col items-center justify-center gap-2 lg:w-1/2 lg:gap-6">
-          <LogoApex className="w-32" />
+          <LogoApex size={128} />
           <p className="font-amatic_sc font-bold text-xl md:text-3xl xl:text-4xl text-center whitespace-pre-line px-5">
             <span className="text-orange-600">
               Association d’intérêt général qui oeuvre

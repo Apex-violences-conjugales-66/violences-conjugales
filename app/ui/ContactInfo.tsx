@@ -24,7 +24,7 @@ export default function ContactInfo({
   return (
     <div
       className={cn(
-        "p-2 rounded-sm border border-gray-800 size-fit shrink-0 bg-white",
+        "p-2 rounded-sm border border-gray-800 size-fit shrink-0 bg-white space-y-1",
         className,
       )}
     >

@@ -16,7 +16,7 @@ export default function LoginForm() {
       className="flex flex-col gap-6 justify-center items-center"
     >
       <Link href="/" className="hover:opacity-70 transition-opacity">
-        <LogoApex className="w-32 mb-10" />
+        <LogoApex size={128} className="mb-10" />
       </Link>
       <h3>Connexion administrateur</h3>
       <div className="flex flex-col gap-2 min-w-[200px] md:min-w-[300px]">

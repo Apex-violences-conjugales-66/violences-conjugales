@@ -21,10 +21,23 @@ const sql = postgres(process.env.POSTGRES_URL!, {
 
 export async function fetchMembers() {
   try {
-    const members = await sql<Member[]>`SELECT * FROM members`;
+    const members = await sql<
+      Member[]
+    >`SELECT * FROM members ORDER BY CASE type WHEN 'equipe' THEN 1 WHEN 'administration' THEN 2 ELSE 3 END, name ASC`;
     return members;
   } catch (error) {
     throw new Error("Failed to fetch members");
+  }
+}
+
+export async function fetchMemberbyId(id: string): Promise<Member | null> {
+  try {
+    const data = await sql<Member[]>`
+      SELECT * FROM members WHERE id = ${id}
+    `;
+    return data[0] ?? null;
+  } catch {
+    throw new Error("Failed to fetch member");
   }
 }
 
@@ -50,7 +63,9 @@ export async function fetchLatestCatalogueAndBulletin() {
 
 export async function fetchFormations() {
   try {
-    const data = await sql<Formation[]>`SELECT * FROM formations`;
+    const data = await sql<
+      Formation[]
+    >`SELECT * FROM formations ORDER BY year DESC, name ASC`;
     return data;
   } catch (error) {
     throw new Error("Failed to fetch formations");
@@ -110,10 +125,23 @@ export async function fetchMemoirs() {
 
 export async function fetchPartners() {
   try {
-    const data = await sql<Partner[]>`SELECT * FROM partners`;
+    const data = await sql<
+      Partner[]
+    >`SELECT * FROM partners ORDER BY CASE type WHEN 'institutionnel' THEN 1 ELSE 2 END, name ASC`;
     return data;
   } catch (error) {
     throw new Error("Failed to fetch partners");
+  }
+}
+
+export async function fetchPartnerById(id: string): Promise<Partner | null> {
+  try {
+    const data = await sql<Partner[]>`
+      SELECT * FROM partners WHERE id = ${id}
+    `;
+    return data[0] ?? null;
+  } catch {
+    throw new Error("Failed to fetch partner");
   }
 }
 
