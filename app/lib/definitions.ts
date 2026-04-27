@@ -1,10 +1,17 @@
 // This file contains type definitions for your data.
 // It describes the shape of the data, and what data type each property should accept.
 
+export type BlobUrl =
+  | "imageUrl"
+  | "catalogueUrl"
+  | "bulletinUrl"
+  | "documentUrl";
+
 export type FormEntry =
   | "members"
   | "partners"
   | "formations"
+  | "documents"
   | "books"
   | "movies"
   | "documentResources"
@@ -49,7 +56,7 @@ export type Formation = {
 };
 
 export type DocumentResource = {
-  id: number;
+  id: string;
   name: string;
   documentUrl: string;
 };
@@ -74,11 +81,4 @@ export type Movie = {
   title: string;
   description: string;
   movieUrl: string;
-};
-
-export type DocumentCardProps = {
-  id: string;
-  name: string;
-  documentUrl: string;
-  onClick: () => void;
 };

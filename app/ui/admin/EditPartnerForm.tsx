@@ -1,6 +1,7 @@
 "use client";
 
 import { updatePartner } from "@/app/lib/actions";
+import { useAdminForm } from "@/app/lib/hooks";
 import { Partner } from "@/app/lib/definitions";
 import { SubmitButton } from "@/app/ui/admin/ActionButtons";
 import Link from "next/link";
@@ -12,9 +13,13 @@ export default function EditPartnerForm({
   id: string;
   partner: Partner;
 }) {
-  const updatePartnerWithId = updatePartner.bind(null, id);
+  const { handleSubmit, isPending } = useAdminForm(
+    updatePartner.bind(null, id),
+    "partners",
+  );
+
   return (
-    <form action={updatePartnerWithId} className="flex flex-col">
+    <form action={handleSubmit} className="flex flex-col">
       <h1 className="mb-4">Modifier un partenaire</h1>
       <div className="flex flex-col bg-slate-200 p-6 gap-4 rounded-md">
         <div className="mb-2">
@@ -90,7 +95,10 @@ export default function EditPartnerForm({
         >
           Annuler
         </Link>
-        <SubmitButton className="rounded-full bg-green-500 text-white font-medium px-4 py-2">
+        <SubmitButton
+          isPending={isPending}
+          className="rounded-full bg-green-500 text-white font-medium px-4 py-2"
+        >
           Mettre à jour
         </SubmitButton>
       </div>

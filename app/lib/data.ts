@@ -72,6 +72,19 @@ export async function fetchFormations() {
   }
 }
 
+export async function fetchFormationById(
+  id: string,
+): Promise<Formation | null> {
+  try {
+    const data = await sql<Formation[]>`
+      SELECT * FROM formations WHERE id = ${id}
+    `;
+    return data[0] ?? null;
+  } catch {
+    throw new Error("Failed to fetch formation");
+  }
+}
+
 export async function fetchDocuments() {
   try {
     const data = await sql<
@@ -79,12 +92,13 @@ export async function fetchDocuments() {
     >`SELECT * FROM document_resources`;
     return data;
   } catch (error) {
-    throw new Error("Failed to fetch documents");
+    console.error("fetchDocuments error:", error);
+    throw error;
   }
 }
 
 export async function fetchDocumentById(
-  id: number,
+  id: string,
 ): Promise<DocumentResource | null> {
   try {
     const data = await sql<DocumentResource[]>`

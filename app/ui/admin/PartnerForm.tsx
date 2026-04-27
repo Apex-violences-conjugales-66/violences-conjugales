@@ -1,12 +1,15 @@
 "use client";
 
 import { createPartner } from "@/app/lib/actions";
+import { useAdminForm } from "@/app/lib/hooks";
 import { SubmitButton } from "@/app/ui/admin/ActionButtons";
 import Link from "next/link";
 
 export default function PartnerForm() {
+  const { handleSubmit, isPending } = useAdminForm(createPartner, "partners");
+
   return (
-    <form action={createPartner} className="flex flex-col">
+    <form action={handleSubmit} className="flex flex-col">
       <h1 className="mb-4">Ajouter un partenaire</h1>
       <div className="flex flex-col bg-slate-200 p-6 gap-4 rounded-md">
         <div className="mb-2">
@@ -78,7 +81,10 @@ export default function PartnerForm() {
         >
           Annuler
         </Link>
-        <SubmitButton className="rounded-full bg-green-500 text-white font-medium px-4 py-2">
+        <SubmitButton
+          isPending={isPending}
+          className="rounded-full bg-green-500 text-white font-medium px-4 py-2"
+        >
           Ajouter Partenaire
         </SubmitButton>
       </div>

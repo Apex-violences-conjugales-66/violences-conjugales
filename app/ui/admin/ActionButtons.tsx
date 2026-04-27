@@ -39,15 +39,17 @@ export function EditButton({
 export function DeleteButton({
   table,
   id,
+  blobUrl,
 }: {
   table: string;
   id: string | number;
+  blobUrl?: string;
 }) {
   const [isPending, startTransition] = useTransition();
 
   return (
     <button
-      onClick={() => startTransition(() => deleteEntry(table, id))}
+      onClick={() => startTransition(() => deleteEntry(table, id, blobUrl))}
       disabled={isPending}
       className="border border-slate-300 p-2 rounded-md hover:bg-slate-200 transition-colors disabled:opacity-50"
     >
@@ -63,19 +65,22 @@ export function DeleteButton({
 export function SubmitButton({
   children,
   className,
+  isPending: externalPending,
 }: {
   children: React.ReactNode;
   className?: string;
+  isPending?: boolean;
 }) {
   const { pending } = useFormStatus();
+  const isLoading = externalPending ?? pending;
 
   return (
     <button
       type="submit"
-      disabled={pending}
+      disabled={isLoading}
       className={cn("flex items-center gap-2 disabled:opacity-50", className)}
     >
-      {pending && <Loader size={16} className="animate-spin" />}
+      {isLoading && <Loader size={16} className="animate-spin" />}
       {children}
     </button>
   );

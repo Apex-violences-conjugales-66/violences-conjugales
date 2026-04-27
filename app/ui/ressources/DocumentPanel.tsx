@@ -37,7 +37,7 @@ export default function DocumentPanel({
 
       {/* PDF viewer */}
       <iframe
-        src={`${doc.documentUrl}#toolbar=0`}
+        src={`https://docs.google.com/viewer?url=${encodeURIComponent(doc.documentUrl)}&embedded=true`}
         className="flex-1 w-full min-h-[600px]"
       />
     </div>
