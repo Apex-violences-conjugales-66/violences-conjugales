@@ -47,7 +47,7 @@ export default async function EditForm({
         notFound();
       }
       return <EditFormationForm id={id} formation={formation} />;
-    case "documents":
+    case "document_resources":
       const document = await fetchDocumentById(id);
       if (!document) {
         notFound();
