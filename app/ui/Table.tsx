@@ -12,6 +12,7 @@ import {
   Bulletin,
   BlobUrl,
   Certificat,
+  FormEntry,
 } from "@/app/lib/definitions";
 import { cn } from "@/app/lib/utils";
 import {
@@ -25,11 +26,12 @@ const BLOB_URL_KEYS = new Set<BlobUrl>([
   "catalogueUrl",
   "bulletinUrl",
   "documentUrl",
+  "certificatUrl",
 ]);
 
 interface TableProps {
   name: string;
-  entry: string;
+  entry: FormEntry;
   buttonLabel?: string;
   editable?: boolean;
   data?:
@@ -88,7 +90,7 @@ export default function Table({
             <tbody className="bg-white">
               {data.map((item, index) => (
                 <tr
-                  key={index}
+                  key={item.id}
                   className="border-b last:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
                 >
                   {Object.entries(item).map(

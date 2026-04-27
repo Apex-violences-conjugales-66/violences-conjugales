@@ -1,24 +1,24 @@
-import { updateMember } from "@/app/lib/actions";
 import {
-  fetchMemberbyId,
-  fetchPartnerById,
-  fetchFormationById,
-  fetchDocumentById,
   fetchBookById,
-  fetchMovieById,
-  fetchMemoirById,
-  fetchCatalogueById,
   fetchBulletinById,
+  fetchCatalogueById,
+  fetchCertificatById,
+  fetchDocumentById,
+  fetchFormationById,
+  fetchMemberbyId,
+  fetchMemoirById,
+  fetchMovieById,
+  fetchPartnerById,
 } from "@/app/lib/data";
 import { FormEntry } from "@/app/lib/definitions";
-import EditMemberForm from "@/app/ui/admin/EditMemberForm";
-import EditPartnerForm from "@/app/ui/admin/EditPartnerForm";
-import EditFormationForm from "@/app/ui/admin/EditFormationForm";
-import EditDocumentForm from "@/app/ui/admin/EditDocumentForm";
 import EditBookForm from "@/app/ui/admin/EditBookForm";
-import EditMovieForm from "@/app/ui/admin/EditMovieForm";
-import EditMemoirForm from "@/app/ui/admin/EditMemoirForm";
 import EditCatalogueForm from "@/app/ui/admin/EditCatalogueForm";
+import EditDocumentForm from "@/app/ui/admin/EditDocumentForm";
+import EditFormationForm from "@/app/ui/admin/EditFormationForm";
+import EditMemberForm from "@/app/ui/admin/EditMemberForm";
+import EditMemoirForm from "@/app/ui/admin/EditMemoirForm";
+import EditMovieForm from "@/app/ui/admin/EditMovieForm";
+import EditPartnerForm from "@/app/ui/admin/EditPartnerForm";
 import { notFound } from "next/navigation";
 
 export default async function EditForm({
@@ -83,6 +83,12 @@ export default async function EditForm({
         notFound();
       }
       return <EditCatalogueForm id={id} type="bulletin" data={bulletin} />;
+    case "certificats":
+      const certificat = await fetchCertificatById(id);
+      if (!certificat) {
+        notFound();
+      }
+      return <EditCatalogueForm id={id} type="certificat" data={certificat} />;
     default:
       return <p className="text-slate-500">Formulaire introuvable.</p>;
   }

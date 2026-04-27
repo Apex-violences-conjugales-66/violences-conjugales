@@ -27,7 +27,8 @@ export async function fetchMembers() {
     >`SELECT * FROM members ORDER BY CASE type WHEN 'equipe' THEN 1 WHEN 'administration' THEN 2 ELSE 3 END, name ASC`;
     return members;
   } catch (error) {
-    throw new Error("Failed to fetch members");
+    console.log("fetchMembers error:", error);
+    throw error;
   }
 }
 
@@ -37,8 +38,9 @@ export async function fetchMemberbyId(id: string): Promise<Member | null> {
       SELECT * FROM members WHERE id = ${id}
     `;
     return data[0] ?? null;
-  } catch {
-    throw new Error("Failed to fetch member");
+  } catch (error) {
+    console.log("fetchMemberById error:", error);
+    throw error;
   }
 }
 
@@ -49,7 +51,8 @@ export async function fetchCatalogues() {
     >`SELECT * FROM catalogues ORDER BY year DESC`;
     return data;
   } catch (error) {
-    throw new Error("Failed to fetch catalogues");
+    console.log("fetchCatalogues error:", error);
+    throw error;
   }
 }
 
@@ -61,8 +64,9 @@ export async function fetchCatalogueById(
       SELECT * FROM catalogues WHERE id = ${id}
     `;
     return data[0] ?? null;
-  } catch {
-    throw new Error("Failed to fetch catalogue");
+  } catch (error) {
+    console.log("fetchCatalogueById error:", error);
+    throw error;
   }
 }
 
@@ -73,7 +77,8 @@ export async function fetchBulletins() {
     >`SELECT * FROM bulletins ORDER BY year DESC`;
     return data;
   } catch (error) {
-    throw new Error("Failed to fetch bulletins");
+    console.log("fetchBulletins error:", error);
+    throw error;
   }
 }
 
@@ -83,8 +88,9 @@ export async function fetchBulletinById(id: string): Promise<Bulletin | null> {
       SELECT * FROM bulletins WHERE id = ${id}
     `;
     return data[0] ?? null;
-  } catch {
-    throw new Error("Failed to fetch bulletin");
+  } catch (error) {
+    console.log("fetchBulletinById error:", error);
+    throw error;
   }
 }
 
@@ -95,7 +101,8 @@ export async function fetchLatestCatalogue() {
     >`SELECT * FROM catalogues ORDER BY year DESC LIMIT 1`;
     return data[0] ?? null;
   } catch (error) {
-    throw new Error("Failed to fetch latest catalogue");
+    console.log("fetchLatestCatalogue error:", error);
+    throw error;
   }
 }
 
@@ -106,7 +113,8 @@ export async function fetchLatestBulletin() {
     >`SELECT * FROM bulletins ORDER BY year DESC LIMIT 1`;
     return data[0] ?? null;
   } catch (error) {
-    throw new Error("Failed to fetch latest bulletin");
+    console.log("fetchLatestBulletin error:", error);
+    throw error;
   }
 }
 
@@ -117,7 +125,8 @@ export async function fetchLatestCertificat() {
     >`SELECT * FROM certificats ORDER BY year DESC LIMIT 1`;
     return data[0] ?? null;
   } catch (error) {
-    throw new Error("Failed to fetch latest certificat");
+    console.log("fetchLatestCertificat error:", error);
+    throw error;
   }
 }
 
@@ -128,7 +137,8 @@ export async function fetchCertificats() {
     >`SELECT * FROM certificats ORDER BY year DESC`;
     return data;
   } catch (error) {
-    throw new Error("Failed to fetch certificats");
+    console.log("fetchCertificats error:", error);
+    throw error;
   }
 }
 
@@ -140,8 +150,9 @@ export async function fetchCertificatById(
       SELECT * FROM certificats WHERE id = ${id}
     `;
     return data[0] ?? null;
-  } catch {
-    throw new Error("Failed to fetch certificat");
+  } catch (error) {
+    console.log("fetchCertificatById error:", error);
+    throw error;
   }
 }
 
@@ -152,7 +163,8 @@ export async function fetchFormations() {
     >`SELECT * FROM formations ORDER BY year DESC, name ASC`;
     return data;
   } catch (error) {
-    throw new Error("Failed to fetch formations");
+    console.log("fetchFormations error:", error);
+    throw error;
   }
 }
 
@@ -164,8 +176,9 @@ export async function fetchFormationById(
       SELECT * FROM formations WHERE id = ${id}
     `;
     return data[0] ?? null;
-  } catch {
-    throw new Error("Failed to fetch formation");
+  } catch (error) {
+    console.log("fetchFormationById error:", error);
+    throw error;
   }
 }
 
@@ -189,8 +202,9 @@ export async function fetchDocumentById(
       SELECT * FROM document_resources WHERE id = ${id}
     `;
     return data[0] ?? null;
-  } catch {
-    throw new Error("Failed to fetch document");
+  } catch (error) {
+    console.log("fetchDocumentById error:", error);
+    throw error;
   }
 }
 
@@ -199,7 +213,8 @@ export async function fetchMovies() {
     const data = await sql<Movie[]>`SELECT * FROM movies`;
     return data;
   } catch (error) {
-    throw new Error("Failed to fetch movies");
+    console.log("fetchMovies error:", error);
+    throw error;
   }
 }
 
@@ -208,7 +223,8 @@ export async function fetchBooks() {
     const data = await sql<Book[]>`SELECT * FROM books`;
     return data;
   } catch (error) {
-    throw new Error("Failed to fetch books");
+    console.log("fetchBooks error:", error);
+    throw error;
   }
 }
 
@@ -217,7 +233,8 @@ export async function fetchMemoirs() {
     const data = await sql<Memoir[]>`SELECT * FROM memoirs`;
     return data;
   } catch (error) {
-    throw new Error("Failed to fetch memoirs");
+    console.log("fetchMemoirs error:", error);
+    throw error;
   }
 }
 
@@ -225,8 +242,9 @@ export async function fetchBookById(id: string): Promise<Book | null> {
   try {
     const data = await sql<Book[]>`SELECT * FROM books WHERE id = ${id}`;
     return data[0] ?? null;
-  } catch {
-    throw new Error("Failed to fetch book");
+  } catch (error) {
+    console.log("fetchBookById error:", error);
+    throw error;
   }
 }
 
@@ -234,8 +252,9 @@ export async function fetchMovieById(id: string): Promise<Movie | null> {
   try {
     const data = await sql<Movie[]>`SELECT * FROM movies WHERE id = ${id}`;
     return data[0] ?? null;
-  } catch {
-    throw new Error("Failed to fetch movie");
+  } catch (error) {
+    console.log("fetchMovieById error:", error);
+    throw error;
   }
 }
 
@@ -243,8 +262,9 @@ export async function fetchMemoirById(id: string): Promise<Memoir | null> {
   try {
     const data = await sql<Memoir[]>`SELECT * FROM memoirs WHERE id = ${id}`;
     return data[0] ?? null;
-  } catch {
-    throw new Error("Failed to fetch memoir");
+  } catch (error) {
+    console.log("fetchMemoirById error:", error);
+    throw error;
   }
 }
 
@@ -255,7 +275,8 @@ export async function fetchPartners() {
     >`SELECT * FROM partners ORDER BY CASE type WHEN 'institutionnel' THEN 1 ELSE 2 END, name ASC`;
     return data;
   } catch (error) {
-    throw new Error("Failed to fetch partners");
+    console.log("fetchPartners error:", error);
+    throw error;
   }
 }
 
@@ -265,8 +286,9 @@ export async function fetchPartnerById(id: string): Promise<Partner | null> {
       SELECT * FROM partners WHERE id = ${id}
     `;
     return data[0] ?? null;
-  } catch {
-    throw new Error("Failed to fetch partner");
+  } catch (error) {
+    console.log("fetchPartnerById error:", error);
+    throw error;
   }
 }
 

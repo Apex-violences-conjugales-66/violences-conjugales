@@ -1,6 +1,7 @@
 "use client";
 
 import { deleteEntry } from "@/app/lib/actions";
+import { FormEntry } from "@/app/lib/definitions";
 import { cn } from "@/app/lib/utils";
 import { Loader, Pen, Plus, Trash } from "lucide-react";
 import Link from "next/link";
@@ -47,7 +48,7 @@ export function DeleteButton({
   id,
   blobUrl,
 }: {
-  table: string;
+  table: FormEntry;
   id: string | number;
   blobUrl?: string;
 }) {

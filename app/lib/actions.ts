@@ -6,6 +6,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { put, del } from "@vercel/blob";
 import postgres from "postgres";
+import { FormEntry } from "@/app/lib/definitions";
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: "require" });
 
@@ -50,8 +51,8 @@ export async function createMember(formData: FormData) {
     console.error("Error creating member:", error);
     throw error;
   }
-  console.log("Member created successfully");
   revalidatePath("/admin");
+  revalidatePath("/", "layout");
 }
 
 export async function updateMember(id: string, formData: FormData) {
@@ -71,8 +72,8 @@ export async function updateMember(id: string, formData: FormData) {
     console.error("Error updating member:", error);
     throw error;
   }
-  console.log("Member updated successfully");
   revalidatePath("/admin");
+  revalidatePath("/", "layout");
 }
 
 // Partners
@@ -97,6 +98,7 @@ export async function createPartner(formData: FormData) {
     throw error;
   }
   revalidatePath("/admin");
+  revalidatePath("/", "layout");
 }
 
 export async function updatePartner(id: string, formData: FormData) {
@@ -145,6 +147,7 @@ export async function updatePartner(id: string, formData: FormData) {
     await del(oldImageUrl);
   }
   revalidatePath("/admin");
+  revalidatePath("/", "layout");
 }
 
 // Formations
@@ -171,6 +174,7 @@ export async function createFormation(formData: FormData) {
     throw error;
   }
   revalidatePath("/admin");
+  revalidatePath("/formation");
 }
 
 export async function updateFormation(id: string, formData: FormData) {
@@ -196,6 +200,7 @@ export async function updateFormation(id: string, formData: FormData) {
     throw error;
   }
   revalidatePath("/admin");
+  revalidatePath("/formation");
 }
 
 // Documents
@@ -219,6 +224,7 @@ export async function createDocument(formData: FormData) {
     throw error;
   }
   revalidatePath("/admin");
+  revalidatePath("/ressources");
 }
 
 export async function updateDocument(id: string, formData: FormData) {
@@ -266,6 +272,7 @@ export async function updateDocument(id: string, formData: FormData) {
     await del(oldDocumentUrl);
   }
   revalidatePath("/admin");
+  revalidatePath("/ressources");
 }
 
 // Books
@@ -285,6 +292,7 @@ export async function createBook(formData: FormData) {
     throw error;
   }
   revalidatePath("/admin");
+  revalidatePath("ressources");
 }
 
 export async function updateBook(id: string, formData: FormData) {
@@ -303,6 +311,7 @@ export async function updateBook(id: string, formData: FormData) {
     throw error;
   }
   revalidatePath("/admin");
+  revalidatePath("/ressources");
 }
 
 // Movies
@@ -322,6 +331,7 @@ export async function createMovie(formData: FormData) {
     throw error;
   }
   revalidatePath("/admin");
+  revalidatePath("/ressources");
 }
 
 export async function updateMovie(id: string, formData: FormData) {
@@ -340,6 +350,7 @@ export async function updateMovie(id: string, formData: FormData) {
     throw error;
   }
   revalidatePath("/admin");
+  revalidatePath("/ressources");
 }
 
 // Memoirs
@@ -365,6 +376,7 @@ export async function createMemoir(formData: FormData) {
     throw error;
   }
   revalidatePath("/admin");
+  revalidatePath("/ressources");
 }
 
 export async function updateMemoir(id: string, formData: FormData) {
@@ -414,6 +426,7 @@ export async function updateMemoir(id: string, formData: FormData) {
     await del(oldDocumentUrl);
   }
   revalidatePath("/admin");
+  revalidatePath("/ressources");
 }
 
 // Catalogues
@@ -437,6 +450,7 @@ export async function createCatalogue(formData: FormData) {
     throw error;
   }
   revalidatePath("/admin");
+  revalidatePath("/formation");
 }
 
 export async function updateCatalogue(id: string, formData: FormData) {
@@ -484,6 +498,7 @@ export async function updateCatalogue(id: string, formData: FormData) {
     await del(oldCatalogueUrl);
   }
   revalidatePath("/admin");
+  revalidatePath("/formation");
 }
 
 // Bulletins
@@ -507,6 +522,7 @@ export async function createBulletin(formData: FormData) {
     throw error;
   }
   revalidatePath("/admin");
+  revalidatePath("/formation");
 }
 
 export async function updateBulletin(id: string, formData: FormData) {
@@ -554,6 +570,7 @@ export async function updateBulletin(id: string, formData: FormData) {
     await del(oldBulletinUrl);
   }
   revalidatePath("/admin");
+  revalidatePath("/formation");
 }
 
 export async function createCertificat(formData: FormData) {
@@ -575,6 +592,7 @@ export async function createCertificat(formData: FormData) {
     throw error;
   }
   revalidatePath("/admin");
+  revalidatePath("/formation");
 }
 
 export async function updateCertificat(id: string, formData: FormData) {
@@ -625,10 +643,11 @@ export async function updateCertificat(id: string, formData: FormData) {
     await del(oldCertificatUrl);
   }
   revalidatePath("/admin");
+  revalidatePath("/formation");
 }
 
 export async function deleteEntry(
-  table: string,
+  table: FormEntry,
   id: string | number,
   blobUrl?: string,
 ) {

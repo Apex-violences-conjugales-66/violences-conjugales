@@ -1,8 +1,12 @@
 "use client";
 
-import { updateCatalogue, updateBulletin } from "@/app/lib/actions";
+import {
+  updateCatalogue,
+  updateBulletin,
+  updateCertificat,
+} from "@/app/lib/actions";
 import { useAdminForm } from "@/app/lib/hooks";
-import { Catalogue, Bulletin } from "@/app/lib/definitions";
+import { Catalogue, Bulletin, Certificat } from "@/app/lib/definitions";
 import { SubmitButton } from "@/app/ui/admin/ActionButtons";
 import Link from "next/link";
 
@@ -12,13 +16,25 @@ export default function EditCatalogueForm({
   data,
 }: {
   id: string;
-  type: "catalogue" | "bulletin";
-  data: Catalogue | Bulletin;
+  type: "catalogue" | "bulletin" | "certificat";
+  data: Catalogue | Bulletin | Certificat;
 }) {
   const isCatalogue = type === "catalogue";
-  const label = isCatalogue ? "Catalogue" : "Bulletin";
-  const action = isCatalogue ? updateCatalogue : updateBulletin;
-  const redirectHash = isCatalogue ? "catalogues" : "bulletins";
+  const label = isCatalogue
+    ? "Catalogue"
+    : type === "bulletin"
+      ? "Bulletin"
+      : "Certificat";
+  const action = isCatalogue
+    ? updateCatalogue
+    : type === "bulletin"
+      ? updateBulletin
+      : updateCertificat;
+  const redirectHash = isCatalogue
+    ? "catalogues"
+    : type === "bulletin"
+      ? "bulletins"
+      : "certificats";
 
   const { handleSubmit, isPending } = useAdminForm(
     action.bind(null, id),
