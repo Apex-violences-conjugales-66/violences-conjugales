@@ -63,20 +63,21 @@ export default function Table({
           <table className="table-fixed rounded-md border-slate-500 w-full">
             <thead>
               <tr>
-                {Object.keys(data[0]).map(
-                  (key) =>
-                    key !== "id" && (
-                      <th
-                        scope="col"
-                        key={key}
-                        className={cn(
-                          "px-3 py-5 font-medium text-left first:pl-6",
-                        )}
-                      >
-                        {key.charAt(0).toUpperCase() + key.slice(1)}
-                      </th>
-                    ),
-                )}
+                {data[0] &&
+                  Object.keys(data[0]).map(
+                    (key) =>
+                      key !== "id" && (
+                        <th
+                          scope="col"
+                          key={key}
+                          className={cn(
+                            "px-3 py-5 font-medium text-left first:pl-6",
+                          )}
+                        >
+                          {key.charAt(0).toUpperCase() + key.slice(1)}
+                        </th>
+                      ),
+                  )}
                 {editable && (
                   <th scope="col" className="relative py-3 pl-6 pr-3">
                     <span className="sr-only">Edit</span>
