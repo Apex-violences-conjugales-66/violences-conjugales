@@ -30,7 +30,7 @@ export default async function Dashboard() {
           <Table name="Members" data={members} />
         </section>
         <section id="partners" className="scroll-mt-6">
-          <Table name="Partners" data={partners} blobUrlKey="imageUrl" />
+          <Table name="Partners" data={partners} />
         </section>
         <section id="formations" className="scroll-mt-6">
           <Table name="Formations" data={formations} />
