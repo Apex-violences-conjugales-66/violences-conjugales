@@ -28,7 +28,7 @@ const FormationShowcase: FunctionComponent<FormationShowcaseProps> = () => {
             </p>
             <Image
               alt="logo qualiopi"
-              src="/formation/logo-qualiopi.png"
+              src="/logo-qualiopi.png"
               width={633}
               height={338}
               className="rounded-sm object-contain  max-w-80 bg-white"
@@ -37,7 +37,7 @@ const FormationShowcase: FunctionComponent<FormationShowcaseProps> = () => {
           <Button
             icon={<ChevronRightIcon className="w-6 h-auto md:w-10" />}
             iconPosition="right"
-            href="/projet-associatif"
+            href="/formation"
             className="gap-1 pr-2 self-center mt-4 md:mt-10"
           >
             En savoir plus

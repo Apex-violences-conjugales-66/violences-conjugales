@@ -33,14 +33,14 @@ export default function DocumentsGallery({
                   : "none",
             }}
           >
-            <div className="w-full ">
+            <div className="w-full">
               <iframe
                 src={`https://docs.google.com/viewer?url=${encodeURIComponent(doc.documentUrl)}&embedded=true`}
                 className="w-full pointer-events-none"
                 loading="lazy"
               />
             </div>
-            <p className="text-sm text-center line-clamp-2 w-full p-1 bg-white z-20">
+            <p className="text-sm text-center line-clamp-2 w-full p-1 bg-white">
               {doc.name}
             </p>
           </a>

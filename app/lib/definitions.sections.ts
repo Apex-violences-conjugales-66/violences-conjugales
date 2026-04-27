@@ -1,5 +1,8 @@
 import {
   Book,
+  Bulletin,
+  Catalogue,
+  Certificat,
   DocumentResource,
   Formation,
   Member,
@@ -34,8 +37,9 @@ export interface ISectionTeam extends SectionBase {
 
 export interface ISectionFormation extends SectionBase {
   name: "formationSection";
-  bulletinUrl: string;
-  catalogueUrl: string;
+  catalogue: Catalogue;
+  bulletin: Bulletin;
+  certificat: Certificat;
   formations: Formation[];
 }
 

@@ -7,13 +7,19 @@ import Link from "next/link";
 import { useTransition } from "react";
 import { useFormStatus } from "react-dom";
 
-export function AddButton({ entry }: { entry: string }) {
+export function AddButton({
+  entry,
+  buttonLabel,
+}: {
+  entry: string;
+  buttonLabel?: string;
+}) {
   return (
     <Link
       href={`/admin/create?entry=${entry}`}
       className="flex gap-6 border bg-green-600 text-white items-center font-medium px-4 rounded-md hover:bg-green-500 transition-colors"
     >
-      Ajouter {entry.slice(0, -1)}
+      Ajouter {buttonLabel ? buttonLabel : entry.slice(0, -1)}
       <Plus size={20} />
     </Link>
   );

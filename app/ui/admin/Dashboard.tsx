@@ -1,5 +1,8 @@
 import {
   fetchBooks,
+  fetchBulletins,
+  fetchCatalogues,
+  fetchCertificats,
   fetchDocuments,
   fetchFormations,
   fetchMembers,
@@ -20,6 +23,9 @@ export default async function Dashboard() {
   const books = await fetchBooks();
   const movies = await fetchMovies();
   const memoirs = await fetchMemoirs();
+  const catalogues = await fetchCatalogues();
+  const bulletins = await fetchBulletins();
+  const certificats = await fetchCertificats();
 
   return (
     <div id="top" className="scroll-mt-12">
@@ -37,26 +43,45 @@ export default async function Dashboard() {
         </Link>
       </div>
       <div className="flex flex-col gap-8 mt-8 smooth-scroll">
+        <section id="catalogue" className="scroll-mt-6">
+          <Table
+            name="catalogues des formations"
+            entry="catalogues"
+            data={catalogues}
+            buttonLabel="catalogue"
+          />
+        </section>
+        <section id="bulletin" className="scroll-mt-6">
+          <Table
+            name="bulletins d'inscription"
+            entry="bulletins"
+            data={bulletins}
+            buttonLabel="bulletin"
+          />
+        </section>
+        <section id="certificats" className="scroll-mt-6">
+          <Table name="certificats" entry="certificats" data={certificats} />
+        </section>
         <section id="members" className="scroll-mt-6">
-          <Table name="Members" data={members} />
+          <Table name="membres" entry="members" data={members} />
         </section>
         <section id="partners" className="scroll-mt-6">
-          <Table name="Partners" data={partners} />
+          <Table name="partnenaires" entry="partners" data={partners} />
         </section>
         <section id="formations" className="scroll-mt-6">
-          <Table name="Formations" data={formations} />
+          <Table name="formations" entry="formations" data={formations} />
         </section>
         <section id="documents" className="scroll-mt-6">
-          <Table name="Documents" data={documents} />
+          <Table name="documents" entry="documents" data={documents} />
         </section>
         <section id="books" className="scroll-mt-6">
-          <Table name="Books" data={books} />
+          <Table name="livres" entry="books" data={books} />
         </section>
         <section id="movies" className="scroll-mt-6">
-          <Table name="Movies" data={movies} />
+          <Table name="films" entry="movies" data={movies} />
         </section>
         <section id="memoirs" className="scroll-mt-6">
-          <Table name="Memoirs" data={memoirs} />
+          <Table name="memoires" entry="memoirs" data={memoirs} />
         </section>
       </div>
     </div>

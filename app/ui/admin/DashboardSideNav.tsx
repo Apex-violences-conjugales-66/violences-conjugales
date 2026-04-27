@@ -3,13 +3,16 @@
 import { ArrowUp } from "lucide-react";
 
 const chapters = [
-  { label: "Members", href: "/admin#members" },
-  { label: "Partners", href: "/admin#partners" },
+  { label: "Catalogues", href: "/admin#catalogue" },
+  { label: "Bulletins", href: "/admin#bulletin" },
+  { label: "Certificats", href: "/admin#certificats" },
+  { label: "Membres", href: "/admin#members" },
+  { label: "Partenaires", href: "/admin#partners" },
   { label: "Formations", href: "/admin#formations" },
   { label: "Documents", href: "/admin#documents" },
-  { label: "Books", href: "/admin#books" },
-  { label: "Movies", href: "/admin#movies" },
-  { label: "Memoirs", href: "/admin#memoirs" },
+  { label: "Livres", href: "/admin#books" },
+  { label: "Films", href: "/admin#movies" },
+  { label: "Mémoires", href: "/admin#memoirs" },
 ];
 
 export default function DashboardSideNav() {

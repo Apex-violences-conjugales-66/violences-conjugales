@@ -1,21 +1,29 @@
-import { ANNEE_BULLETIN } from "@/app/lib/constants";
+import {
+  Bulletin,
+  Catalogue,
+  Certificat,
+  Formation,
+} from "@/app/lib/definitions";
 import ContactInfo from "@/app/ui/ContactInfo";
 import Divider from "@/app/ui/Divider";
-import Image from "next/image";
-import Link from "next/link";
-import { Formation } from "@/app/lib/definitions";
 import SectionComponent from "@/app/ui/SectionComponent";
 import Title from "@/app/ui/Title";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function FormationSection({
-  catalogueUrl,
-  bulletinUrl,
+  catalogue,
+  bulletin,
+  certificat,
   formations,
 }: {
-  catalogueUrl: string;
-  bulletinUrl: string;
+  catalogue: Catalogue;
+  bulletin: Bulletin;
+  certificat: Certificat;
   formations: Formation[];
 }) {
+  console.log("🚀 ~ FormationSection ~ catalogue:", catalogue);
+  const ANNEE_BULLETIN = new Date().getFullYear();
   return (
     <SectionComponent isFirst isLast withSideBorders bgColor="orange">
       <div className="container py-14 flex flex-col">
@@ -52,20 +60,20 @@ export default function FormationSection({
           </div>
           <div className="flex mt-6 h-48 md:h-80 self-center xl:self-auto xl:h-auto flex-col w-1/2 xl:w-1/3 items-center gap-y-2">
             <Link
-              href="/formation/qualianor-certification.pdf"
+              href={certificat.certificatUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full h-full relative border border-blue-dark bg-white hover:border-white hover:opacity-75 transition"
             >
               <Image
                 alt="logo qualiopi"
-                src="/formation/logo-qualiopi.png"
+                src="/logo-qualiopi.png"
                 fill
                 style={{ objectFit: "contain" }}
               />
             </Link>
             <Link
-              href="/formation/qualianor-certification.pdf"
+              href={certificat.certificatUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
@@ -106,10 +114,10 @@ export default function FormationSection({
             inter-entreprise.
             <br /> <br /> Téléchargez notre{" "}
             <Link
-              href={catalogueUrl}
+              href={catalogue.catalogueUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-orange hover:underline"
+              className="text-orange hover:underline font-medium"
             >
               catalogue des formations {ANNEE_BULLETIN + 1}
             </Link>
@@ -202,10 +210,10 @@ export default function FormationSection({
             par courrier.
           </div>
           <Link
-            href={bulletinUrl}
+            href={bulletin.bulletinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-orange hover:underline self-center mt-4"
+            className="text-orange hover:underline self-center mt-4 font-medium"
           >
             Bulletin d&rsquo;inscription {ANNEE_BULLETIN}
           </Link>

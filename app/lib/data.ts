@@ -5,6 +5,7 @@ import {
   Book,
   Bulletin,
   Catalogue,
+  Certificat,
   DocumentResource,
   Formation,
   Member,
@@ -41,23 +42,112 @@ export async function fetchMemberbyId(id: string): Promise<Member | null> {
   }
 }
 
-export async function fetchLatestCatalogueAndBulletin() {
+export async function fetchCatalogues() {
   try {
-    const [catalogue, bulletin] = await Promise.all([
-      sql<
-        Catalogue[]
-      >`SELECT catalogue_url FROM catalogues ORDER BY year DESC LIMIT 1`,
-      sql<
-        Bulletin[]
-      >`SELECT bulletin_url FROM bulletins ORDER BY year DESC LIMIT 1`,
-    ]);
-
-    return {
-      catalogueUrl: catalogue[0]?.catalogueUrl ?? null,
-      bulletinUrl: bulletin[0]?.bulletinUrl ?? null,
-    };
+    const data = await sql<
+      Catalogue[]
+    >`SELECT * FROM catalogues ORDER BY year DESC`;
+    return data;
   } catch (error) {
-    throw new Error("Failed to fetch latest catalogue and bulletin");
+    console.log("🚀 ~ fetchCatalogues ~ error:", error);
+    throw new Error("Failed to fetch catalogues");
+  }
+}
+
+export async function fetchCatalogueById(
+  id: string,
+): Promise<Catalogue | null> {
+  try {
+    const data = await sql<Catalogue[]>`
+      SELECT * FROM catalogues WHERE id = ${id}
+    `;
+    return data[0] ?? null;
+  } catch {
+    throw new Error("Failed to fetch catalogue");
+  }
+}
+
+export async function fetchBulletins() {
+  try {
+    const data = await sql<
+      Bulletin[]
+    >`SELECT * FROM bulletins ORDER BY year DESC`;
+    return data;
+  } catch (error) {
+    console.log("🚀 ~ fetchBulletins ~ error:", error);
+    throw new Error("Failed to fetch bulletins");
+  }
+}
+
+export async function fetchBulletinById(id: string): Promise<Bulletin | null> {
+  try {
+    const data = await sql<Bulletin[]>`
+      SELECT * FROM bulletins WHERE id = ${id}
+    `;
+    return data[0] ?? null;
+  } catch {
+    throw new Error("Failed to fetch bulletin");
+  }
+}
+
+export async function fetchLatestCatalogue() {
+  try {
+    const data = await sql<
+      Catalogue[]
+    >`SELECT * FROM catalogues ORDER BY year DESC LIMIT 1`;
+    return data[0] ?? null;
+  } catch (error) {
+    console.log("🚀 ~ fetchLatestCatalogue ~ error:", error);
+    throw new Error("Failed to fetch latest catalogue");
+  }
+}
+
+export async function fetchLatestBulletin() {
+  try {
+    const data = await sql<
+      Bulletin[]
+    >`SELECT * FROM bulletins ORDER BY year DESC LIMIT 1`;
+    return data[0] ?? null;
+  } catch (error) {
+    console.log("🚀 ~ fetchLatestBulletin ~ error:", error);
+    throw new Error("Failed to fetch latest bulletin");
+  }
+}
+
+export async function fetchLatestCertificat() {
+  try {
+    const data = await sql<
+      Certificat[]
+    >`SELECT * FROM certificats ORDER BY year DESC LIMIT 1`;
+    return data[0] ?? null;
+  } catch (error) {
+    console.log("🚀 ~ fetchLatestCertificat ~ error:", error);
+    throw new Error("Failed to fetch latest certificat");
+  }
+}
+
+export async function fetchCertificats() {
+  try {
+    const data = await sql<
+      Certificat[]
+    >`SELECT * FROM certificats ORDER BY year DESC`;
+    return data;
+  } catch (error) {
+    console.log("🚀 ~ fetchCertificats ~ error:", error);
+    throw new Error("Failed to fetch certificats");
+  }
+}
+
+export async function fetchCertificatById(
+  id: string,
+): Promise<Certificat | null> {
+  try {
+    const data = await sql<Certificat[]>`
+      SELECT * FROM certificats WHERE id = ${id}
+    `;
+    return data[0] ?? null;
+  } catch {
+    throw new Error("Failed to fetch certificat");
   }
 }
 
@@ -137,6 +227,33 @@ export async function fetchMemoirs() {
   }
 }
 
+export async function fetchBookById(id: string): Promise<Book | null> {
+  try {
+    const data = await sql<Book[]>`SELECT * FROM books WHERE id = ${id}`;
+    return data[0] ?? null;
+  } catch {
+    throw new Error("Failed to fetch book");
+  }
+}
+
+export async function fetchMovieById(id: string): Promise<Movie | null> {
+  try {
+    const data = await sql<Movie[]>`SELECT * FROM movies WHERE id = ${id}`;
+    return data[0] ?? null;
+  } catch {
+    throw new Error("Failed to fetch movie");
+  }
+}
+
+export async function fetchMemoirById(id: string): Promise<Memoir | null> {
+  try {
+    const data = await sql<Memoir[]>`SELECT * FROM memoirs WHERE id = ${id}`;
+    return data[0] ?? null;
+  } catch {
+    throw new Error("Failed to fetch memoir");
+  }
+}
+
 export async function fetchPartners() {
   try {
     const data = await sql<
@@ -182,12 +299,18 @@ export async function getSections(
       return [{ name: "projet" }];
     }
     case "formation": {
-      const data = await fetchLatestCatalogueAndBulletin();
-      const catalogueUrl = data.catalogueUrl;
-      const bulletinUrl = data.bulletinUrl;
+      const catalogue = await fetchLatestCatalogue();
+      const bulletin = await fetchLatestBulletin();
+      const certificat = await fetchLatestCertificat();
       const formations = await fetchFormations();
       return [
-        { name: "formationSection", catalogueUrl, bulletinUrl, formations },
+        {
+          name: "formationSection",
+          catalogue,
+          bulletin,
+          certificat,
+          formations,
+        },
       ];
     }
     case "ressources": {

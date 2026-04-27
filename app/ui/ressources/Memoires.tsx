@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function Memoires({ memoirs }: { memoirs: Memoir[] }) {
   return (
     <SectionComponent isLast>
-      <div className="container flex flex-col gap-4 ">
+      <div className="container flex flex-col gap-4 md:gap-10">
         <div className="flex flex-col ">
           <Title className="self-center">Mémoires</Title>
           <div className="flex flex-col">
@@ -19,7 +19,7 @@ export default function Memoires({ memoirs }: { memoirs: Memoir[] }) {
               <br />
               Si vous utilisez une partie des mémoires pour vos propres travaux
               n&rsquo;oubliez pas d&rsquo;en citer les auteur.es
-              <Heart className="w-8 inline-block ml-1" />
+              <Heart className="text-orange-600 w-8 inline-block ml-1" />
             </p>
             <div className="flex gap-4 items-center self-end">
               <p>Contactez-nous pour plus d&rsquo;informations</p>

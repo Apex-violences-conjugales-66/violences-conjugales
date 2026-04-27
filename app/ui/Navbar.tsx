@@ -52,7 +52,7 @@ export default function Navbar() {
           </div>
         </div>
         <Link
-          href="/login"
+          href="/admin"
           className="absolute right-14 sm:right-20 h-8 w-8 sm:h-12 sm:w-12 top-0 flex items-center justify-center border-2 border-t-0 border-gray-800 bg-gray-800 rounded-b-xl z-50 text-white hover:text-gray-800 hover:bg-white transition-colors"
         >
           <Padlock className="h-auto w-4 sm:w-6" />

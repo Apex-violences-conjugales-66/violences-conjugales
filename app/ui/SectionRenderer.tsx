@@ -33,8 +33,9 @@ export default function SectionRenderer({ section }: { section: Section }) {
     case "formationSection":
       return (
         <FormationSection
-          catalogueUrl={section.catalogueUrl}
-          bulletinUrl={section.bulletinUrl}
+          catalogue={section.catalogue}
+          bulletin={section.bulletin}
+          certificat={section.certificat}
           formations={section.formations}
         />
       );

@@ -5,7 +5,8 @@ export type BlobUrl =
   | "imageUrl"
   | "catalogueUrl"
   | "bulletinUrl"
-  | "documentUrl";
+  | "documentUrl"
+  | "certificatUrl";
 
 export type FormEntry =
   | "members"
@@ -14,8 +15,11 @@ export type FormEntry =
   | "documents"
   | "books"
   | "movies"
-  | "documentResources"
-  | "memoirs";
+  | "documents"
+  | "memoirs"
+  | "catalogues"
+  | "bulletins"
+  | "certificats";
 
 export type Partner = {
   id: string;
@@ -29,6 +33,13 @@ export type Member = {
   name: string;
   title: string;
   type: "bureau" | "administration" | "equipe";
+};
+
+export type Certificat = {
+  id: string;
+  year: number;
+  certificatUrl: string;
+  uploadedAt: Date;
 };
 
 export type Catalogue = {

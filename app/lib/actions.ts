@@ -113,6 +113,14 @@ export async function updatePartner(id: string, formData: FormData) {
     imageUrl = url;
   }
 
+  let oldImageUrl: string | undefined;
+  if (imageUrl) {
+    const rows = await sql<
+      { imageUrl: string }[]
+    >`SELECT image_url AS "imageUrl" FROM partners WHERE id = ${id}`;
+    oldImageUrl = rows[0]?.imageUrl;
+  }
+
   try {
     if (imageUrl) {
       await sql`
@@ -131,6 +139,10 @@ export async function updatePartner(id: string, formData: FormData) {
     if (imageUrl) await del(imageUrl);
     console.error("Error updating partner:", error);
     throw error;
+  }
+
+  if (oldImageUrl && oldImageUrl.includes("blob.vercel-storage.com")) {
+    await del(oldImageUrl);
   }
   revalidatePath("/admin");
 }
@@ -222,6 +234,14 @@ export async function updateDocument(id: string, formData: FormData) {
     documentUrl = url;
   }
 
+  let oldDocumentUrl: string | undefined;
+  if (documentUrl) {
+    const rows = await sql<
+      { documentUrl: string }[]
+    >`SELECT document_url AS "documentUrl" FROM document_resources WHERE id = ${id}`;
+    oldDocumentUrl = rows[0]?.documentUrl;
+  }
+
   try {
     if (documentUrl) {
       await sql`
@@ -240,6 +260,369 @@ export async function updateDocument(id: string, formData: FormData) {
     if (documentUrl) await del(documentUrl);
     console.error("Error updating document:", error);
     throw error;
+  }
+
+  if (oldDocumentUrl && oldDocumentUrl.includes("blob.vercel-storage.com")) {
+    await del(oldDocumentUrl);
+  }
+  revalidatePath("/admin");
+}
+
+// Books
+
+export async function createBook(formData: FormData) {
+  const { author, title, description } = Object.fromEntries(
+    formData.entries(),
+  ) as { author: string; title: string; description: string };
+
+  try {
+    await sql`
+      INSERT INTO books (author, title, description)
+      VALUES (${author}, ${title}, ${description})
+    `;
+  } catch (error) {
+    console.error("Error creating book:", error);
+    throw error;
+  }
+  revalidatePath("/admin");
+}
+
+export async function updateBook(id: string, formData: FormData) {
+  const { author, title, description } = Object.fromEntries(
+    formData.entries(),
+  ) as { author: string; title: string; description: string };
+
+  try {
+    await sql`
+      UPDATE books
+      SET author = ${author}, title = ${title}, description = ${description}
+      WHERE id = ${id}
+    `;
+  } catch (error) {
+    console.error("Error updating book:", error);
+    throw error;
+  }
+  revalidatePath("/admin");
+}
+
+// Movies
+
+export async function createMovie(formData: FormData) {
+  const { title, description, movieUrl } = Object.fromEntries(
+    formData.entries(),
+  ) as { title: string; description: string; movieUrl: string };
+
+  try {
+    await sql`
+      INSERT INTO movies (title, description, movie_url)
+      VALUES (${title}, ${description}, ${movieUrl})
+    `;
+  } catch (error) {
+    console.error("Error creating movie:", error);
+    throw error;
+  }
+  revalidatePath("/admin");
+}
+
+export async function updateMovie(id: string, formData: FormData) {
+  const { title, description, movieUrl } = Object.fromEntries(
+    formData.entries(),
+  ) as { title: string; description: string; movieUrl: string };
+
+  try {
+    await sql`
+      UPDATE movies
+      SET title = ${title}, description = ${description}, movie_url = ${movieUrl}
+      WHERE id = ${id}
+    `;
+  } catch (error) {
+    console.error("Error updating movie:", error);
+    throw error;
+  }
+  revalidatePath("/admin");
+}
+
+// Memoirs
+
+export async function createMemoir(formData: FormData) {
+  const { author, title, description } = Object.fromEntries(
+    formData.entries(),
+  ) as { author: string; title: string; description: string };
+  const file = formData.get("document") as File;
+
+  const { url } = await put(`memoirs/${file.name}`, file, {
+    access: "public",
+  });
+
+  try {
+    await sql`
+      INSERT INTO memoirs (author, title, description, document_url)
+      VALUES (${author}, ${title}, ${description}, ${url})
+    `;
+  } catch (error) {
+    await del(url);
+    console.error("Error creating memoir:", error);
+    throw error;
+  }
+  revalidatePath("/admin");
+}
+
+export async function updateMemoir(id: string, formData: FormData) {
+  const { author, title, description } = Object.fromEntries(
+    formData.entries(),
+  ) as { author: string; title: string; description: string };
+  const file = formData.get("document") as File | null;
+
+  let documentUrl: string | undefined;
+
+  if (file && file.size > 0) {
+    const { url } = await put(`memoirs/${file.name}`, file, {
+      access: "public",
+    });
+    documentUrl = url;
+  }
+
+  let oldDocumentUrl: string | undefined;
+  if (documentUrl) {
+    const rows = await sql<
+      { documentUrl: string }[]
+    >`SELECT document_url AS "documentUrl" FROM memoirs WHERE id = ${id}`;
+    oldDocumentUrl = rows[0]?.documentUrl;
+  }
+
+  try {
+    if (documentUrl) {
+      await sql`
+        UPDATE memoirs
+        SET author = ${author}, title = ${title}, description = ${description}, document_url = ${documentUrl}
+        WHERE id = ${id}
+      `;
+    } else {
+      await sql`
+        UPDATE memoirs
+        SET author = ${author}, title = ${title}, description = ${description}
+        WHERE id = ${id}
+      `;
+    }
+  } catch (error) {
+    if (documentUrl) await del(documentUrl);
+    console.error("Error updating memoir:", error);
+    throw error;
+  }
+
+  if (oldDocumentUrl && oldDocumentUrl.includes("blob.vercel-storage.com")) {
+    await del(oldDocumentUrl);
+  }
+  revalidatePath("/admin");
+}
+
+// Catalogues
+
+export async function createCatalogue(formData: FormData) {
+  const year = formData.get("year") as string;
+  const file = formData.get("file") as File;
+
+  const { url } = await put(`catalogues/${file.name}`, file, {
+    access: "public",
+  });
+
+  try {
+    await sql`
+      INSERT INTO catalogues (year, catalogue_url, uploaded_at)
+      VALUES (${parseInt(year)}, ${url}, NOW())
+    `;
+  } catch (error) {
+    await del(url);
+    console.error("Error creating catalogue:", error);
+    throw error;
+  }
+  revalidatePath("/admin");
+}
+
+export async function updateCatalogue(id: string, formData: FormData) {
+  const year = formData.get("year") as string;
+  const file = formData.get("file") as File | null;
+
+  let catalogueUrl: string | undefined;
+
+  if (file && file.size > 0) {
+    const { url } = await put(`catalogues/${file.name}`, file, {
+      access: "public",
+    });
+    catalogueUrl = url;
+  }
+
+  let oldCatalogueUrl: string | undefined;
+  if (catalogueUrl) {
+    const rows = await sql<
+      { catalogueUrl: string }[]
+    >`SELECT catalogue_url AS "catalogueUrl" FROM catalogues WHERE id = ${id}`;
+    oldCatalogueUrl = rows[0]?.catalogueUrl;
+  }
+
+  try {
+    if (catalogueUrl) {
+      await sql`
+        UPDATE catalogues
+        SET year = ${parseInt(year)}, catalogue_url = ${catalogueUrl}
+        WHERE id = ${id}
+      `;
+    } else {
+      await sql`
+        UPDATE catalogues
+        SET year = ${parseInt(year)}
+        WHERE id = ${id}
+      `;
+    }
+  } catch (error) {
+    if (catalogueUrl) await del(catalogueUrl);
+    console.error("Error updating catalogue:", error);
+    throw error;
+  }
+
+  if (oldCatalogueUrl && oldCatalogueUrl.includes("blob.vercel-storage.com")) {
+    await del(oldCatalogueUrl);
+  }
+  revalidatePath("/admin");
+}
+
+// Bulletins
+
+export async function createBulletin(formData: FormData) {
+  const year = formData.get("year") as string;
+  const file = formData.get("file") as File;
+
+  const { url } = await put(`bulletins/${file.name}`, file, {
+    access: "public",
+  });
+
+  try {
+    await sql`
+      INSERT INTO bulletins (year, bulletin_url, uploaded_at)
+      VALUES (${parseInt(year)}, ${url}, NOW())
+    `;
+  } catch (error) {
+    await del(url);
+    console.error("Error creating bulletin:", error);
+    throw error;
+  }
+  revalidatePath("/admin");
+}
+
+export async function updateBulletin(id: string, formData: FormData) {
+  const year = formData.get("year") as string;
+  const file = formData.get("file") as File | null;
+
+  let bulletinUrl: string | undefined;
+
+  if (file && file.size > 0) {
+    const { url } = await put(`bulletins/${file.name}`, file, {
+      access: "public",
+    });
+    bulletinUrl = url;
+  }
+
+  let oldBulletinUrl: string | undefined;
+  if (bulletinUrl) {
+    const rows = await sql<
+      { bulletinUrl: string }[]
+    >`SELECT bulletin_url AS "bulletinUrl" FROM bulletins WHERE id = ${id}`;
+    oldBulletinUrl = rows[0]?.bulletinUrl;
+  }
+
+  try {
+    if (bulletinUrl) {
+      await sql`
+        UPDATE bulletins
+        SET year = ${parseInt(year)}, bulletin_url = ${bulletinUrl}
+        WHERE id = ${id}
+      `;
+    } else {
+      await sql`
+        UPDATE bulletins
+        SET year = ${parseInt(year)}
+        WHERE id = ${id}
+      `;
+    }
+  } catch (error) {
+    if (bulletinUrl) await del(bulletinUrl);
+    console.error("Error updating bulletin:", error);
+    throw error;
+  }
+
+  if (oldBulletinUrl && oldBulletinUrl.includes("blob.vercel-storage.com")) {
+    await del(oldBulletinUrl);
+  }
+  revalidatePath("/admin");
+}
+
+export async function createCertificat(formData: FormData) {
+  const year = formData.get("year") as string;
+  const file = formData.get("file") as File;
+
+  const { url } = await put(`certificats/${file.name}`, file, {
+    access: "public",
+  });
+
+  try {
+    await sql`
+      INSERT INTO certificats (year, certificat_url, uploaded_at)
+      VALUES (${parseInt(year)}, ${url}, NOW())
+    `;
+  } catch (error) {
+    await del(url);
+    console.error("Error creating certificat:", error);
+    throw error;
+  }
+  revalidatePath("/admin");
+}
+
+export async function updateCertificat(id: string, formData: FormData) {
+  const year = formData.get("year") as string;
+  const file = formData.get("file") as File | null;
+
+  let certificatUrl: string | undefined;
+
+  if (file && file.size > 0) {
+    const { url } = await put(`certificats/${file.name}`, file, {
+      access: "public",
+    });
+    certificatUrl = url;
+  }
+
+  let oldCertificatUrl: string | undefined;
+  if (certificatUrl) {
+    const rows = await sql<
+      { certificatUrl: string }[]
+    >`SELECT certificat_url AS "certificatUrl" FROM certificats WHERE id = ${id}`;
+    oldCertificatUrl = rows[0]?.certificatUrl;
+  }
+
+  try {
+    if (certificatUrl) {
+      await sql`
+        UPDATE certificats
+        SET year = ${parseInt(year)}, certificat_url = ${certificatUrl}
+        WHERE id = ${id}
+      `;
+    } else {
+      await sql`
+        UPDATE certificats
+        SET year = ${parseInt(year)}
+        WHERE id = ${id}
+      `;
+    }
+  } catch (error) {
+    if (certificatUrl) await del(certificatUrl);
+    console.error("Error updating certificat:", error);
+    throw error;
+  }
+
+  if (
+    oldCertificatUrl &&
+    oldCertificatUrl.includes("blob.vercel-storage.com")
+  ) {
+    await del(oldCertificatUrl);
   }
   revalidatePath("/admin");
 }

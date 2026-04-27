@@ -8,7 +8,10 @@ import {
   Memoir,
   Partner,
   Member,
+  Catalogue,
+  Bulletin,
   BlobUrl,
+  Certificat,
 } from "@/app/lib/definitions";
 import { cn } from "@/app/lib/utils";
 import {
@@ -26,6 +29,8 @@ const BLOB_URL_KEYS = new Set<BlobUrl>([
 
 interface TableProps {
   name: string;
+  entry: string;
+  buttonLabel?: string;
   editable?: boolean;
   data?:
     | Book[]
@@ -34,15 +39,24 @@ interface TableProps {
     | Formation[]
     | Memoir[]
     | Partner[]
-    | Member[];
+    | Member[]
+    | Catalogue[]
+    | Bulletin[]
+    | Certificat[];
 }
 
-export default function Table({ name, data, editable = true }: TableProps) {
+export default function Table({
+  name,
+  entry,
+  data,
+  editable = true,
+  buttonLabel,
+}: TableProps) {
   return (
     <div className="w-full space-y-4">
       <div className="flex justify-between ">
         <h2>{name}</h2>
-        <AddButton entry={name.toLowerCase()} />
+        <AddButton entry={entry} buttonLabel={buttonLabel} />
       </div>
       {data && (
         <div className="bg-slate-100 px-2 pb-2 rounded-md ">
@@ -83,16 +97,18 @@ export default function Table({ name, data, editable = true }: TableProps) {
                           key={i}
                           className={cn("p-3 first:pl-6 max-w-0 truncate")}
                         >
-                          {value}
+                          {value instanceof Date
+                            ? value.toLocaleDateString()
+                            : value}
                         </td>
                       ),
                   )}
                   {editable && (
                     <td className="relative py-3 pl-6 pr-3 flex justify-end">
                       <div className="flex gap-2">
-                        <EditButton id={item.id} entry={name.toLowerCase()} />
+                        <EditButton id={item.id} entry={entry} />
                         <DeleteButton
-                          table={name.toLowerCase()}
+                          table={entry}
                           id={item.id}
                           blobUrl={
                             Object.entries(item).find(([key]) =>
