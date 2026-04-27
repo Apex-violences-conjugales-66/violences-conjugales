@@ -9,8 +9,6 @@ export default async function Page({
   searchParams?: { entry?: string };
 }) {
   const id = (await params).id;
-  console.log("🚀 ~ Page ~ id:", id);
   const entry = searchParams?.entry as FormEntry | undefined;
-  console.log("🚀 ~ Page ~ entry:", entry);
   return <EditForm entry={entry} id={id} />;
 }

@@ -9,7 +9,6 @@ export const authConfig = {
       const isLoggedIn = !!auth?.user;
       const isProtected = nextUrl.pathname.startsWith("/admin");
       if (isProtected) {
-        console.log("🚀 ~ isLoggedIn:", isLoggedIn);
         if (isLoggedIn) return true;
         return false;
       } else if (isLoggedIn) {

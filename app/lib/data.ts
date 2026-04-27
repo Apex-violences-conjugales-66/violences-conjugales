@@ -49,7 +49,6 @@ export async function fetchCatalogues() {
     >`SELECT * FROM catalogues ORDER BY year DESC`;
     return data;
   } catch (error) {
-    console.log("🚀 ~ fetchCatalogues ~ error:", error);
     throw new Error("Failed to fetch catalogues");
   }
 }
@@ -74,7 +73,6 @@ export async function fetchBulletins() {
     >`SELECT * FROM bulletins ORDER BY year DESC`;
     return data;
   } catch (error) {
-    console.log("🚀 ~ fetchBulletins ~ error:", error);
     throw new Error("Failed to fetch bulletins");
   }
 }
@@ -97,7 +95,6 @@ export async function fetchLatestCatalogue() {
     >`SELECT * FROM catalogues ORDER BY year DESC LIMIT 1`;
     return data[0] ?? null;
   } catch (error) {
-    console.log("🚀 ~ fetchLatestCatalogue ~ error:", error);
     throw new Error("Failed to fetch latest catalogue");
   }
 }
@@ -109,7 +106,6 @@ export async function fetchLatestBulletin() {
     >`SELECT * FROM bulletins ORDER BY year DESC LIMIT 1`;
     return data[0] ?? null;
   } catch (error) {
-    console.log("🚀 ~ fetchLatestBulletin ~ error:", error);
     throw new Error("Failed to fetch latest bulletin");
   }
 }
@@ -121,7 +117,6 @@ export async function fetchLatestCertificat() {
     >`SELECT * FROM certificats ORDER BY year DESC LIMIT 1`;
     return data[0] ?? null;
   } catch (error) {
-    console.log("🚀 ~ fetchLatestCertificat ~ error:", error);
     throw new Error("Failed to fetch latest certificat");
   }
 }
@@ -133,7 +128,6 @@ export async function fetchCertificats() {
     >`SELECT * FROM certificats ORDER BY year DESC`;
     return data;
   } catch (error) {
-    console.log("🚀 ~ fetchCertificats ~ error:", error);
     throw new Error("Failed to fetch certificats");
   }
 }

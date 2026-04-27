@@ -48,7 +48,7 @@ export default async function Dashboard() {
             name="catalogues des formations"
             entry="catalogues"
             data={catalogues}
-            buttonLabel="catalogue"
+            buttonLabel="Catalogue"
           />
         </section>
         <section id="bulletin" className="scroll-mt-6">
@@ -56,32 +56,62 @@ export default async function Dashboard() {
             name="bulletins d'inscription"
             entry="bulletins"
             data={bulletins}
-            buttonLabel="bulletin"
+            buttonLabel="Bulletin"
           />
         </section>
         <section id="certificats" className="scroll-mt-6">
-          <Table name="certificats" entry="certificats" data={certificats} />
+          <Table
+            name="certificats"
+            entry="certificats"
+            data={certificats}
+            buttonLabel="Certificat"
+          />
         </section>
         <section id="members" className="scroll-mt-6">
-          <Table name="membres" entry="members" data={members} />
+          <Table
+            name="membres"
+            entry="members"
+            data={members}
+            buttonLabel="Membre"
+          />
         </section>
         <section id="partners" className="scroll-mt-6">
-          <Table name="partnenaires" entry="partners" data={partners} />
+          <Table
+            name="partnenaires"
+            entry="partners"
+            data={partners}
+            buttonLabel="Partenaire"
+          />
         </section>
         <section id="formations" className="scroll-mt-6">
-          <Table name="formations" entry="formations" data={formations} />
+          <Table
+            name="formations"
+            entry="formations"
+            data={formations}
+            buttonLabel="Formation"
+          />
         </section>
         <section id="documents" className="scroll-mt-6">
-          <Table name="documents" entry="documents" data={documents} />
+          <Table
+            name="documents"
+            entry="document_resources"
+            data={documents}
+            buttonLabel="Document"
+          />
         </section>
         <section id="books" className="scroll-mt-6">
-          <Table name="livres" entry="books" data={books} />
+          <Table name="livres" entry="books" data={books} buttonLabel="Livre" />
         </section>
         <section id="movies" className="scroll-mt-6">
-          <Table name="films" entry="movies" data={movies} />
+          <Table name="films" entry="movies" data={movies} buttonLabel="Film" />
         </section>
         <section id="memoirs" className="scroll-mt-6">
-          <Table name="memoires" entry="memoirs" data={memoirs} />
+          <Table
+            name="memoires"
+            entry="memoirs"
+            data={memoirs}
+            buttonLabel="Mémoire"
+          />
         </section>
       </div>
     </div>

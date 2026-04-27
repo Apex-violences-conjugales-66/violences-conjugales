@@ -22,7 +22,6 @@ export default function FormationSection({
   certificat: Certificat;
   formations: Formation[];
 }) {
-  console.log("🚀 ~ FormationSection ~ catalogue:", catalogue);
   const ANNEE_BULLETIN = new Date().getFullYear();
   return (
     <SectionComponent isFirst isLast withSideBorders bgColor="orange">

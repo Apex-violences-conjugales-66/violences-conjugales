@@ -17,7 +17,7 @@ export default function CreateForm({ entry }: { entry?: FormEntry }) {
       return <PartnerForm />;
     case "formations":
       return <FormationForm />;
-    case "documents":
+    case "document_resources":
       return <DocumentForm />;
     case "books":
       return <BookForm />;
