@@ -3,7 +3,7 @@ import Credentials from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { authConfig } from "@/auth.config";
 
-export const { signIn, signOut, auth } = NextAuth({
+export const { signIn, signOut, auth, handlers } = NextAuth({
   ...authConfig,
   providers: [
     Credentials({
