@@ -3,9 +3,9 @@
 import { deleteEntry } from "@/app/lib/actions";
 import { FormEntry } from "@/app/lib/definitions";
 import { cn } from "@/app/lib/utils";
-import { Loader, Pen, Plus, Trash } from "lucide-react";
+import { Ban, Cross, Loader, Pen, Plus, Trash } from "lucide-react";
 import Link from "next/link";
-import { useTransition } from "react";
+import { useState, useTransition } from "react";
 import { useFormStatus } from "react-dom";
 
 export function AddButton({
@@ -52,19 +52,43 @@ export function DeleteButton({
   id: string | number;
   blobUrl?: string;
 }) {
+  const [confirming, setConfirming] = useState(false);
   const [isPending, startTransition] = useTransition();
+
+  if (confirming) {
+    return (
+      <div className="flex gap-2">
+        <button
+          onClick={() => startTransition(() => deleteEntry(table, id, blobUrl))}
+          disabled={isPending}
+          className="border border-red-400 bg-red-50 text-red-600 px-2 py-1 text-xs rounded-md hover:bg-red-100 transition-colors disabled:opacity-50"
+        >
+          {isPending ? (
+            <Loader size={14} className="animate-spin" />
+          ) : (
+            <div className="flex items-center gap-1 font-medium">
+              <p>Confirmer</p>
+              <Trash size={14} />
+            </div>
+          )}
+        </button>
+        <button
+          onClick={() => setConfirming(false)}
+          disabled={isPending}
+          className="border border-slate-300 px-2 py-1 text-xs rounded-md hover:bg-slate-200 transition-colors disabled:opacity-50"
+        >
+          <Ban size={14} />
+        </button>
+      </div>
+    );
+  }
 
   return (
     <button
-      onClick={() => startTransition(() => deleteEntry(table, id, blobUrl))}
-      disabled={isPending}
-      className="border border-slate-300 p-2 rounded-md hover:bg-slate-200 transition-colors disabled:opacity-50"
+      onClick={() => setConfirming(true)}
+      className="border border-slate-300 p-2 rounded-md hover:bg-slate-200 transition-colors"
     >
-      {isPending ? (
-        <Loader size={16} className="animate-spin" />
-      ) : (
-        <Trash size={16} />
-      )}
+      <Trash size={16} />
     </button>
   );
 }

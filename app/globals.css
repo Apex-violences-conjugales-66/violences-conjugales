@@ -28,7 +28,7 @@ ul {
     @apply font-bold md:text-base lg:text-lg sm:text-xl;
   }
   h5 {
-    @apply text-sm sm:text-xl;
+    @apply font-medium sm:text-lg;
   }
   h6 {
     @apply text-sm sm:text-lg ml-2;

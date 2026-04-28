@@ -21,8 +21,12 @@ export interface ISectionSimple extends SectionBase {
     | "introduction"
     | "donations"
     | "actions"
-    | "formationShowcase"
-    | "projet";
+    | "formationShowcase";
+}
+
+export interface ISectionProjet extends SectionBase {
+  name: "projet";
+  members: Member[];
 }
 
 export interface ISectionPartners extends SectionBase {
@@ -62,6 +66,7 @@ export interface ISectionMemoires extends SectionBase {
 export type Section =
   | ISectionSimple
   | ISectionTeam
+  | ISectionProjet
   | ISectionFormation
   | ISectionDocumentsSection
   | ISectionMediagraphie

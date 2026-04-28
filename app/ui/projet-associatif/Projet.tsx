@@ -1,12 +1,13 @@
+import { Member } from "@/app/lib/definitions";
 import SectionComponent from "@/app/ui/SectionComponent";
 import Title from "@/app/ui/Title";
 import { ArrowUp } from "lucide-react";
 import Link from "next/link";
-import { FunctionComponent } from "react";
 
-interface ProjetProps {}
-
-const Projet: FunctionComponent<ProjetProps> = () => {
+export default function Projet({ members }: { members: Member[] }) {
+  const bureau = members.filter((m) => m.type === "bureau");
+  const conseil = members.filter((m) => m.type === "administration");
+  const personnel = members.filter((m) => m.type === "equipe");
   return (
     <SectionComponent isFirst isLast className="container">
       <div
@@ -26,16 +27,16 @@ const Projet: FunctionComponent<ProjetProps> = () => {
               FORMATION
             </h5>
           </Link>
-          <h6>1. Présentation de l&rsquo;équipe</h6>
-          <h6>2. Les valeurs et principes d&rsquo;intervention</h6>
-          <h6>3. L&rsquo;organisation</h6>
+          <h6>1. Les valeurs et principes d&rsquo;intervention</h6>
+          <h6>2. L&rsquo;organisation</h6>
           <Link href="#title-3">
             <h5>
               III - ACCOMPAGNEMENT DES PERSONNES EN PRISE AVEC LES VIOLENCES
               CONJUGALES
             </h5>
           </Link>
-          <h6>1. L&rsquo;Escale</h6> <h6>2. Les Jeunes de 12 à 18 ans</h6>
+          <h6>1. L&rsquo;Escale</h6>
+          <h6>2. Les Jeunes de 12 à 18 ans</h6>
           <h6>3. Les personnes auteures de violences conjugales</h6>
           <Link href="#title-4">
             <h5>IV - FINANCEURS ET PARTENAIRES</h5>
@@ -51,7 +52,7 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           <h6>3. Les métiers représentés</h6>
         </div>
       </div>
-      <div className="mt-12 space-y-4 [&>ul]:inside [&>ul]:ml-4">
+      <div className="mt-12 space-y-4 [&>ul]:inside [&>ul]:ml-4 ">
         <div className="flex gap-x-5 items-start md:items-center">
           <h4 id="title-1" className="scroll-m-36">
             I - CREATION ET ADMINISTRATION DE L&rsquo;ASSOCIATION
@@ -70,6 +71,7 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           le 27.04.1984 sous le n° W662001601 à Perpignan, parution au Journal
           Officiel N° 119 du 22.05.1984.
           <br />
+          <br />
           Son siège social est établi à la Maison pour les Familles - 3 rue
           Déodat de Séverac 66000 PERPIGNAN L&rsquo;association a pour but « la
           défense des intérêts matériels et moraux des familles conformément aux
@@ -78,44 +80,62 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           et mettre en œuvre toute action éducative et d&rsquo;enseignement,
           études, recherches et expérimentation en matière de développement
           économique et humain et notamment en matière de violences conjugales.
-          <br /> L&rsquo;association est dirigée par un conseil
-          d&rsquo;administration qui est composé de 2 à 10 membres élus par
-          l&rsquo;assemblée générale parmi les membres de l&rsquo;association.
-          Les membres du conseil d&rsquo;administration sont élus pour 2 ans ;
-          ils sont rééligibles. Le conseil d&rsquo;administration se réunit au
-          minimum 2 fois par an. Le conseil d&rsquo;administration élit en son
-          sein un bureau qui a pour seule fonction la gestion courante de
-          l&rsquo;association. Il est composé de 2 à 3 personnes.
+          <br />
+          <br />
+          L&rsquo;association est dirigée par un conseil d&rsquo;administration
+          qui est composé de 2 à 10 membres élus par l&rsquo;assemblée générale
+          parmi les membres de l&rsquo;association. Les membres du conseil
+          d&rsquo;administration sont élus pour 2 ans ; ils sont rééligibles. Le
+          conseil d&rsquo;administration se réunit au minimum 2 fois par an. Le
+          conseil d&rsquo;administration élit en son sein un bureau qui a pour
+          seule fonction la gestion courante de l&rsquo;association. Il est
+          composé de 2 à 3 personnes.
           <br /> Devra être présent lors des réunions au minimum un salarié de
           l&rsquo;association.
           <br /> L&rsquo;association se compose de : membres actifs, membres
-          adhérents et de bénéficiaires
-          <br /> Membre actif : Personne qui paie sa cotisation et qui participe
+          adhérents et de bénéficiaires.
+          <br />
+          <br />
+          Membre actif : Personne qui paie sa cotisation et qui participe
           bénévolement à la vie de l&rsquo;association
           <br />
           Membre adhérent : Personne qui paie sa cotisation. Elle peut
           bénéficier des activités de l&rsquo;association.
-          <br /> Bénéficiaire : Personne qui bénéficie des activités de
+          <br />
+          Bénéficiaire : Personne qui bénéficie des activités de
           l&rsquo;association.
           <br />
-          Le Bureau
         </p>
-        <ul>
-          <li>Présidente : Imma MATAIX, assistante sociale </li>
-          <li>Trésorier : Marc LECLERC, chef d&rsquo;entreprise </li>
-          <li>Secrétaire : Marie-Noëlle FRECHINOS, secrétaire comptable</li>
-        </ul>
-        <p>Le Conseil d&rsquo;Administration</p>
-        <ul>
-          <li>Christian NEGROLI, retraité</li>
-          <li>Denis LAMBERT, comptable</li>
-          <li> Françoise COSTE, médecin</li>
-          <li>Geneviève MASSINES, éducatrice spécialisée</li>
-          <li>Marie Josée MAGUER, sage-femme</li>
-          <li>Mathilde PALAU, éducatrice spécialisée</li>
-          <li> Muriel GUILLAUMES, formatrice</li>
-          <li>Jacques LORIEUX, retraité (membre d&rsquo;honneur)</li>
-        </ul>
+        <h3>Le Bureau</h3>
+        {bureau && (
+          <ul>
+            {bureau.map((member) => (
+              <li key={member.id}>
+                {member.name}, {member.title}
+              </li>
+            ))}
+          </ul>
+        )}
+        <h3>Le Conseil d&rsquo;Administration</h3>
+        {conseil && (
+          <ul>
+            {conseil.map((member) => (
+              <li key={member.id}>
+                {member.name}, {member.title}
+              </li>
+            ))}
+          </ul>
+        )}
+        <h3>L&apos;Équipe</h3>
+        {personnel && (
+          <ul>
+            {personnel.map((member) => (
+              <li key={member.id}>
+                {member.name}, {member.title}
+              </li>
+            ))}
+          </ul>
+        )}
         <div className="flex gap-x-5 items-start md:items-center">
           <h4 id="title-2" className="scroll-m-36 uppercase">
             II - APEX : Violences conjugales de l&rsquo;intervention à la
@@ -128,33 +148,7 @@ const Projet: FunctionComponent<ProjetProps> = () => {
             <ArrowUp className="w-5" />
           </Link>
         </div>
-        <h5>1. Présentation de l&rsquo;équipe</h5>
-        <p>
-          Les membres, majoritairement travailleurs sociaux, salariés en Contrat
-          à Durée Indéterminée à temps partiel, ont suivi plusieurs niveaux de
-          formation dispensés par l&rsquo;équipe « d&rsquo;Option : « une
-          alternative à la violence conjugale et familiale » (Québec).
-          <br /> Christine GUILLAUMES, coordonnatrice, intervient sur
-          l&rsquo;Escale, la permanence pour les jeunes exposés aux violences
-          conjugales, et les permanences de la MSP de Céret.
-          <br /> Isabelle LOEB est chargée de la comptabilité et
-          l&rsquo;administration, de la gestion de l&rsquo;organisme de
-          formation. Laetitia BRAVO intervenante à l&rsquo;Escale, anime les
-          permanences de la MSP de Rivesaltes, d&rsquo;Elne et de Thuir, ainsi
-          que les groupes de paroles pour les personnes auteures de violences
-          conjugales.
-          <br /> Mehdi EL BARKANI est intervenant sur les permanences et groupes
-          de paroles pour les personnes auteures de violences conjugales et sur
-          l&rsquo;Escale.
-          <br /> Stéphanie GODARD, intervenante sur la MSP de Font Romeu.
-          <br /> Valérie FONTIMPE intervenante sur l&rsquo;Escale et la MSP de
-          Prades coordonne l&rsquo;action Prévention de la récidive et
-          l&rsquo;accompagnement des personnes auteures des violences conjugales
-          <br /> Yann LAUTROU, intervenant sur l&rsquo;Escale.
-          <br /> L&rsquo;équipe peut aussi intervenir sur les actions de
-          prévention auprès des jeunes dans les collèges et les lycées.
-        </p>
-        <h5>2. Les valeurs et principes d&rsquo;intervention</h5>
+        <h5>1. Les valeurs et principes d&rsquo;intervention</h5>
         <p>
           APEX accueille, écoute, accompagne des personnes en prise ou ayant été
           en prise avec les violences conjugales, prône les valeurs de respect,
@@ -162,12 +156,14 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           confidentialité des échanges et de l&rsquo;identité des personnes
           accueillies, croyance à la remobilisation des ressources intérieures
           existantes, partenariat.
-          <br /> Nos principes d&rsquo;interventions sont les suivants :<br />{" "}
+          <br />
+          <br />
+          Nos principes d&rsquo;interventions sont les suivants :<br />
           La violence, quel qu&rsquo;en soit la forme, ne peut être tolérée et
           doit être punie par la loi. C&rsquo;est un moyen choisi pour dominer
           une autre personne.
           <br /> Les notions de sécurité et de protection sont primordiales au
-          sein de l&rsquo;association. Elles permettent aux personnes
+          sein de l&rsquo;association, elles permettent aux personnes
           accueillies de trouver un espace qui leur est dédié.
           <br /> L&rsquo;accompagnement se déroule dans le respect de la
           personne, de son rythme, de son autonomie, en prenant en compte ses
@@ -178,27 +174,33 @@ const Projet: FunctionComponent<ProjetProps> = () => {
           déroule dans un cadre sécurisant pour l&rsquo;enfant, en premier lieu
           avec sa mère, puis lorsque l&rsquo;enfant se sent suffisamment sécure,
           seul avec l&rsquo;intervenant.
-          <br /> Nous partons du principe que toute personne est responsable des
-          actes qu&rsquo;elle pose et des décisions qu&rsquo;elle prend. Aussi,
-          nous ne « victimisons » pas les personnes aux prises avec les
-          violences conjugales que nous accompagnons, tout comme nous
-          travaillons sur la prise de responsabilité et la reconnaissance des
-          actes posés des personnes auteures.
-          <br /> Afin de poursuivre son travail de réflexion et
-          d&rsquo;effectuer au mieux ses missions dans des conditions favorisant
-          un accueil de qualité, l&rsquo;équipe se réunit régulièrement et
-          participe mensuellement à des séances de supervision, tout comme les
+          <br />
+          <br />
+          Nous partons du principe que toute personne est responsable des actes
+          qu&rsquo;elle pose et des décisions qu&rsquo;elle prend. Aussi, nous
+          ne « victimisons » pas les personnes aux prises avec les violences
+          conjugales que nous accompagnons, tout comme nous travaillons sur la
+          prise de responsabilité et la reconnaissance des actes posés des
+          personnes auteures.
+          <br />
+          <br />
+          Afin de poursuivre son travail de réflexion et d&rsquo;effectuer au
+          mieux ses missions dans des conditions favorisant un accueil de
+          qualité, l&rsquo;équipe se réunit régulièrement et participe
+          mensuellement à des séances de supervision, tout comme les
           co-animatrices (APEX et CD66) des groupes de paroles des Maisons
           Sociales de Proximité.
-          <br /> Nous avons obtenu l&rsquo;agrément pour le parcours de sortie
-          de prostitution.
-          <br /> L&rsquo;association APEX dispose aussi d&rsquo;un organisme de
-          formations dispensées tout au long de l&rsquo;année à des
-          professionnels de divers horizons, souvent en lien avec le travail
-          social. Certains membres de l&rsquo;équipe co-animent d&rsquo;ailleurs
-          les formations dispensées par Option.
+          <br />
+          Nous avons obtenu l&rsquo;agrément pour le parcours de sortie de
+          prostitution.
+          <br />
+          APEX dispose aussi d&rsquo;un organisme de formations dispensées tout
+          au long de l&rsquo;année à des professionnels de divers horizons,
+          souvent en lien avec le travail social. Certains membres de
+          l&rsquo;équipe co-animent d&rsquo;ailleurs les formations dispensées
+          par Option.
         </p>
-        <h5>3. L&rsquo;organisation</h5>
+        <h5>2. L&rsquo;organisation</h5>
         <p>
           L&rsquo;équipe accueille les personnes dans des services et espaces
           différenciés :
@@ -768,6 +770,4 @@ const Projet: FunctionComponent<ProjetProps> = () => {
       </div>
     </SectionComponent>
   );
-};
-
-export default Projet;
+}

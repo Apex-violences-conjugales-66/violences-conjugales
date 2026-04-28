@@ -297,8 +297,10 @@ export async function getSections(
 ): Promise<Section[]> {
   switch (page) {
     case "home": {
-      const members = await fetchMembers();
-      const partners = await fetchPartners();
+      const [members, partners] = await Promise.all([
+        fetchMembers(),
+        fetchPartners(),
+      ]);
       return [
         { name: "homeheader" },
         { name: "introduction" },
@@ -312,13 +314,16 @@ export async function getSections(
       return [{ name: "donations" }];
     }
     case "projet": {
-      return [{ name: "projet" }];
+      const members = await fetchMembers();
+      return [{ name: "projet", members }];
     }
     case "formation": {
-      const catalogue = await fetchLatestCatalogue();
-      const bulletin = await fetchLatestBulletin();
-      const certificat = await fetchLatestCertificat();
-      const formations = await fetchFormations();
+      const [catalogue, bulletin, certificat, formations] = await Promise.all([
+        fetchLatestCatalogue(),
+        fetchLatestBulletin(),
+        fetchLatestCertificat(),
+        fetchFormations(),
+      ]);
       return [
         {
           name: "formationSection",
@@ -330,10 +335,12 @@ export async function getSections(
       ];
     }
     case "ressources": {
-      const documents = await fetchDocuments();
-      const movies = await fetchMovies();
-      const books = await fetchBooks();
-      const memoirs = await fetchMemoirs();
+      const [documents, movies, books, memoirs] = await Promise.all([
+        fetchDocuments(),
+        fetchMovies(),
+        fetchBooks(),
+        fetchMemoirs(),
+      ]);
       return [
         { name: "documentsSection", documents },
         { name: "mediagraphie", movies, books },

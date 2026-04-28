@@ -27,7 +27,7 @@ export default function SectionRenderer({ section }: { section: Section }) {
     case "team":
       return <Team members={section.members} />;
     case "projet":
-      return <Projet />;
+      return <Projet members={section.members} />;
     case "formationShowcase":
       return <FormationShowcase />;
     case "formationSection":

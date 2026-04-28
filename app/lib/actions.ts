@@ -51,7 +51,6 @@ export async function createMember(formData: FormData) {
     console.error("Error creating member:", error);
     throw error;
   }
-  revalidatePath("/admin");
   revalidatePath("/", "layout");
 }
 
@@ -72,7 +71,6 @@ export async function updateMember(id: string, formData: FormData) {
     console.error("Error updating member:", error);
     throw error;
   }
-  revalidatePath("/admin");
   revalidatePath("/", "layout");
 }
 
@@ -97,7 +95,6 @@ export async function createPartner(formData: FormData) {
     console.error("Error creating partner:", error);
     throw error;
   }
-  revalidatePath("/admin");
   revalidatePath("/", "layout");
 }
 
@@ -146,7 +143,6 @@ export async function updatePartner(id: string, formData: FormData) {
   if (oldImageUrl && oldImageUrl.includes("blob.vercel-storage.com")) {
     await del(oldImageUrl);
   }
-  revalidatePath("/admin");
   revalidatePath("/", "layout");
 }
 
@@ -173,8 +169,7 @@ export async function createFormation(formData: FormData) {
     console.error("Error creating formation:", error);
     throw error;
   }
-  revalidatePath("/admin");
-  revalidatePath("/formation");
+  revalidatePath("/", "layout");
 }
 
 export async function updateFormation(id: string, formData: FormData) {
@@ -199,8 +194,7 @@ export async function updateFormation(id: string, formData: FormData) {
     console.error("Error updating formation:", error);
     throw error;
   }
-  revalidatePath("/admin");
-  revalidatePath("/formation");
+  revalidatePath("/", "layout");
 }
 
 // Documents
@@ -223,8 +217,7 @@ export async function createDocument(formData: FormData) {
     console.error("Error creating document:", error);
     throw error;
   }
-  revalidatePath("/admin");
-  revalidatePath("/ressources");
+  revalidatePath("/", "layout");
 }
 
 export async function updateDocument(id: string, formData: FormData) {
@@ -271,8 +264,7 @@ export async function updateDocument(id: string, formData: FormData) {
   if (oldDocumentUrl && oldDocumentUrl.includes("blob.vercel-storage.com")) {
     await del(oldDocumentUrl);
   }
-  revalidatePath("/admin");
-  revalidatePath("/ressources");
+  revalidatePath("/", "layout");
 }
 
 // Books
@@ -291,8 +283,7 @@ export async function createBook(formData: FormData) {
     console.error("Error creating book:", error);
     throw error;
   }
-  revalidatePath("/admin");
-  revalidatePath("ressources");
+  revalidatePath("/", "layout");
 }
 
 export async function updateBook(id: string, formData: FormData) {
@@ -310,8 +301,7 @@ export async function updateBook(id: string, formData: FormData) {
     console.error("Error updating book:", error);
     throw error;
   }
-  revalidatePath("/admin");
-  revalidatePath("/ressources");
+  revalidatePath("/", "layout");
 }
 
 // Movies
@@ -330,8 +320,7 @@ export async function createMovie(formData: FormData) {
     console.error("Error creating movie:", error);
     throw error;
   }
-  revalidatePath("/admin");
-  revalidatePath("/ressources");
+  revalidatePath("/", "layout");
 }
 
 export async function updateMovie(id: string, formData: FormData) {
@@ -349,8 +338,7 @@ export async function updateMovie(id: string, formData: FormData) {
     console.error("Error updating movie:", error);
     throw error;
   }
-  revalidatePath("/admin");
-  revalidatePath("/ressources");
+  revalidatePath("/", "layout");
 }
 
 // Memoirs
@@ -375,8 +363,7 @@ export async function createMemoir(formData: FormData) {
     console.error("Error creating memoir:", error);
     throw error;
   }
-  revalidatePath("/admin");
-  revalidatePath("/ressources");
+  revalidatePath("/", "layout");
 }
 
 export async function updateMemoir(id: string, formData: FormData) {
@@ -425,8 +412,7 @@ export async function updateMemoir(id: string, formData: FormData) {
   if (oldDocumentUrl && oldDocumentUrl.includes("blob.vercel-storage.com")) {
     await del(oldDocumentUrl);
   }
-  revalidatePath("/admin");
-  revalidatePath("/ressources");
+  revalidatePath("/", "layout");
 }
 
 // Catalogues
@@ -449,8 +435,7 @@ export async function createCatalogue(formData: FormData) {
     console.error("Error creating catalogue:", error);
     throw error;
   }
-  revalidatePath("/admin");
-  revalidatePath("/formation");
+  revalidatePath("/", "layout");
 }
 
 export async function updateCatalogue(id: string, formData: FormData) {
@@ -497,8 +482,7 @@ export async function updateCatalogue(id: string, formData: FormData) {
   if (oldCatalogueUrl && oldCatalogueUrl.includes("blob.vercel-storage.com")) {
     await del(oldCatalogueUrl);
   }
-  revalidatePath("/admin");
-  revalidatePath("/formation");
+  revalidatePath("/", "layout");
 }
 
 // Bulletins
@@ -521,8 +505,7 @@ export async function createBulletin(formData: FormData) {
     console.error("Error creating bulletin:", error);
     throw error;
   }
-  revalidatePath("/admin");
-  revalidatePath("/formation");
+  revalidatePath("/", "layout");
 }
 
 export async function updateBulletin(id: string, formData: FormData) {
@@ -569,8 +552,7 @@ export async function updateBulletin(id: string, formData: FormData) {
   if (oldBulletinUrl && oldBulletinUrl.includes("blob.vercel-storage.com")) {
     await del(oldBulletinUrl);
   }
-  revalidatePath("/admin");
-  revalidatePath("/formation");
+  revalidatePath("/", "layout");
 }
 
 export async function createCertificat(formData: FormData) {
@@ -591,8 +573,7 @@ export async function createCertificat(formData: FormData) {
     console.error("Error creating certificat:", error);
     throw error;
   }
-  revalidatePath("/admin");
-  revalidatePath("/formation");
+  revalidatePath("/", "layout");
 }
 
 export async function updateCertificat(id: string, formData: FormData) {
@@ -642,8 +623,7 @@ export async function updateCertificat(id: string, formData: FormData) {
   ) {
     await del(oldCertificatUrl);
   }
-  revalidatePath("/admin");
-  revalidatePath("/formation");
+  revalidatePath("/", "layout");
 }
 
 export async function deleteEntry(
@@ -660,6 +640,6 @@ export async function deleteEntry(
     console.error(`Error deleting entry from ${table}:`, error);
     throw error;
   }
-  revalidatePath("/admin");
+  revalidatePath("/", "layout");
   redirect("/admin");
 }

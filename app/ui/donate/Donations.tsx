@@ -12,11 +12,15 @@ export default function Donations() {
           <div>
             <h3 className="mb-2">Pourquoi donner ?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit.
-              Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex
-              sapien vitae pellentesque sem placerat in id. Placerat in id
-              cursus mi pretium tellus duis. Pretium tellus duis convallis
-              tempus leo eu aenean.
+              Apex est une association à but non lucratif qui vit grâce à la
+              générosité de ses donateurs. Votre soutien nous permet de
+              continuer à offrir nos services d&apos;accompagnement, de
+              sensibilisation et de formation pour lutter contre les violences
+              conjugales. Chaque don, petit ou grand, fait une différence
+              significative dans la vie des personnes que nous aidons. En
+              donnant, vous contribuez à créer un avenir plus sûr et plus juste
+              pour les victimes de violences conjugales. Merci de votre
+              générosité et de votre engagement envers notre cause.
             </p>
           </div>
           <div className="flex flex-col gap-4">
@@ -30,7 +34,7 @@ export default function Donations() {
                   alt="Carte Bancaire"
                   className="w-6"
                 />
-                <h3>virement bancaire</h3>
+                <h3>Virement bancaire</h3>
               </div>
               <p className="font-bold">Coordonnées bancaires</p>
               <ul className="list-none">

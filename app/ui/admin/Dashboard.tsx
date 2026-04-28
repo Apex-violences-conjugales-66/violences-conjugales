@@ -16,16 +16,29 @@ import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 
 export default async function Dashboard() {
-  const members = await fetchMembers();
-  const partners = await fetchPartners();
-  const formations = await fetchFormations();
-  const documents = await fetchDocuments();
-  const books = await fetchBooks();
-  const movies = await fetchMovies();
-  const memoirs = await fetchMemoirs();
-  const catalogues = await fetchCatalogues();
-  const bulletins = await fetchBulletins();
-  const certificats = await fetchCertificats();
+  const [
+    members,
+    partners,
+    formations,
+    documents,
+    books,
+    movies,
+    memoirs,
+    catalogues,
+    bulletins,
+    certificats,
+  ] = await Promise.all([
+    fetchMembers(),
+    fetchPartners(),
+    fetchFormations(),
+    fetchDocuments(),
+    fetchBooks(),
+    fetchMovies(),
+    fetchMemoirs(),
+    fetchCatalogues(),
+    fetchBulletins(),
+    fetchCertificats(),
+  ]);
 
   return (
     <div id="top" className="scroll-mt-12">
@@ -77,7 +90,7 @@ export default async function Dashboard() {
         </section>
         <section id="partners" className="scroll-mt-6">
           <Table
-            name="partnenaires"
+            name="partenaires"
             entry="partners"
             data={partners}
             buttonLabel="Partenaire"

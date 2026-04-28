@@ -97,7 +97,7 @@ export default function Table({
                     ([key, value], i) =>
                       i !== 0 && (
                         <td
-                          key={i}
+                          key={key}
                           className={cn("p-3 first:pl-6 max-w-0 truncate")}
                         >
                           {value instanceof Date
