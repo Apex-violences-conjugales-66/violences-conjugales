@@ -14,7 +14,7 @@ export default function HomeHeader() {
           height={500}
           className="w-full lg:w-1/2"
         />
-        <div className="flex flex-col items-center justify-center gap-2 lg:w-1/2 lg:gap-6">
+        <div className="flex flex-col items-center justify-center gap-2 lg:gap-6">
           <LogoApex size={128} />
           <p className="font-amatic_sc font-bold text-xl md:text-3xl xl:text-4xl text-center whitespace-pre-line px-5">
             <span className="text-orange-600">
@@ -31,7 +31,7 @@ export default function HomeHeader() {
       </div>
       <Image
         src="/papillons-transparent.png"
-        alt="Flower"
+        alt="Papillons"
         width={400}
         height={620}
         className="hidden md:block absolute bottom-0 right-0 w-[80px] h-auto lg:w-auto lg:h-[200px] lg:-bottom-[100px]"
