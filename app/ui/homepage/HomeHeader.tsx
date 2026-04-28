@@ -7,6 +7,7 @@ export default function HomeHeader() {
     <SectionComponent isFirst={true} className="relative">
       <div className="bg-orange-50 flex-1 flex flex-col gap-12 py-12 lg:flex-row lg:gap-0">
         <Image
+          priority
           src="/header_art.jpg"
           alt="Header art"
           width={1000}

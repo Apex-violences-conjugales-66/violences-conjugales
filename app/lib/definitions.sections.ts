@@ -41,9 +41,9 @@ export interface ISectionTeam extends SectionBase {
 
 export interface ISectionFormation extends SectionBase {
   name: "formationSection";
-  catalogue: Catalogue;
-  bulletin: Bulletin;
-  certificat: Certificat;
+  catalogue: Catalogue | null;
+  bulletin: Bulletin | null;
+  certificat: Certificat | null;
   formations: Formation[];
 }
 

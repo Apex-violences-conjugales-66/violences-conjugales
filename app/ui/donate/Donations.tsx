@@ -1,6 +1,6 @@
 import SectionComponent from "@/app/ui/SectionComponent";
 import Title from "@/app/ui/Title";
-import { ArrowRight, CreditCard } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Donations() {

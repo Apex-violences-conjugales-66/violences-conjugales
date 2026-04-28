@@ -1,5 +1,3 @@
-"use client";
-
 import { Partner } from "@/app/lib/definitions";
 import Divider from "@/app/ui/Divider";
 import SectionComponent from "@/app/ui/SectionComponent";

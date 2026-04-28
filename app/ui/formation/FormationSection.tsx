@@ -17,12 +17,12 @@ export default function FormationSection({
   certificat,
   formations,
 }: {
-  catalogue: Catalogue;
-  bulletin: Bulletin;
-  certificat: Certificat;
+  catalogue: Catalogue | null;
+  bulletin: Bulletin | null;
+  certificat: Certificat | null;
   formations: Formation[];
 }) {
-  const ANNEE_BULLETIN = new Date().getFullYear();
+  const ANNEE_BULLETIN = catalogue?.year ?? new Date().getFullYear();
   return (
     <SectionComponent isFirst isLast withSideBorders bgColor="orange">
       <div className="container py-14 flex flex-col">
@@ -57,29 +57,32 @@ export default function FormationSection({
               formations auprès des entreprises et des usagers.
             </p>
           </div>
-          <div className="flex mt-6 h-48 md:h-80 self-center xl:self-auto xl:h-auto flex-col w-1/2 xl:w-1/3 items-center gap-y-2">
-            <Link
-              href={certificat.certificatUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full h-full relative border border-blue-dark bg-white hover:border-white hover:opacity-75 transition"
-            >
-              <Image
-                alt="logo qualiopi"
-                src="/logo-qualiopi.png"
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </Link>
-            <Link
-              href={certificat.certificatUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              Voir notre certificat
-            </Link>
-          </div>
+          {certificat && (
+            <div className="flex mt-6 h-48 md:h-80 self-center xl:self-auto xl:h-auto flex-col w-1/2 xl:w-1/3 items-center gap-y-2">
+              <Link
+                href={certificat.certificatUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full h-full relative border border-blue-dark bg-white hover:border-white hover:opacity-75 transition"
+              >
+                <Image
+                  alt="logo qualiopi"
+                  src="/logo-qualiopi.png"
+                  sizes="(max-width: 1280px) 50vw, 33vw"
+                  fill
+                  style={{ objectFit: "contain" }}
+                />
+              </Link>
+              <Link
+                href={certificat.certificatUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Voir notre certificat
+              </Link>
+            </div>
+          )}
         </div>
         <div className="text-justify mt-6 ">
           <h3 className="mb-2">Nos Offres de Formation</h3>
@@ -107,19 +110,25 @@ export default function FormationSection({
             Catalogue de Formation {ANNEE_BULLETIN}-{ANNEE_BULLETIN + 1}
           </h3>
           <div>
-            Découvrez notre offre de formation pour la fin de {ANNEE_BULLETIN}{" "}
-            et l&rsquo;année {ANNEE_BULLETIN + 1}.
-            <br /> Vous trouverez ci-dessous les formations proposées en
-            inter-entreprise.
-            <br /> <br /> Téléchargez notre{" "}
-            <Link
-              href={catalogue.catalogueUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-orange hover:underline font-medium"
-            >
-              catalogue des formations {ANNEE_BULLETIN + 1}
-            </Link>
+            <p>
+              Découvrez notre offre de formation pour la fin de {ANNEE_BULLETIN}{" "}
+              et l&rsquo;année {ANNEE_BULLETIN + 1}.
+              <br /> Vous trouverez ci-dessous les formations proposées en
+              inter-entreprise.
+            </p>
+            {catalogue && (
+              <p>
+                Téléchargez notre{" "}
+                <Link
+                  href={catalogue.catalogueUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange hover:underline font-medium"
+                >
+                  catalogue des formations {ANNEE_BULLETIN + 1}
+                </Link>
+              </p>
+            )}
           </div>
           {formations.map((formation, index) => (
             <div key={formation.id}>
@@ -208,14 +217,16 @@ export default function FormationSection({
             d&rsquo;inscription ci-dessous, puis de nous le renvoyer par mail ou
             par courrier.
           </div>
-          <Link
-            href={bulletin.bulletinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-orange hover:underline self-center mt-4 font-medium"
-          >
-            Bulletin d&rsquo;inscription {ANNEE_BULLETIN}
-          </Link>
+          {bulletin && (
+            <Link
+              href={bulletin.bulletinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange hover:underline self-center mt-4 font-medium"
+            >
+              Bulletin d&rsquo;inscription {ANNEE_BULLETIN}
+            </Link>
+          )}
         </div>
       </div>
     </SectionComponent>

@@ -24,7 +24,7 @@ export async function fetchMembers() {
   try {
     const members = await sql<
       Member[]
-    >`SELECT * FROM members ORDER BY CASE type WHEN 'equipe' THEN 1 WHEN 'administration' THEN 2 ELSE 3 END, name ASC`;
+    >`SELECT * FROM members ORDER BY CASE type WHEN 'bureau' THEN 1 WHEN 'administration' THEN 2 ELSE 3 END, name ASC`;
     return members;
   } catch (error) {
     console.log("fetchMembers error:", error);
@@ -309,9 +309,6 @@ export async function getSections(
         { name: "partners", partners },
         { name: "formationShowcase" },
       ];
-    }
-    case "donate": {
-      return [{ name: "donations" }];
     }
     case "projet": {
       const members = await fetchMembers();

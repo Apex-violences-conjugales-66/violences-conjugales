@@ -30,13 +30,7 @@ export default function Memoires({ memoirs }: { memoirs: Memoir[] }) {
         <div className="columns-1 md:columns-2 xl:columns-3 space-y-4">
           {memoirs.map((memoir) => (
             <div key={memoir.id} className="overflow-hidden">
-              <MemoirCard
-                id={memoir.id}
-                author={memoir.author}
-                title={memoir.title}
-                description={memoir.description}
-                documentUrl={memoir.documentUrl}
-              />
+              <MemoirCard {...memoir} />
             </div>
           ))}
         </div>

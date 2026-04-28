@@ -1,25 +1,25 @@
-"use client";
-
 import { Section } from "@/app/lib/definitions.sections";
 import Footer from "@/app/ui/Footer";
 import Navbar from "@/app/ui/Navbar";
 import SectionRenderer from "@/app/ui/SectionRenderer";
 import StickyDonationButton from "@/app/ui/StickyDonationButton";
-import { usePathname } from "next/navigation";
 
-export default function PageTemplate({ sections }: { sections: Section[] }) {
-  const pathname = usePathname();
+export default function PageTemplate({
+  sections,
+  stickyDonationButtonActive = true,
+}: {
+  sections: Section[];
+  stickyDonationButtonActive?: boolean;
+}) {
   return (
     <main>
       <Navbar />
       {sections.map((section, index) => {
         return (
-          <div key={section.name + index}>
-            <SectionRenderer section={section} />
-          </div>
+          <SectionRenderer key={`${section.name}-${index}`} section={section} />
         );
       })}
-      {pathname != "/donate" && <StickyDonationButton />}
+      {stickyDonationButtonActive && <StickyDonationButton />}
       <Footer />
     </main>
   );

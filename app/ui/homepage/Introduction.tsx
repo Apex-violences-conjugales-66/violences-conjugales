@@ -3,11 +3,8 @@ import Quotation from "@/app/ui/Quotation";
 import SectionComponent from "@/app/ui/SectionComponent";
 import Title from "@/app/ui/Title";
 import { ChevronRightIcon } from "lucide-react";
-import { FunctionComponent } from "react";
 
-interface IntroductionProps {}
-
-const Introduction: FunctionComponent<IntroductionProps> = () => {
+export default function Introduction() {
   return (
     <SectionComponent>
       <div className="container flex flex-col relative gap-8 md:gap-0">
@@ -50,6 +47,4 @@ const Introduction: FunctionComponent<IntroductionProps> = () => {
       </div>
     </SectionComponent>
   );
-};
-
-export default Introduction;
+}

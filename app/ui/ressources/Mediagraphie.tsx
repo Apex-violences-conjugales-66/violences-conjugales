@@ -1,17 +1,14 @@
 import { Book, Movie } from "@/app/lib/definitions";
 import Divider from "@/app/ui/Divider";
 import SectionComponent from "@/app/ui/SectionComponent";
-import { FunctionComponent } from "react";
 
-interface MediagraphieProps {
-  books: Book[];
-  movies: Movie[];
-}
-
-const Mediagraphie: FunctionComponent<MediagraphieProps> = ({
+export default function Mediagraphie({
   books,
   movies,
-}) => {
+}: {
+  books: Book[];
+  movies: Movie[];
+}) {
   return (
     <SectionComponent bgColor="orange">
       <div className="container py-14 flex flex-col items-center">
@@ -21,7 +18,7 @@ const Mediagraphie: FunctionComponent<MediagraphieProps> = ({
             <Divider horizontal />
             <div className="space-y-4">
               {books.map((book, index) => (
-                <p key={"book" + index}>
+                <p key={book.id}>
                   {book.author}    <b>{book.title}</b>    {book.description}
                 </p>
               ))}
@@ -33,7 +30,7 @@ const Mediagraphie: FunctionComponent<MediagraphieProps> = ({
             <Divider horizontal />
             <div className="space-y-4">
               {movies.map((movie, index) => (
-                <p key={"movie" + index}>
+                <p key={movie.id}>
                   <b>{movie.title}</b> {movie.description}
                   {movie.movieUrl && (
                     <>
@@ -56,6 +53,4 @@ const Mediagraphie: FunctionComponent<MediagraphieProps> = ({
       </div>
     </SectionComponent>
   );
-};
-
-export default Mediagraphie;
+}

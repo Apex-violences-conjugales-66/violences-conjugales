@@ -3,11 +3,8 @@ import SectionComponent from "@/app/ui/SectionComponent";
 import Title from "@/app/ui/Title";
 import { ChevronRightIcon } from "lucide-react";
 import Image from "next/image";
-import { FunctionComponent } from "react";
 
-interface FormationShowcaseProps {}
-
-const FormationShowcase: FunctionComponent<FormationShowcaseProps> = () => {
+export default function FormationShowcase() {
   return (
     <SectionComponent withSideBorders isLast bgColor="orange">
       <div className="container py-14">
@@ -46,6 +43,4 @@ const FormationShowcase: FunctionComponent<FormationShowcaseProps> = () => {
       </div>
     </SectionComponent>
   );
-};
-
-export default FormationShowcase;
+}
