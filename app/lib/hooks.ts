@@ -27,6 +27,7 @@ export function useAdminForm(
   function handleSubmit(formData: FormData) {
     startTransition(async () => {
       await action(formData);
+      router.refresh();
       router.push(`/admin#${redirectHash}`);
     });
   }
