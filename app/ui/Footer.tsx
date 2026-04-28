@@ -55,7 +55,7 @@ export default function Footer() {
               <span>APEX.</span>
               <span>Tous droits réservés.</span>
             </p>
-            <p className="flex gap-2 shrink-0 items-center text-center">
+            <p className="flex gap-2 shrink-0 items-center lg:w-1/3 text-center justify-center">
               <Link
                 href="/mentions-legales"
                 className="hover:underline underline-offset-4"
@@ -68,13 +68,6 @@ export default function Footer() {
                 className="hover:underline underline-offset-4"
               >
                 Politique de Confidentialité
-              </Link>
-              <span>|</span>
-              <Link
-                href="/gestion-des-cookies"
-                className="hover:underline underline-offset-4"
-              >
-                Gestion des cookies
               </Link>
             </p>
             <p className="flex gap-2 lg:w-1/3 justify-end">
