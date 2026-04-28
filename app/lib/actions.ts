@@ -83,6 +83,7 @@ export async function createPartner(formData: FormData) {
 
   const { url } = await put(`partners/${image.name}`, image, {
     access: "public",
+    addRandomSuffix: true,
   });
 
   try {
@@ -108,6 +109,7 @@ export async function updatePartner(id: string, formData: FormData) {
   if (image && image.size > 0) {
     const { url } = await put(`partners/${image.name}`, image, {
       access: "public",
+      addRandomSuffix: true,
     });
     imageUrl = url;
   }
@@ -205,6 +207,7 @@ export async function createDocument(formData: FormData) {
 
   const { url } = await put(`documents/${file.name}`, file, {
     access: "public",
+    addRandomSuffix: true,
   });
 
   try {
@@ -229,6 +232,7 @@ export async function updateDocument(id: string, formData: FormData) {
   if (file && file.size > 0) {
     const { url } = await put(`documents/${file.name}`, file, {
       access: "public",
+      addRandomSuffix: true,
     });
     documentUrl = url;
   }
@@ -351,6 +355,7 @@ export async function createMemoir(formData: FormData) {
 
   const { url } = await put(`memoirs/${file.name}`, file, {
     access: "public",
+    addRandomSuffix: true,
   });
 
   try {
@@ -377,6 +382,7 @@ export async function updateMemoir(id: string, formData: FormData) {
   if (file && file.size > 0) {
     const { url } = await put(`memoirs/${file.name}`, file, {
       access: "public",
+      addRandomSuffix: true,
     });
     documentUrl = url;
   }
@@ -423,6 +429,7 @@ export async function createCatalogue(formData: FormData) {
 
   const { url } = await put(`catalogues/${file.name}`, file, {
     access: "public",
+    addRandomSuffix: true,
   });
 
   try {
@@ -447,6 +454,7 @@ export async function updateCatalogue(id: string, formData: FormData) {
   if (file && file.size > 0) {
     const { url } = await put(`catalogues/${file.name}`, file, {
       access: "public",
+      addRandomSuffix: true,
     });
     catalogueUrl = url;
   }
@@ -493,6 +501,7 @@ export async function createBulletin(formData: FormData) {
 
   const { url } = await put(`bulletins/${file.name}`, file, {
     access: "public",
+    addRandomSuffix: true,
   });
 
   try {
@@ -517,6 +526,7 @@ export async function updateBulletin(id: string, formData: FormData) {
   if (file && file.size > 0) {
     const { url } = await put(`bulletins/${file.name}`, file, {
       access: "public",
+      addRandomSuffix: true,
     });
     bulletinUrl = url;
   }
@@ -561,6 +571,7 @@ export async function createCertificat(formData: FormData) {
 
   const { url } = await put(`certificats/${file.name}`, file, {
     access: "public",
+    addRandomSuffix: true,
   });
 
   try {
@@ -585,6 +596,7 @@ export async function updateCertificat(id: string, formData: FormData) {
   if (file && file.size > 0) {
     const { url } = await put(`certificats/${file.name}`, file, {
       access: "public",
+      addRandomSuffix: true,
     });
     certificatUrl = url;
   }
