@@ -1,7 +1,6 @@
 "use client";
 
-import navigationData from "@/app/data/navigationData";
-import { PHONE_NUMBER } from "@/app/lib/constants";
+import { navigationData, PHONE_NUMBER } from "@/app/lib/constants";
 import ContactInfo from "@/app/ui/ContactInfo";
 import Divider from "@/app/ui/Divider";
 import Separator from "@/app/ui/Separator";

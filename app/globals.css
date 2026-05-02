@@ -5,6 +5,8 @@
 :root {
   --navbar-height: 6rem;
   --navbar-height-lg: 8rem;
+  --navbar-height-scrolled: 5rem;
+  --navbar-height-lg-scrolled: 6rem;
   --sidenav-width: 300px;
 }
 
