@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   description:
     "APEX est une association dédiée à la lutte contre les violences conjugales. Retrouvez nos ressources, formations et actions pour accompagner les victimes.",
   keywords: [
+    "apex",
+    "perpignan",
     "violences conjugales",
-    "APEX",
     "association",
     "aide aux victimes",
     "formations",
     "66",
-    "Perpignan",
   ],
   openGraph: {
     type: "website",
