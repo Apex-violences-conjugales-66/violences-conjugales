@@ -49,7 +49,7 @@ export default function RootLayout({
       className={cn(
         `${roboto.variable}`,
         `${amatic_sc.variable}`,
-        "font-roboto text-gray-800 font-light text-pretty",
+        "font-roboto text-gray-800 font-light text-pretty scroll-smooth",
       )}
     >
       <body>{children}</body>

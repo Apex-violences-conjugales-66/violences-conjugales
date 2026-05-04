@@ -12,12 +12,12 @@ export default function Projet({ members }: { members: Member[] }) {
     <SectionComponent isFirst isLast className="container">
       <div
         id="sommaire"
-        className="xl:mx-16 border-2 border-orange-600 relative scroll-m-96 scroll-smooth mt-10 md:mt-0"
+        className="xl:mx-16 border-2 border-orange-600 relative scroll-m-96 mt-10 md:mt-0"
       >
         <Title className="text-3xl md:text-5xl font-amatic_sc absolute right-6 md:right-16 -top-5 md:-top-6 bg-white ">
           AU SOMMAIRE
         </Title>
-        <div className="px-4 py-10 md:p-11 space-y-1 [&>*>h5]:my-2 md:[&>*>h5]:my-1">
+        <div className="px-4 py-10 md:p-11 space-y-1 [&>*>h5]:my-2 md:[&>*>h5]:my-1 [&>*>h5:hover]:underline">
           <Link href="#title-1">
             <h5>I - CREATION ET ADMINISTRATION DE L&rsquo;ASSOCIATION</h5>
           </Link>
@@ -52,9 +52,9 @@ export default function Projet({ members }: { members: Member[] }) {
           <h6>3. Les métiers représentés</h6>
         </div>
       </div>
-      <div className="mt-12 space-y-4 [&>ul]:inside [&>ul]:ml-4 ">
+      <div className="mt-12 space-y-4 [&>ul]:inside [&>ul]:ml-4 [&>*>h4]:scroll-m-24 [&>*>h4]:lg:scroll-m-28">
         <div className="flex gap-x-5 items-start md:items-center">
-          <h4 id="title-1" className="scroll-m-36">
+          <h4 id="title-1" className="">
             I - CREATION ET ADMINISTRATION DE L&rsquo;ASSOCIATION
           </h4>
           <Link
@@ -137,7 +137,7 @@ export default function Projet({ members }: { members: Member[] }) {
           </ul>
         )}
         <div className="flex gap-x-5 items-start md:items-center">
-          <h4 id="title-2" className="scroll-m-36 uppercase">
+          <h4 id="title-2" className="scroll-m-20 uppercase">
             II - APEX : Violences conjugales de l&rsquo;intervention à la
             formation
           </h4>
@@ -266,7 +266,7 @@ export default function Projet({ members }: { members: Member[] }) {
           </li>
         </ul>
         <div className="flex gap-x-5 items-start md:items-center ">
-          <h4 id="title-3" className="scroll-m-36 uppercase">
+          <h4 id="title-3" className="scroll-m-20 uppercase">
             III - Accompagnement des personnes en prise avec les violences
             conjugales
           </h4>
@@ -412,7 +412,7 @@ export default function Projet({ members }: { members: Member[] }) {
           et l&rsquo;entourage.
         </p>
         <div className="flex gap-x-5 items-start md:items-center ">
-          <h4 id="title-4" className="scroll-m-36">
+          <h4 id="title-4" className="scroll-m-20">
             IV - FINANCEURS ET PARTENAIRES
           </h4>
           <Link
@@ -549,7 +549,7 @@ export default function Projet({ members }: { members: Member[] }) {
           Catalane, , Il faudra leur dire, ASSOSPHERE et ADESOL.
         </p>
         <div className="flex gap-x-5 items-start md:items-center ">
-          <h4 id="title-5" className="scroll-m-36">
+          <h4 id="title-5" className="scroll-m-20">
             V - ANALYSE ET RÉFLEXION
           </h4>
           <Link
@@ -673,7 +673,7 @@ export default function Projet({ members }: { members: Member[] }) {
           </li>
         </ul>
         <div className="flex gap-x-5 items-start md:items-center ">
-          <h4 id="title-6" className="scroll-m-36">
+          <h4 id="title-6" className="scroll-m-20">
             VI - LA FORMATION PROFESSIONNELLE CONTINUE
           </h4>
           <Link
