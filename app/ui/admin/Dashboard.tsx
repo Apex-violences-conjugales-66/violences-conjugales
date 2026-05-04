@@ -12,7 +12,8 @@ import {
 } from "@/app/lib/data";
 import LogoApex from "@/app/ui/LogoApex";
 import Table from "@/app/ui/Table";
-import { ChevronLeft } from "lucide-react";
+import { signOut } from "@/auth";
+import { ArrowBigLeft, LogOut } from "lucide-react";
 import Link from "next/link";
 
 export default async function Dashboard() {
@@ -43,18 +44,32 @@ export default async function Dashboard() {
   return (
     <div id="top" className="scroll-mt-12">
       <div className="flex items-center justify-between">
-        <h1 className="border border-slate-200 rounded-md px-6 py-4 w-fit">
-          Dashboard tables
-        </h1>
         <Link
           href="/"
-          className="flex gap-4 items-center border border-slate-200 rounded-md px-6 py-4 w-fit"
+          className="flex text-orange-500 gap-4 items-center border-2 rounded-md px-6 py-4 w-fit border-orange-500 hover:bg-orange-50 transition-colors"
         >
-          <ChevronLeft className="h-10" />
-          <h1>Retour au site</h1>
+          <ArrowBigLeft className="h-10" />
+          <h1>Site</h1>
           <LogoApex className="w-10" />
         </Link>
+        <form
+          action={async () => {
+            "use server";
+            await signOut({ redirectTo: "/" });
+          }}
+        >
+          <button
+            type="submit"
+            className="flex gap-4 items-center border-2 rounded-md px-6 py-4 w-fit border-red-500 hover:bg-red-50 transition-colors text-red-500"
+          >
+            <LogOut className="h-10" />
+            <h1>Déconnexion</h1>
+          </button>
+        </form>
       </div>
+      <h1 className="border border-slate-200 rounded-md px-6 py-4 w-fit mt-6">
+        Tables administrateur
+      </h1>
       <div className="flex flex-col gap-8 mt-8 smooth-scroll">
         <section id="catalogue" className="scroll-mt-6">
           <Table

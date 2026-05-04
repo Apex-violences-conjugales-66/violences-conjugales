@@ -51,7 +51,7 @@ export default function Navbar() {
           >
             <LogoApex
               className={cn(
-                "w-20 lg:w-24 translate-x-[21px] lg:translate-x-0 transition-all duration-300",
+                "w-20 lg:w-24 transition-all duration-300",
                 scrolled && "w-16 lg:w-20",
               )}
             />
@@ -71,10 +71,10 @@ export default function Navbar() {
               </NavLink>
             ))}
           </div>
-          <div className="flex gap-2 self-start">
+          <div className="flex gap-0 self-start lg:gap-2">
             <Link
               href="/admin"
-              className="size-8 md:size-12 flex items-center justify-center border-2 border-t-0 border-gray-800 bg-gray-800 rounded-b-xl z-50 text-white hover:text-gray-800 hover:bg-white transition-colors"
+              className="size-8 md:size-12 items-center justify-center border-2 border-t-0 border-gray-800 bg-gray-800 rounded-b-xl z-50 text-white hover:text-gray-800 hover:bg-white transition-colors hidden lg:flex"
             >
               <Padlock className="h-auto w-4 md:w-6" />
             </Link>
