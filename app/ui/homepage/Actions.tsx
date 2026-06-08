@@ -39,9 +39,7 @@ export default function Actions() {
                     <ul>
                       <li>Saint-Laurent-de-la-Salanque</li>
                       <li>Port-Vendres</li>
-                      <li>Saint-Paul-de-Fenouillet</li>
                       <li>Bourg-Madame</li>
-                      <li>Villelongue-dels-Monts</li>
                     </ul>
                   </div>
                 </div>
@@ -73,7 +71,7 @@ export default function Actions() {
                 </div>
                 <ContactInfo
                   className="self-center"
-                  horaires={`Du Lundi au Jeudi de 9h à 17h\nLe vendredi de 14h à 17h`}
+                  horaires={`Lundi, mercredi, jeudi de 9h à 17h\nMardi et vendredi de 13h à 17h`}
                   phone="04 68 63 50 24"
                   email="apex-violencesconjugales@hotmail.com"
                 />
