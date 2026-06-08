@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
 
 const chapters = [
@@ -16,8 +17,17 @@ const chapters = [
 ];
 
 export default function DashboardSideNav() {
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    setHash(window.location.hash);
+    const onHashChange = () => setHash(window.location.hash);
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
   return (
-    <div className="fixed h-screen w-[var(--sidenav-width)] px-6 py-12 bg-orange-600 gap-8 flex flex-col text-white">
+    <div className="fixed h-screen w-[var(--sidenav-width)] px-6 py-12 bg-orange-600 flex flex-col text-white overflow-y-auto overflow-x-hidden">
       <a
         href="/admin#top"
         className="flex gap-4 items-center [&>div]:hover:border-gray-800 p-2 border-2 border-white mb-10 rounded-md size-fit hover:text-gray-800 hover:border-gray-800 hover:bg-white transition-colors w-full justify-between"
@@ -28,15 +38,21 @@ export default function DashboardSideNav() {
         </div>
       </a>
       <nav className="flex flex-col gap-4">
-        {chapters.map((chapter) => (
-          <a
-            key={chapter.href}
-            href={chapter.href}
-            className="font-amatic_sc font-bold uppercase text-4xl py-2 px-4 border-2 border-orange-600 hover:bg-orange-50 hover:text-gray-800 hover:border-gray-800 transition-colors rounded-md"
-          >
-            {chapter.label}
-          </a>
-        ))}
+        {chapters.map((chapter) => {
+          const chapterHash = chapter.href.split("#")[1];
+          const isActive = hash === `#${chapterHash}`;
+          return (
+            <a
+              key={chapter.href}
+              href={chapter.href}
+              className={`font-amatic_sc font-bold uppercase text-4xl py-2 px-4 transition-all rounded-md hover:text-orange-200 hover:translate-x-8 ${
+                isActive ? "translate-x-8 text-orange-200" : ""
+              }`}
+            >
+              {chapter.label}
+            </a>
+          );
+        })}
       </nav>
     </div>
   );
