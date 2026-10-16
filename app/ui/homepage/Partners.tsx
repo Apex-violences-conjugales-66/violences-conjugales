@@ -76,7 +76,6 @@ export default function Partners({ partners }: { partners: Partner[] }) {
                 <div>
                   <h4>SANTE</h4>
                   <p>Les psychologues de différents services et en cabinet</p>
-                  <p>ffffffffffff </p>
                   <p>Le Centre Hospitalier de Perpignan</p>
                   <p>Le CAC 48</p>
                   <p>Les médecins généralistes et spécialisés</p>
