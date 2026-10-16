@@ -37,10 +37,10 @@ export default function MentionsLegalesPage() {
               </a>
             </p>
             <p>
-              <strong>Directeur de publication :</strong> [Nom du responsable]
+              <strong>Directeur de publication :</strong> Jessica IAMRANENE
             </p>
             <p>
-              <strong>SIRET :</strong> [Numéro SIRET]
+              <strong>SIRET :</strong> 410428908 00041
             </p>
           </section>
 
