@@ -167,7 +167,7 @@ export default function FormationSection({
                 Pour toute information ou pour vous inscrire à nos formations,
                 veuillez contacter:
                 <span className="mt-6">
-                  <b>Valérie FONTIMPE ou Christine GUILLAUMES</b>
+                  <b>Test texte à modifier</b>
                 </span>
               </p>
               <ContactInfo
